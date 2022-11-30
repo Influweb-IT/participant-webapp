@@ -2,7 +2,8 @@
   "services": {
     "title": "Services",
     "contact": "Contact",
-    "twitter": "Follow us on Twitter"
+    "twitter": "Follow us on Twitter",
+    "facebook": "Follow us on Facebook"
   },
   "about": {
     "title": "About this page",
@@ -12,9 +13,6 @@
   },
   "languages": {
     "title": "Languages",
-    "en": "English",
-    "nl-be": "Nederlands",
-    "de-be": "Deutsch",
-    "fr-be": "Français"
+    "en": "English"
   }
 }

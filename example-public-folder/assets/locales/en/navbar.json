@@ -1,9 +1,10 @@
 {
   "home": "Home",
-  "authhome": "My Infectieradar",
-  "results": "Current Results",
-  "about": "About Infectieradar",
+  "authhome": "Home",
+  "results": "Results",
+  "about": "About",
   "faq": "FAQ",
+  "news": "News",
   "login": "Login",
   "signup": "Sign up",
   "rightMenu": {
@@ -12,5 +13,7 @@
     "verified": "Account not verified"
   },
   "exitSurveyMode": "Exit",
-  "selectedProfilePrefixInSurveyMode": "Answering for: "
+  "selectedProfilePrefixInSurveyMode": "Answering for: ",
+  "toggleBtn": "Menu",
+  "toggleBtnAriaLabel": "Menu"
 }

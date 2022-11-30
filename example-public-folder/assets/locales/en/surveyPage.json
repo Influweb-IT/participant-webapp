@@ -10,5 +10,18 @@
   "notValidQuestion": "Select a valid answer for all questions.",
   "backBtn": "Back",
   "nextBtn": "Next",
-  "submitBtn": "Send"
+  "submitBtn": "Send",
+  "surveyLoadingError": {
+    "content": "Unfortunately, something went wrong loading the questionnaire.\n\nPlease try again or contact our support if the problem persists.",
+    "btn": "Try again"
+  },
+  "surveySubmissionError": {
+    "content": "Unfortunately, something went wrong while sending the questionnaire.\n\nPlease try again or contact our support if the problem persists.",
+    "btn": "Try again"
+  },
+  "submitSuccessDialog": {
+    "title": "Info",
+    "content": "Your questionnaire has been submitted successfully.",
+    "btn": "Continue"
+  }
 }

@@ -1,16 +1,16 @@
 {
   "config": {
     "type": "simpleLogo",
-    "className": "",
+    "className": "justify-content-center",
     "image": {
       "altKey": "logoAlt",
       "sm": {
-        "url": "/images/logo1.png",
+        "url": "/images/logo.png",
         "className": "py-2",
         "width": 226
       },
       "lg": {
-        "url": "/images/logo1.png",
+        "url": "/images/logo.png",
         "className": "py-2",
         "width": 250
       }

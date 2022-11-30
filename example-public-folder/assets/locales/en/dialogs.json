@@ -44,6 +44,7 @@
     "loginLink": "Have an account already? Login in here.",
     "reCaptchaLinks": "This site is protected by reCAPTCHA and the Google <1>Privacy Policy</1> and <3>Terms of Service</3> apply.",
     "errors": {
+      "emailRules": "The email address you entered is not valid.",
       "passwordRules": "Your password must have at least 8 characters and contain 3 of the following 4 elements: lowercase letters, capital letters, numbers, punctuation marks.",
       "passwordMatch": "The passwords are not the same",
       "invalidEmail": "Your email address seems to be incorrect",
@@ -63,12 +64,15 @@
   },
   "signupSuccess": {
     "title": "Welcome!",
-    "successMsg": "You are almost signed up for Infectieradar.be! \n\n First confirm your email address by clicking on the link in the confirmation email that we have sent you \n If you can’t find the email, first check your spam folder. You can also request a new email below.",
-    "emailSentMsg": "E-mail has been send",
+    "successMsg": "You are almost signed up! \n\n First confirm your email address by clicking on the link in the confirmation email that we have sent you \n If you can’t find the email, first check your spam folder. You can also request a new email below.",
+    "emailSentMsg": "E-mail has been sent",
+    "msgForVerifiedAccount": "If you have just verified your account, you can use the button below to reload this page.",
+    "reloadUser": "Check verification",
     "resendVerificationEmailBtn": "Resend confirmation email",
     "wrongEmailBtn": "Did you use the wrong email address? Then change it here.",
     "errors": {
-      "unknown": "Something has gone wrong."
+      "unknown": "Something has gone wrong.",
+      "verifyEmailFirst": "You need to verify your email address first by clicking the link in the registration email. If you cannot find the email, use the button to send a new email."
     }
   },
   "passwordForgotten": {
@@ -79,7 +83,7 @@
     "emailInputPlaceholder": "Enter E-mail",
     "submitBtn": "Change password",
     "errors": {
-      "invalidId": "Something has gone wrong. Check your email address or connection./n You can have another try when the button is visible again.",
+      "invalidId": "Something has gone wrong. Check your email address or connection.\n You can have another try when the button is visible again.",
       "unknown": "Something has gone wrong. Check your information or try again later."
     }
   },
@@ -89,7 +93,7 @@
     "emailInputPlaceholder": "New email address",
     "passwordInputLabel": "Password",
     "passwordInputPlaceholder": "Password",
-    "info": "Do you want to use a different email address? Change your email address by clicking on the button below. Note: you cannot log back in to Infectieradar.be until you have confirmed the email address.",
+    "info": "Do you want to use a different email address? Change your email address by clicking on the button below. Note: you cannot log back in until you have confirmed the email address.",
     "cancelBtn": "Cancel",
     "confirmBtn": "Change email address",
     "errors": {
@@ -99,7 +103,7 @@
     },
     "warningDialog": {
       "title": "Confirm new email address",
-      "content": "Note: you cannot log back in to Infectieradar.be until you have confirmed the new email address via the link in the confirmation email that we have sent you.",
+      "content": "Note: you cannot log back in until you have confirmed the new email address via the link in the confirmation email that we have sent you.",
       "cancelBtn": "Cancel",
       "confirmBtn": "Confirm"
     },
@@ -166,10 +170,7 @@
     "defaultLanguageLabel": "Default language",
     "info": "You can change the default language here. If availble, also emails will be send in this language.",
     "languages": {
-      "nl-be": "Nederlands",
-      "en": "English",
-      "fr-be": "Français",
-      "de-be": "Deutsch"
+      "en": "English"
     },
     "cancelBtn": "Cancel",
     "confirmBtn": "Confirm language",

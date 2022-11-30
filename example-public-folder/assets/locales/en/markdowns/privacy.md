@@ -1,1 +1,1 @@
-Web-site privacy statement content goes here.
+Your full privacy policy goes here

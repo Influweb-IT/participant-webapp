@@ -1,8 +1,8 @@
 {
-  "title": "Infectieradar",
+  "title": "Studies",
   "topImage": {
     "title": "",
-    "content": "By participating in Infectieradar.be you help map the spread of infectious diseases, allowing us to quickly see the current situation in Belgium."
+    "content": "By participating you help map the spread of infectious diseases, allowing us to quickly see the current situation."
   },
   "requiredSurveys": {
     "title": "Questionnaires to be completed",
@@ -18,8 +18,8 @@
   "referencesBox": {
     "title": "See also",
     "faqLink": "Frequently Asked Questions",
-    "resultsLink": "Current results",
-    "aboutLink": "About Infectierader"
+    "resultsLink": "Results",
+    "aboutLink": "About"
   },
   "quickSettingsBox": {
     "title": "Settings",

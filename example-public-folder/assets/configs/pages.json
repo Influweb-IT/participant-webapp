@@ -12,45 +12,45 @@
       "hideWhen": "auth",
       "rows": [
         {
-          "key": "content",
-          "className": "py-3 min-vh-60",
+          "key": "teaserImage",
+          "fullWidth": true,
           "columns": [
             {
-              "key": "videoCol",
-              "className": "col-12 col-lg-8",
+              "key": "col",
+              "className": "w-100 p-0",
               "items": [
                 {
-                  "itemKey": "video",
-                  "className": "bg-secondary h-100 w-100 text-light justify-content-center text-center d-flex align-items-center",
+                  "itemKey": "teaserImage",
                   "config": {
-                    "type": "video",
-                    "posterUrlKey": "poster",
-                    "fallbackTextKey": "fallbackText",
-                    "videoSources": [
-                      {
-                        "type": "video/mp4",
-                        "urlKey": "mp4"
-                      }
-                    ]
+                    "type": "teaserImage",
+                    "image": {
+                      "url": "/images/landing.jpg",
+                      "height": 367,
+                      "backgroundPosition": "47% 27%"
+                    },
+                    "textBox": {
+                      "className": "col col-md-6 col-lg-4 offset-0 offset-lg-1"
+                    }
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "key": "content",
+          "containerClassName": "min-vh-60",
+          "columns": [
             {
-              "key": "aboutCardCol",
-              "className": "col-12 col-lg-4 mt-3 mt-lg-0",
+              "key": "loginCardCol",
+              "className": "col-12 col-md-6 col-lg-4 mt-3",
               "items": [
                 {
-                  "itemKey": "aboutCard",
+                  "itemKey": "loginCard",
                   "className": "h-100",
                   "config": {
-                    "type": "imageCard",
-                    "showActionBtn": true,
-                    "action": {
-                      "type": "navigate",
-                      "value": "/about"
-                    },
-                    "imageSrc": "/images/about.jpg"
+                    "type": "loginCard",
+                    "showInfoText": false
                   }
                 }
               ]
@@ -76,7 +76,7 @@
             },
             {
               "key": "cardSignupCol",
-              "className": "col-12 col-md-6 col-lg-4 mt-3",
+              "className": "col-12 col-lg-4 mt-3",
               "items": [
                 {
                   "itemKey": "signupCard",
@@ -94,15 +94,79 @@
               ]
             },
             {
-              "key": "loginCardCol",
-              "className": "col-12 col-lg-4 mb-lg-0 mt-3",
+              "key": "newsCardCol",
+              "className": "col-12 col-lg-4 mt-3",
               "items": [
                 {
-                  "itemKey": "loginCard",
+                  "itemKey": "newsCard",
                   "className": "h-100",
                   "config": {
-                    "type": "loginCard",
-                    "showInfoText": false
+                    "type": "imageCard",
+                    "showActionBtn": true,
+                    "action": {
+                      "type": "navigate",
+                      "value": "/news"
+                    },
+                    "imageSrc": "/images/news.jpg"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "aboutCardCol",
+              "className": "col-12 col-lg-4 mt-3 min-h-478",
+              "items": [
+                {
+                  "itemKey": "aboutCard",
+                  "className": "h-100",
+                  "config": {
+                    "type": "imageCard",
+                    "showActionBtn": true,
+                    "action": {
+                      "type": "navigate",
+                      "value": "/about"
+                    },
+                    "imageSrc": "/images/about.jpg"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "infoCard",
+              "className": "col-12 col-lg-4 mt-3 min-h-478",
+              "items": [
+                {
+                  "itemKey": "infoCard",
+                  "className": "h-100",
+                  "config": {
+                    "type": "imageCard",
+                    "showActionBtn": true,
+                    "action": {
+                      "type": "navigate",
+                      "value": "/info"
+                    },
+                    "imageSrc": "/images/info.jpg"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sponsorRow",
+          "containerClassName": "",
+          "columns": [
+            {
+              "key": "sponsorCol",
+              "className": "col-12 col-md-12 mt-3",
+              "items": [
+                {
+                  "itemKey": "logoCredits",
+                  "className": "",
+                  "config": {
+                    "type": "markdown",
+                    "markdownUrl": "markdowns/sponsors.md",
+                    "flavor": "chart-renderer"
                   }
                 }
               ]
@@ -117,7 +181,7 @@
       "rows": [
         {
           "key": "contentRow",
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "contentCol",
@@ -127,7 +191,7 @@
                   "itemKey": "results",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "markdowns/results-0.md",
+                    "markdownUrl": "markdowns/results.md",
                     "flavor": "chart-renderer"
                   }
                 }
@@ -143,8 +207,34 @@
       "pageKey": "landing",
       "rows": [
         {
+          "key": "teaserImage",
+          "fullWidth": true,
+          "columns": [
+            {
+              "key": "col",
+              "className": "w-100 p-0",
+              "items": [
+                {
+                  "itemKey": "teaserImage",
+                  "config": {
+                    "type": "teaserImage",
+                    "image": {
+                      "url": "/images/landing.jpg",
+                      "height": 367,
+                      "backgroundPosition": "47% 27%"
+                    },
+                    "textBox": {
+                      "className": "col col-md-6 col-lg-4 offset-0 offset-lg-1"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "key": "main",
-          "className": "py-3 min-vh-60",
+          "containerClassName": "py-3 min-vh-60",
           "columns": [
             {
               "key": "surveyCol",
@@ -208,19 +298,6 @@
                       }
                     ]
                   }
-                },
-                {
-                  "itemKey": "supportReferences",
-                  "config": {
-                    "type": "linkList",
-                    "links": [
-                      {
-                        "linkKey": "supportLink",
-                        "type": "external",
-                        "value": "https://www.uhasselt.be/UH/Onze-fondsen/56179-Onze-fondsen/Fonds-infectieradar"
-                      }
-                    ]
-                  }
                 }
               ]
             }
@@ -235,7 +312,7 @@
       "rows": [
         {
           "key": "mainRow",
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "settingsCol",
@@ -311,7 +388,7 @@
         {
           "key": "content",
           "fullWidth": false,
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "mainCol",
@@ -352,6 +429,20 @@
                     "imageSrc": "/images/participate.jpg",
                     "showActionBtn": true
                   }
+                },
+                {
+                  "itemKey": "surveyCard",
+                  "hideWhen": "unauth",
+                  "className": "",
+                  "config": {
+                    "type": "imageCard",
+                    "action": {
+                      "type": "navigate",
+                      "value": "/home"
+                    },
+                    "imageSrc": "/images/survey.jpg",
+                    "showActionBtn": true
+                  }
                 }
               ]
             }
@@ -376,7 +467,7 @@
                   "config": {
                     "type": "teaserImage",
                     "image": {
-                      "url": "/images/about2.jpg",
+                      "url": "/images/about-teaser.jpg",
                       "backgroundPosition": "50% 43%",
                       "height": 420
                     }
@@ -389,7 +480,7 @@
         {
           "key": "content",
           "fullWidth": false,
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "mainCol",
@@ -400,21 +491,6 @@
                   "config": {
                     "type": "markdown",
                     "markdownUrl": "/markdowns/about.md"
-                  }
-                },
-                {
-                  "itemKey": "video",
-                  "className": "bg-secondary w-100 text-white justify-content-center text-center d-flex align-items-center mt-3",
-                  "config": {
-                    "type": "video",
-                    "posterUrlKey": "poster",
-                    "fallbackTextKey": "fallbackText",
-                    "videoSources": [
-                      {
-                        "urlKey": "mp4",
-                        "type": "video/mp4"
-                      }
-                    ]
                   }
                 }
               ]
@@ -447,38 +523,8 @@
                       "type": "navigate",
                       "value": "/home"
                     },
-                    "imageSrc": "/images/questionnaire.jpg",
+                    "imageSrc": "/images/survey.jpg",
                     "showActionBtn": true
-                  }
-                },
-                {
-                  "itemKey": "logoCredits",
-                  "className": "",
-                  "config": {
-                    "type": "logoCredits",
-                    "useTitle": true,
-                    "className": "mb-2",
-                    "images": [
-                      {
-                        "key": "uantwerpen",
-                        "altKey": "uantwerpenLogo",
-                        "url": "images/uantwerpen.png",
-                        "width": 260
-                      },
-                      {
-                        "key": "epipose",
-                        "altKey": "epiposeLogo",
-                        "url": "images/epipose.jpg",
-                        "className": "",
-                        "width": 260
-                      },
-                      {
-                        "key": "uhasselt",
-                        "altKey": "hasseltLogo",
-                        "url": "images/uhasselt.jpg",
-                        "width": 260
-                      }
-                    ]
                   }
                 }
               ]
@@ -493,7 +539,7 @@
       "rows": [
         {
           "key": "content",
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "pCol",
@@ -519,7 +565,7 @@
       "rows": [
         {
           "key": "content",
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "pCol",
@@ -545,7 +591,7 @@
       "rows": [
         {
           "key": "content",
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "pCol",
@@ -571,7 +617,7 @@
       "rows": [
         {
           "key": "content",
-          "className": "my-3 min-vh-60",
+          "containerClassName": "my-3 min-vh-60",
           "columns": [
             {
               "key": "pCol",
@@ -583,6 +629,58 @@
                   "config": {
                     "type": "markdown",
                     "markdownUrl": "/markdowns/disclaimer.md"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/news",
+      "pageKey": "news",
+      "rows": [
+        {
+          "key": "content",
+          "containerClassName": "my-3 min-vh-60",
+          "columns": [
+            {
+              "key": "pCol",
+              "className": "col-12 col-sm-10 col-md-8",
+              "items": [
+                {
+                  "itemKey": "accessibility",
+                  "className": "",
+                  "config": {
+                    "type": "markdown",
+                    "markdownUrl": "/markdowns/news.md"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/info",
+      "pageKey": "info",
+      "rows": [
+        {
+          "key": "content",
+          "containerClassName": "my-3 min-vh-60",
+          "columns": [
+            {
+              "key": "pCol",
+              "className": "col-12 col-sm-10 col-md-8",
+              "items": [
+                {
+                  "itemKey": "info",
+                  "className": "",
+                  "config": {
+                    "type": "markdown",
+                    "markdownUrl": "/markdowns/info.md"
                   }
                 }
               ]

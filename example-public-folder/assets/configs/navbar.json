@@ -29,6 +29,11 @@
       "type": "internal",
       "itemKey": "results",
       "url": "/results"
+    },
+    {
+      "type": "internal",
+      "itemKey": "news",
+      "url": "/news"
     }
   ],
   "rightItems": [

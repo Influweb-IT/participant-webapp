@@ -1,13 +1,9 @@
 {
-  "instanceId": "belgium",
+  "instanceId": "default",
   "languages": [
     {
       "code": "en",
       "itemKey": "en"
-    },
-    {
-      "code": "fr-be",
-      "itemKey": "fr-be"
     }
   ],
   "avatars": [
