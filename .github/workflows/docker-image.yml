@@ -21,6 +21,12 @@ jobs:
     - name: Docker image tag override
       if: ${{ github.event.inputs.tags && github.event.inputs.tags != '' }}
       run: echo "REPO_VERSION=${{github.event.inputs.tags}}" >> $GITHUB_ENV
+    - name: Move sample .env-local
+      if: ${{ github.repository_owner == 'influenzanet' }}
+      run: mv env-sample.config .env.local
+    - name: Copy sample public
+      if: ${{ github.repository_owner == 'influenzanet' }}
+      run: mv example-public-folder public
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
