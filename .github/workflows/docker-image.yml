@@ -5,6 +5,9 @@ on:
     inputs:
       tags:
         description: 'Docker Tag override: [leave empty if not needed]'
+  push:
+      tags:
+        - "v*"
 
 jobs:
 
@@ -13,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - run: git fetch --prune --unshallow --tags
     - name: Get current version
       id: version
@@ -21,6 +24,9 @@ jobs:
     - name: Docker image tag override
       if: ${{ github.event.inputs.tags && github.event.inputs.tags != '' }}
       run: echo "REPO_VERSION=${{github.event.inputs.tags}}" >> $GITHUB_ENV
+    - name: Get version from tags push
+      run: echo "REPO_VERSION=${{github.ref_name}}" >> $GITHUB_ENV
+      if: ${{ github.event_name == 'push' }}
     - name: Move sample .env-local
       if: ${{ github.repository_owner == 'influenzanet' }}
       run: mv env-sample.config .env.local
