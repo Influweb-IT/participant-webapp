@@ -10,4 +10,4 @@ help:
 	@echo "  DOCKER_OPTS : default docker build options (default : $(DOCKER_OPTS))"
 
 docker:
-	docker build -t  github.com/influenzanet/web-app:v0.0.1  -f Dockerfile $(DOCKER_OPTS) --build-arg ENV_FILE=env-sample.config .
+	docker build -t  influenzanet/participant-web-app:v1.2.0  -f Dockerfile $(DOCKER_OPTS) --build-arg ENV_FILE=env-sample.config .
