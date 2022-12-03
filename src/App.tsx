@@ -18,6 +18,15 @@ import * as pagesConfig from "./configs/pages.json";
 import Iubenda from "./Iubenda";
 import Facebook from "./Facebook";
 
+const dateLocales = [
+  { code: 'it', locale: it, format: 'dd/MM/yyyy' }
+];
+
+let appConfig_: AppConfig  = {...appConfig};
+if (process.env.REACT_APP_DEFAULT_INSTANCE) {
+  appConfig_.instanceId = process.env.REACT_APP_DEFAULT_INSTANCE;
+}
+
 const App: React.FC = () => {
   const { i18n } = useTranslation();
 
@@ -32,7 +41,7 @@ const App: React.FC = () => {
   return (
     <React.Fragment>
       <AppCore
-        appConfig={appConfig as AppConfig}
+        appConfig={appConfig_}
         headerConfig={headerConfig as HeaderConfig}
         navbarConfig={navbarConfig as NavbarConfig}
         pagesConfig={pagesConfig as PagesConfig}
