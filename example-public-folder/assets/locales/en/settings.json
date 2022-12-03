@@ -30,9 +30,7 @@
       "info": "You can change the language here.",
       "languages": {
         "en": "English",
-        "nl-be": "Nederlands",
-        "fr-be": "Français",
-        "de-be": "Deutsch"
+        "it": "Italiano"
       }
     }
   },

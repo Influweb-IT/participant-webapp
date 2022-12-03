@@ -170,7 +170,8 @@
     "defaultLanguageLabel": "Default language",
     "info": "You can change the default language here. If availble, also emails will be send in this language.",
     "languages": {
-      "en": "English"
+      "en": "English",
+      "it": "Italiano"
     },
     "cancelBtn": "Cancel",
     "confirmBtn": "Confirm language",
