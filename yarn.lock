@@ -2258,10 +2258,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influweb-it/case-web-app-core@2.4.2-test-1.4", "case-web-app-core@npm:@influweb-it/case-web-app-core@^2.4.2-test-1.4":
-  version "2.4.2-test-1.4"
-  resolved "https://npm.pkg.github.com/download/@influweb-it/case-web-app-core/2.4.2-test-1.4/4bafe3993ccbb3205ea546fab97883a9fefa86e2#4bafe3993ccbb3205ea546fab97883a9fefa86e2"
-  integrity sha512-N96UWZKbZyKMev7v64Lc5E0bIbQx3Ntzepj522dGwjKUbL1brrBvN0mgsaNSn/CCn2nFBqLDrQScwSFlZRZZAQ==
+"@influweb-it/case-web-app-core@2.4.2-test-1.5", "case-web-app-core@npm:@influweb-it/case-web-app-core@^2.4.2-test-1.5":
+  version "2.4.2-test-1.5"
+  resolved "https://npm.pkg.github.com/download/@influweb-it/case-web-app-core/2.4.2-test-1.5/4dd9ab470824306299c2f402178971609a20de7c#4dd9ab470824306299c2f402178971609a20de7c"
+  integrity sha512-DxN6Xr0vs07/KNgQK192K35eCJCg5mTnd0mnmzNQaAbfgP257+rlNmOoVlebotIAxKyLSOqu+E+kGmvX3Z+qTQ==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
