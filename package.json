@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "@fontsource/open-sans": "^4.2.1",
+    "@influweb-it/case-web-app-core": "2.4.2-test-1.5",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
-    "@influweb-it/case-web-app-core": "2.4.2-test-1.5",
     "case-web-app-core": "npm:@influweb-it/case-web-app-core@^2.4.2-test-1.5",
     "case-web-ui": "1.13.1",
     "date-fns": "2.28.0",
@@ -21,11 +21,15 @@
     "survey-engine": "^1.1.7"
   },
   "devDependencies": {
-    "http-proxy-middleware": "2.0.1",
-    "check-peer-dependencies": "^4.1.0",
+    "@reduxjs/toolkit": "1.8.1",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
-    "@reduxjs/toolkit": "1.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "check-peer-dependencies": "^4.1.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-react": "^7.32.2",
+    "http-proxy-middleware": "2.0.1",
     "sass": "^1.49.8",
     "typescript": "^4.2.4",
     "web-vitals": "^1.1.2"
@@ -37,7 +41,22 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react/jsx-runtime"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "root": true
   },
   "browserslist": {
     "production": [
