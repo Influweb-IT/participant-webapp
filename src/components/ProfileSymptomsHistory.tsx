@@ -13,10 +13,10 @@ const ProfileSymptomsHistory: React.FC<ProfileSymptomsHistoryProps> = (props) =>
   const [index, setIndex] = useState(0);
   const [reports, setReports] = useState([]); // add type
   const prev = function() {
-
+    throw new Error();
   };
   const next = function() {
-
+    throw new Error();
   };
 
   useEffect(() => {
@@ -38,12 +38,8 @@ const ProfileSymptomsHistory: React.FC<ProfileSymptomsHistoryProps> = (props) =>
 
         console.log(response);
       }
-      catch {
-
-      }
-      finally {
-
-      }
+      catch { /* empty */ }
+      finally { /* empty */ }
     };
 
     getSymptoms();
