@@ -41,6 +41,9 @@ const App: React.FC = () => {
         pagesConfig={pagesConfig as PagesConfig}
         footerConfig={footerConfig as FooterConfig}
         dateLocales={dateLocales}
+        extensions={[{ "name": "userSymptomsHistory",
+                       "component": UserSymptomsHistory}
+                    ]}
       />
       <Iubenda />
       <Facebook />

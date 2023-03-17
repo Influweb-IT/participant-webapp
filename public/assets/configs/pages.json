@@ -231,6 +231,17 @@
                   }
                 },
                 {
+                  "itemKey": "userSymptomsHistory",
+                  "config": {
+                    "type": "extension",
+                    "config": {
+                      "className": "row g-0 bg-primary",
+                      "type": "userSymptomsHistory",
+                      "label": "User Symptoms History"
+                    }
+                  }
+                },
+                {
                   "itemKey": "surveyList",
                   "className": "",
                   "config": {
