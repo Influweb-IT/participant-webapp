@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2023/04/01",
+    "img": "assets/images/feedback/feedback_male_m_icon.jpg"
+  },
+  {
+    "date": "2023/03/01",
+    "img": "assets/images/feedback/feedback_male_f_icon.jpg"
+  },
+  {
+    "date": "2023/02/01",
+    "img": "assets/images/feedback/feedback_bene_m_icon.jpg"
+  },
+  {
+    "date": "2023/01/01",
+    "img": "assets/images/feedback/feedback_male_m_icon.jpg"
+  },
+  {
+    "date": "2023/00/01",
+    "img": "assets/images/feedback/feedback_bene_f_icon.jpg"
+  },
+  {
+    "date": "2022/04/01",
+    "img": "assets/images/feedback/feedback_male_m_icon.jpg"
+  },
+  {
+    "date": "2022/03/01",
+    "img": "assets/images/feedback/feedback_male_f_icon.jpg"
+  },
+  {
+    "date": "2022/02/01",
+    "img": "assets/images/feedback/feedback_bene_m_icon.jpg"
+  },
+  {
+    "date": "2022/01/01",
+    "img": "assets/images/feedback/feedback_male_m_icon.jpg"
+  },
+  {
+    "date": "2022/00/01",
+    "img": "assets/images/feedback/feedback_bene_f_icon.jpg"
+  }
+]
