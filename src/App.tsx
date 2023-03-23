@@ -17,6 +17,7 @@ import * as navbarConfig from "./configs/navbar.json";
 import * as pagesConfig from "./configs/pages.json";
 import Iubenda from "./Iubenda";
 import Facebook from "./Facebook";
+import UserSymptomsHistory from "./components/UserSymptomsHistory/UserSymptomsHistory";
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
@@ -38,9 +39,7 @@ const App: React.FC = () => {
         pagesConfig={pagesConfig as PagesConfig}
         footerConfig={footerConfig as FooterConfig}
         dateLocales={dateLocales}
-        extensions={[{ "name": "userSymptomsHistory",
-                       "component": UserSymptomsHistory}
-                    ]}
+        extensions={[{ name: "userSymptomsHistory", component: UserSymptomsHistory }]}
       />
       <Iubenda />
       <Facebook />

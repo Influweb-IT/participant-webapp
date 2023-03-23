@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import ProfileSymptomsHistory from "./ProfileSymptomsHistory";
-import UserProfilesSelector from "./UserProfilesSelector";
+import UserProfilesSelector from "../UserProfilesSelector/UserProfilesSelector";
 
 interface UserSymptomsHistoryProps {
   className?: string;
@@ -10,10 +10,10 @@ interface UserSymptomsHistoryProps {
 
 const UserSymptomsHistory: React.FC<UserSymptomsHistoryProps> = (props) => {
   const profiles: Array<any> = useSelector((state: any) => state.user.currentUser.profiles);
-  const mainProfileId = profiles.filter((profile) => profile.mainProfile)[ 0 ].alias;
+  const mainProfileId = profiles.filter((profile) => profile.mainProfile)[0].id;
   const studyId = "influweb";
 
-  const [ selectedProfileId, setSelectedProfileId ] = useState(mainProfileId);
+  const [selectedProfileId, setSelectedProfileId] = useState(mainProfileId);
 
   return (
     <div className={props.className}>
@@ -24,7 +24,7 @@ const UserSymptomsHistory: React.FC<UserSymptomsHistoryProps> = (props) => {
 };
 
 UserSymptomsHistory.defaultProps = {
-  className: "row g-0 bg-primary"
-}
+  className: "row g-0 bg-primary",
+};
 
 export default UserSymptomsHistory;
