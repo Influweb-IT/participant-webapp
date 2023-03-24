@@ -21,8 +21,10 @@ export class UserSymptomsHistoryReportReader implements IImageBrowserDataReader 
   }
 
   next = async (count: number): Promise<Array<ImageBrowserViewModel>> => {
+    let symptomsResults: ImageBrowserViewModel[] = [];
+
     if (!this.hasMoreData) {
-      return [];
+      return symptomsResults;
     }
 
     const requestParameters: ReportRequestParameters = [
@@ -35,10 +37,14 @@ export class UserSymptomsHistoryReportReader implements IImageBrowserDataReader 
       count,
     ];
 
-    let symptomsResults: ImageBrowserViewModel[] = [];
+    let response;
 
     try {
-      const response = await studyAPI.getReportsForUser(...requestParameters);
+      response = await studyAPI.getReportsForUser(...requestParameters);
+
+      if (!response?.data?.reports) {
+        return symptomsResults;
+      }
 
       symptomsResults = response.data.reports.map((report: Report) => {
         let viewModel: ImageBrowserViewModel = {
@@ -51,18 +57,15 @@ export class UserSymptomsHistoryReportReader implements IImageBrowserDataReader 
       });
 
       // TODO review
-      const reportCount = response.data.reports.length;
+    } catch {
+      /* empty */
+    } finally {
+      const reportCount = response?.data?.reports ? response.data.reports.length : 0;
       if (reportCount > 0) {
         this.startingDate = response.data.reports[reportCount - 1].timestamp;
       }
 
       this.hasMoreData = reportCount === count;
-
-      // TODO review
-    } catch {
-      /* empty */
-    } finally {
-      /* empty */
     }
 
     return symptomsResults;
