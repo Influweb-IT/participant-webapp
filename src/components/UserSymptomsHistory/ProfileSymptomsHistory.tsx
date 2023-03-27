@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import ImageBrowser from "../ImageBrowser/ImageBrowser";
-import { UserSymptomsHistoryReportReader } from "./services/UserSymptomsHistoryReportReader";
+import { IImageBrowserDataReader } from "../ImageBrowser/services/IImageBrowserDataReader";
 
 interface ProfileSymptomsHistoryProps {
   studyId: string;
   profileId: string;
   className?: string;
+  dataReaderFactory: (studyId: string, profileId: string, limit: number) => IImageBrowserDataReader;
   enableAnimations?: boolean;
 }
 
@@ -16,14 +17,14 @@ const ProfileSymptomsHistory: React.FC<ProfileSymptomsHistoryProps> = (props) =>
       profileId={props.profileId}
       className={props.className}
       enableAnimations={props.enableAnimations}
+      dataReaderFactory={props.dataReaderFactory}
       key={props.studyId + props.profileId}
     />
   );
 };
 
-// TODO data reader not easily replaceable like this
 const SymptomsHistory: React.FC<ProfileSymptomsHistoryProps> = (props) => {
-  const dataReader = useRef(new UserSymptomsHistoryReportReader(props.studyId, props.profileId, 5));
+  const dataReader = useRef(props.dataReaderFactory(props.studyId, props.profileId, 5));
 
   return (
     <ImageBrowser
