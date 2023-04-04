@@ -1,58 +1,45 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import ProfileSymptomsHistory from "./ProfileSymptomsHistory";
 import UserProfilesSelector from "../UserProfilesSelector/UserProfilesSelector";
+import ImageBrowser from "../ImageBrowser/ImageBrowser";
+import { IImageBrowserDataReader } from "../ImageBrowser/services/IImageBrowserDataReader";
+import { UserSymptomsHistoryReportReader } from "./services/UserSymptomsHistoryReportReader";
 
-interface UserSymptomsHistoryProps {
+export type UserSymptomsHistoryDataReader = new (studyId: string, profileId: string) => IImageBrowserDataReader;
+
+export type UserSymptomsHistoryProps = {
   className?: string;
-  dataReaderFactoryName: string;
-}
-
-const UserSymptomsHistory: React.FC<UserSymptomsHistoryProps> = (props) => {
-  const profiles: Array<any> = useSelector((state: any) => state.user.currentUser.profiles);
-  const mainProfileId = profiles.filter((profile) => profile.mainProfile)[0].id;
-  const studyId = "influweb";
-
-  const [selectedProfileId, setSelectedProfileId] = useState(mainProfileId);
-  const [dataReaderFactory, setDataReaderFactory] = useState(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    // TODO define the base dir
-    import("./services/" + props.dataReaderFactoryName).then((v) => {
-      if (isMounted) {
-        if (typeof v.default === "function") {
-          setDataReaderFactory(() => v.default);
-        }
-      }
-    });
-
-    return () => {
-      isMounted = false;
-    };
-  }, [props.dataReaderFactoryName]);
-
-  if (dataReaderFactory !== null) {
-    return (
-      <div className={props.className}>
-        <UserProfilesSelector selectedProfileId={selectedProfileId} onProfileChange={setSelectedProfileId} />
-        <ProfileSymptomsHistory
-          studyId={studyId}
-          profileId={selectedProfileId}
-          dataReaderFactory={dataReaderFactory}
-        ></ProfileSymptomsHistory>
-      </div>
-    );
-  } else {
-    return <></>;
-  }
+  studyId: string;
+  DataReader?: UserSymptomsHistoryDataReader;
 };
 
-UserSymptomsHistory.defaultProps = {
-  className: "row g-0 bg-primary",
-  dataReaderFactoryName: "UserSymptomsReaderFactory",
+const UserSymptomsHistory: React.FC<UserSymptomsHistoryProps> = (props) => {
+  return <UserSymptomsHistoryImpl {...props} key={props.studyId}></UserSymptomsHistoryImpl>;
+};
+
+const UserSymptomsHistoryImpl: React.FC<UserSymptomsHistoryProps> = (props) => {
+  const DataReaderType = props.DataReader ?? UserSymptomsHistoryReportReader;
+
+  const profiles: Array<any> = useSelector((state: any) => state.user.currentUser.profiles);
+  const mainProfileId = profiles.filter((profile) => profile.mainProfile)[0].id;
+
+  const [selectedProfileId, setSelectedProfileId] = useState(mainProfileId);
+
+  const [dataReader, setDataReader] = useState(new DataReaderType(props.studyId, selectedProfileId));
+
+  return (
+    <div className={props.className}>
+      <UserProfilesSelector
+        selectedProfileId={selectedProfileId}
+        onProfileChange={(profileId: string) => {
+          setSelectedProfileId(profileId);
+          setDataReader(new DataReaderType(props.studyId, profileId));
+        }}
+      />
+      <ImageBrowser dataReader={dataReader}></ImageBrowser>
+    </div>
+  );
 };
 
 export default UserSymptomsHistory;

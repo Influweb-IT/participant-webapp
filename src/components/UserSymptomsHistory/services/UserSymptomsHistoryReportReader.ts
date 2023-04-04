@@ -10,14 +10,17 @@ import { SymptomsResult } from "../models/SymptomsResult";
 type ReportRequestParameters = Parameters<typeof studyAPI.getReportsForUser>;
 
 export class UserSymptomsHistoryReportReader implements IImageBrowserDataReader {
+  uid: number;
   studyId: string;
   profileId: string;
   startingDate: number | undefined = undefined;
   hasMoreData: boolean = true;
 
-  constructor(studyId: string, profileId: string, limit: number) {
+  constructor(studyId: string, profileId: string) {
     this.studyId = studyId;
     this.profileId = profileId;
+
+    this.uid = Date.now();
   }
 
   next = async (count: number): Promise<Array<ImageBrowserViewModel>> => {

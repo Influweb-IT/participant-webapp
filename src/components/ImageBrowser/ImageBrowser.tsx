@@ -11,6 +11,10 @@ export interface ImageBrowserProps {
 }
 
 const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
+  return <ImageBrowserImpl {...props} key={props.dataReader.uid}></ImageBrowserImpl>;
+};
+
+const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
   const [index, setIndex] = useState(-1);
   const images = useRef(new Array<ImageBrowserViewModel>());
 
@@ -33,21 +37,27 @@ const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
   };
 
   useEffect(() => {
+    let isMounted = true;
+
     // handle loading
 
     if (index < images.current.length - 2) return;
 
     async function retrieveData() {
       const data = await props.dataReader.next(5);
-      images.current = images.current.concat(data);
+      images.current.push(...data);
 
       // we trigger a render when we get the first batch of data
-      if (index < 0) {
+      if (index < 0 && isMounted) {
         setIndex(0);
       }
     }
 
     retrieveData();
+
+    return () => {
+      isMounted = false;
+    };
   }, [props.dataReader, index]);
 
   const prevIndex = useRef(0);
@@ -200,6 +210,11 @@ const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
       )}
     </div>
   );
+};
+
+ImageBrowser.defaultProps = {
+  className: "col-lg-8 text-white bg-primary",
+  enableAnimations: true,
 };
 
 export default ImageBrowser;
