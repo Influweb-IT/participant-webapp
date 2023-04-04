@@ -14,7 +14,7 @@ import * as appConfig from "./configs/appConfig.json";
 import * as footerConfig from "./configs/footer.json";
 import * as headerConfig from "./configs/header.json";
 import * as navbarConfig from "./configs/navbar.json";
-import * as pagesConfig from "./configs/pages.json";
+import pagesConfig from "./configs/pages";
 import Iubenda from "./Iubenda";
 import Facebook from "./Facebook";
 import UserSymptomsHistory from "./components/UserSymptomsHistory/UserSymptomsHistory";
@@ -36,7 +36,7 @@ const App: React.FC = () => {
         appConfig={appConfig as AppConfig}
         headerConfig={headerConfig as HeaderConfig}
         navbarConfig={navbarConfig as NavbarConfig}
-        pagesConfig={pagesConfig as PagesConfig}
+        pagesConfig={pagesConfig}
         footerConfig={footerConfig as FooterConfig}
         dateLocales={dateLocales}
         extensions={[{ name: "userSymptomsHistory", component: UserSymptomsHistory }]}
