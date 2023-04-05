@@ -3,10 +3,10 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import UserProfilesSelector from "../UserProfilesSelector/UserProfilesSelector";
 import ImageBrowser from "../ImageBrowser/ImageBrowser";
-import { IImageBrowserDataReader } from "../ImageBrowser/services/IImageBrowserDataReader";
+import { ImageBrowserDataReader } from "../ImageBrowser/services/ImageBrowserDataReader";
 import { UserSymptomsHistoryReportReader } from "./services/UserSymptomsHistoryReportReader";
 
-export type UserSymptomsHistoryDataReader = new (studyId: string, profileId: string) => IImageBrowserDataReader;
+export type UserSymptomsHistoryDataReader = new (studyId: string, profileId: string) => ImageBrowserDataReader;
 
 export type UserSymptomsHistoryProps = {
   className?: string;

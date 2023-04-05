@@ -2,25 +2,23 @@ import { studyAPI } from "case-web-app-core";
 import { Report, ReportData } from "../../../utils/Reports/models/ReportModels";
 import { reportDataReader } from "../../../utils/Reports/services/ReportDataReader";
 import { ImageBrowserViewModel } from "../../ImageBrowser/models/ImageBrowserViewModel";
-import { IImageBrowserDataReader } from "../../ImageBrowser/services/IImageBrowserDataReader";
+import { ImageBrowserDataReader } from "../../ImageBrowser/services/ImageBrowserDataReader";
 
 import symptomsConfig from "../../../configs/symptomsConfig.json";
 import { SymptomsResult } from "../models/SymptomsResult";
 
 type ReportRequestParameters = Parameters<typeof studyAPI.getReportsForUser>;
 
-export class UserSymptomsHistoryReportReader implements IImageBrowserDataReader {
-  uid: number;
+export class UserSymptomsHistoryReportReader extends ImageBrowserDataReader {
   studyId: string;
   profileId: string;
   startingDate: number | undefined = undefined;
   hasMoreData: boolean = true;
 
   constructor(studyId: string, profileId: string) {
+    super();
     this.studyId = studyId;
     this.profileId = profileId;
-
-    this.uid = Date.now();
   }
 
   next = async (count: number): Promise<Array<ImageBrowserViewModel>> => {
