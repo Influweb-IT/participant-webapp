@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ImageBrowserViewModel } from "./models/ImageBrowserViewModel";
-import { IImageBrowserDataReader } from "./services/IImageBrowserDataReader";
+import { ImageBrowserDataReader } from "./services/ImageBrowserDataReader";
 
 import "./ImageBrowser.scss";
 
 export interface ImageBrowserProps {
   className?: string;
   enableAnimations?: boolean;
-  dataReader: IImageBrowserDataReader;
+  dataReader: ImageBrowserDataReader;
 }
 
 const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
@@ -15,8 +15,8 @@ const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
 };
 
 const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
-  const [index, setIndex] = useState(-1);
-  const images = useRef(new Array<ImageBrowserViewModel>());
+  const [index, setIndex] = useState(0);
+  const [images, setImages] = useState(new Array<ImageBrowserViewModel>());
 
   const selectIndex = function (i: number) {
     // HACK: disable animations by setting prevIndex equal to the future index value
@@ -32,7 +32,7 @@ const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
   };
 
   const next = () => {
-    const newIndex = Math.min(images.current.length - 1, index + 1);
+    const newIndex = Math.min(images.length - 1, index + 1);
     selectIndex(newIndex);
   };
 
@@ -41,15 +41,13 @@ const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
 
     // handle loading
 
-    if (index < images.current.length - 2) return;
+    if (index < images.length - 2) return;
 
     async function retrieveData() {
       const data = await props.dataReader.next(5);
-      images.current.push(...data);
 
-      // we trigger a render when we get the first batch of data
-      if (index < 0 && isMounted) {
-        setIndex(0);
+      if (isMounted && data.length > 0) {
+        setImages(images.concat(data));
       }
     }
 
@@ -58,7 +56,7 @@ const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
     return () => {
       isMounted = false;
     };
-  }, [props.dataReader, index]);
+  }, [props.dataReader, index, images]);
 
   const prevIndex = useRef(0);
   const animationRequestId = useRef(0);
@@ -130,20 +128,16 @@ const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
    * placement of the images will be unchanged. */
   return (
     <div className={`symptoms-history ${props.className} d-flex flex-column flex-grow-1 align-items-center p-2 `}>
-      {images.current.length === 0 ? (
+      {images.length === 0 ? (
         <h5>No reports</h5>
       ) : (
         <>
-          <h5 className="fw-bold">{images.current[index].date}</h5>
+          <h5 className="fw-bold">{images[index].date}</h5>
           {/* NOTE: the class name below forces a DOM update whenever the index
            * or the reports length changes, this is required to enforce the
            * clearing of the animation class and stop the images from flickering
            * when resetting the CSS animation */}
-          <div
-            ref={transitionDivRef}
-            id="transition-div"
-            className={`index-${index} n-reports-${images.current.length}`}
-          >
+          <div ref={transitionDivRef} id="transition-div" className={`index-${index} n-reports-${images.length}`}>
             <div className="d-flex align-items-center">
               <div id="left_arrow" className="d-sm-none">
                 <i className="bi-arrow-left-circle" style={{ fontSize: "300%" }}></i>
@@ -152,16 +146,12 @@ const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
                 <div className="feedback-slot-small position-relative">
                   {prevIndex.current > 0 && (
                     /* eslint-disable-next-line */
-                    <img
-                      src={images.current[prevIndex.current - 1]!.imageUrl}
-                      className="img-thumbnail"
-                      id="prev-week"
-                    ></img>
+                    <img src={images[prevIndex.current - 1]!.imageUrl} className="img-thumbnail" id="prev-week"></img>
                   )}
                   {prevIndex.current > 1 && (
                     /* eslint-disable-next-line */
                     <img
-                      src={images.current[prevIndex.current - 2]!.imageUrl}
+                      src={images[prevIndex.current - 2]!.imageUrl}
                       className="img-thumbnail"
                       id="new-prev-week"
                     ></img>
@@ -172,33 +162,25 @@ const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
               <div className="feedback-slot">
                 <div className="position-relative">
                   {/* eslint-disable-next-line */}
-                  <img
-                    src={images.current[prevIndex.current]!.imageUrl}
-                    className="img-thumbnail"
-                    id="current-week"
-                  ></img>
+                  <img src={images[prevIndex.current]!.imageUrl} className="img-thumbnail" id="current-week"></img>
                   <div className="click-layer"></div>
                 </div>
               </div>
               <div className=" feedback-slot d-flex align-items-center justify-content-center position-relative">
                 <div className="feedback-slot-small position-relative">
-                  {images.current.length - prevIndex.current > 1 && (
+                  {images.length - prevIndex.current > 1 && (
                     /* eslint-disable-next-line */
-                    <img
-                      src={images.current[prevIndex.current + 1]!.imageUrl}
-                      className="img-thumbnail"
-                      id="next-week"
-                    ></img>
+                    <img src={images[prevIndex.current + 1]!.imageUrl} className="img-thumbnail" id="next-week"></img>
                   )}
-                  {images.current.length - prevIndex.current > 2 && (
+                  {images.length - prevIndex.current > 2 && (
                     /* eslint-disable-next-line */
                     <img
-                      src={images.current[prevIndex.current + 2]!.imageUrl}
+                      src={images[prevIndex.current + 2]!.imageUrl}
                       className="img-thumbnail"
                       id="new-next-week"
                     ></img>
                   )}
-                  {images.current.length - index > 1 && <div className="click-layer" onClick={next}></div>}
+                  {images.length - index > 1 && <div className="click-layer" onClick={next}></div>}
                 </div>
               </div>
               <div id="right_arrow" className="d-sm-none">
