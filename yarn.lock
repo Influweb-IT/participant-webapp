@@ -2258,10 +2258,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influweb-it/case-web-app-core@2.4.2-test-1.5", "case-web-app-core@npm:@influweb-it/case-web-app-core@^2.4.2-test-1.5":
-  version "2.4.2-test-1.5"
-  resolved "https://npm.pkg.github.com/download/@influweb-it/case-web-app-core/2.4.2-test-1.5/4dd9ab470824306299c2f402178971609a20de7c#4dd9ab470824306299c2f402178971609a20de7c"
-  integrity sha512-DxN6Xr0vs07/KNgQK192K35eCJCg5mTnd0mnmzNQaAbfgP257+rlNmOoVlebotIAxKyLSOqu+E+kGmvX3Z+qTQ==
+"@influweb-it/case-web-app-core@2.7.1-influweb-1.0", "case-web-app-core@npm:@influweb-it/case-web-app-core@^2.7.1-influweb-1.0":
+  version "2.7.1-influweb-1.0"
+  resolved "https://npm.pkg.github.com/download/@influweb-it/case-web-app-core/2.7.1-influweb-1.0/3a1ca9d5a47cc9271fb99db39455becc125883c9#3a1ca9d5a47cc9271fb99db39455becc125883c9"
+  integrity sha512-Y0FuK5t1q1uDRn9vuoFbVtu91IlZnGy1jnwDgow36tUAg8VE7VD7NhlVWQYxgQycG/K19m/R7Brh0Gr4FsVbCw==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -4095,10 +4095,10 @@ case-sensitive-paths-webpack-plugin@^2.4.0:
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.4.0.tgz#db64066c6422eed2e08cc14b986ca43796dbc6d4"
   integrity sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==
 
-case-web-ui@1.13.1:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/case-web-ui/-/case-web-ui-1.13.1.tgz#61c2608e62f8403c1af008d6e94c6e130fae0ecd"
-  integrity sha512-o+mVC/FBtkmZv3TXEH6MdVBLDuu0H8tG4ffxORu54pEpHh8OXLc/8TGqeN0igHhO11jILZQ9PKVh0uR/MCDPHQ==
+case-web-ui@1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/case-web-ui/-/case-web-ui-1.14.3.tgz#43b921daf19fac19fa36bf3800ae72b8e9bf4a5f"
+  integrity sha512-UQY5mS8jz94fuVeBiXKOc8u/uJIQ6sDAG++VvnbIxFlEty4I0UneTHEnDPSovQMTQjcVRg3vqmFQbGoau5ZMkA==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.4"
 
@@ -4658,6 +4658,11 @@ date-fns@2.28.0:
   version "2.28.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.28.0.tgz#9570d656f5fc13143e50c975a3b6bbeb46cd08b2"
   integrity sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==
+
+date-fns@^2.29.3:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
+  integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
 debug@2.6.9, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -7535,11 +7540,6 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-moment@2.29.2:
-  version "2.29.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
-  integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
-
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -9879,12 +9879,12 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-survey-engine@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/survey-engine/-/survey-engine-1.1.7.tgz#4603a125f1c80eb1ca54f12b384f6ffd6011dbdf"
-  integrity sha512-tttSe2dX/ghpo7p1tQe20ROi3E2nOcg0YtwFXf5eQTAxdTyEntXciqcOoZJ26FVgYW19nfNv1O+rwi0rQAAOCw==
+survey-engine@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/survey-engine/-/survey-engine-1.2.1.tgz#214099ca904782c454e14962b43624f3899b16f9"
+  integrity sha512-q+9m16D+Zfu5F7u0BMol5HcrfXwQaVbrfQgEyo7HMt5BLsSL6aOwvznvQaHT0wdfCruAY3Dc3LHr/ZQ6qjVdyQ==
   dependencies:
-    moment "2.29.2"
+    date-fns "^2.29.3"
 
 svg-parser@^2.0.2:
   version "2.0.4"
