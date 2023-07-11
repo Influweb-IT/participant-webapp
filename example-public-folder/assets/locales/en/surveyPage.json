@@ -23,5 +23,10 @@
     "title": "Info",
     "content": "Your questionnaire has been submitted successfully.",
     "btn": "Continue"
+  },
+  "profileSelectionDialog": {
+    "title": "Select a profile",
+    "info": "Select the profile you want to use",
+    "manageProfilesBtn": "Make a new profile"
   }
 }
