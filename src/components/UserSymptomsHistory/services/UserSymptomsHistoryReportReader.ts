@@ -1,11 +1,10 @@
 import { studyAPI } from "case-web-app-core";
-import { Report, ReportData } from "../../../utils/Reports/models/ReportModels";
-import { reportDataReader } from "../../../utils/Reports/services/ReportDataReader";
 import { ImageBrowserViewModel } from "../../ImageBrowser/models/ImageBrowserViewModel";
 import { ImageBrowserDataReader } from "../../ImageBrowser/services/ImageBrowserDataReader";
 
-import symptomsConfig from "../../../configs/symptomsConfig.json";
-import { SymptomsResult } from "../models/SymptomsResult";
+import parsers from "./parsers";
+import { Report } from "case-web-app-core/build/api/types/studyAPI";
+import { ParsedReport } from "../../../utils/Reports/models/ReportModels";
 
 type ReportRequestParameters = Parameters<typeof studyAPI.getReportsForUser>;
 
@@ -47,43 +46,42 @@ export class UserSymptomsHistoryReportReader extends ImageBrowserDataReader {
         return symptomsResults;
       }
 
-      symptomsResults = response.data.reports.map((report: Report) => {
-        let viewModel: ImageBrowserViewModel = {
-          date: new Date(report.timestamp * 1000).toDateString(),
-          // TODO manage default image
-          imageUrl: this.reportDataToImage(report.data) ?? "assets/images/feedback/feedback_bene_f_icon.jpg",
-        };
+      const reports: Report[] = response.data.reports;
 
-        return viewModel;
-      });
+      symptomsResults = this.parseReports(reports);
 
-      // TODO review
-    } catch {
-      /* empty */
-    } finally {
-      const reportCount = response?.data?.reports ? response.data.reports.length : 0;
+      const reportCount = reports.length;
       if (reportCount > 0) {
-        this.startingDate = response.data.reports[reportCount - 1].timestamp;
+        this.startingDate = reports[reportCount - 1].timestamp;
       }
 
       this.hasMoreData = reportCount === count;
+    } catch {
+      // there's nothing we can do since we don't have a logger
     }
 
     return symptomsResults;
   };
 
-  // TODO clean and extract
-  private reportDataToImage(data: Array<ReportData>) {
-    const reportDataObject: SymptomsResult = reportDataReader(data);
+  private parseReports(reports: Report[]): ImageBrowserViewModel[] {
+    const result: ImageBrowserViewModel[] = [];
 
-    const config: any = symptomsConfig;
+    reports.reduce((result: ImageBrowserViewModel[], report: Report) => {
+      const parsedReport: ParsedReport = new ParsedReport(report);
 
-    for (let symptoms of config[reportDataObject.gender]) {
-      for (let symptom in symptoms) {
-        if (reportDataObject.symptoms.includes(symptom)) {
-          return symptoms[symptom];
+      // we skip report that do not have a version
+      if (parsedReport.parsedData.version) {
+        const parser = parsers.find((item) => item.version === parsedReport.parsedData.version);
+
+        // we skip report for which we do not have a parser
+        if (parser) {
+          result.push(parser.parse(parsedReport));
         }
       }
-    }
+
+      return result;
+    }, result);
+
+    return result;
   }
 }

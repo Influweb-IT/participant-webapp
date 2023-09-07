@@ -11,10 +11,6 @@ export interface ImageBrowserProps {
 }
 
 const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
-  return <ImageBrowserImpl {...props} key={props.dataReader.uid}></ImageBrowserImpl>;
-};
-
-const ImageBrowserImpl: React.FC<ImageBrowserProps> = (props) => {
   const [index, setIndex] = useState(0);
   const [images, setImages] = useState(new Array<ImageBrowserViewModel>());
 

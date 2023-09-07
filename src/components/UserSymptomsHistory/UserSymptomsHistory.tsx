@@ -6,6 +6,8 @@ import ImageBrowser from "../ImageBrowser/ImageBrowser";
 import { ImageBrowserDataReader } from "../ImageBrowser/services/ImageBrowserDataReader";
 import { UserSymptomsHistoryReportReader } from "./services/UserSymptomsHistoryReportReader";
 
+export type DateLocales = Array<{ code: string; locale: any; format: string }>;
+
 export type UserSymptomsHistoryDataReader = new (studyId: string, profileId: string) => ImageBrowserDataReader;
 
 export type UserSymptomsHistoryProps = {
@@ -22,7 +24,7 @@ const UserSymptomsHistoryImpl: React.FC<UserSymptomsHistoryProps> = (props) => {
   const DataReaderType = props.DataReader ?? UserSymptomsHistoryReportReader;
 
   const profiles: Array<any> = useSelector((state: any) => state.user.currentUser.profiles);
-  const mainProfileId = profiles.filter((profile) => profile.mainProfile)[0].id;
+  const mainProfileId: string = profiles.filter((profile) => profile.mainProfile)[0].id;
 
   const [selectedProfileId, setSelectedProfileId] = useState(mainProfileId);
 
@@ -37,7 +39,7 @@ const UserSymptomsHistoryImpl: React.FC<UserSymptomsHistoryProps> = (props) => {
           setDataReader(new DataReaderType(props.studyId, profileId));
         }}
       />
-      <ImageBrowser dataReader={dataReader}></ImageBrowser>
+      <ImageBrowser dataReader={dataReader} key={selectedProfileId}></ImageBrowser>
     </div>
   );
 };
