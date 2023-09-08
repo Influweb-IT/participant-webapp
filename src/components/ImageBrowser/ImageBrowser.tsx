@@ -4,15 +4,22 @@ import { ImageBrowserDataReader } from "./services/ImageBrowserDataReader";
 
 import "./ImageBrowser.scss";
 
+import { format as formatDate } from "date-fns";
+import { useTranslation } from "react-i18next";
+
 export interface ImageBrowserProps {
   className?: string;
   enableAnimations?: boolean;
   dataReader: ImageBrowserDataReader;
+  // TODO the type should be exported from case web app core
+  dateLocales: Array<{ code: string; locale: any; format: string }>;
 }
 
 const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
   const [index, setIndex] = useState(0);
   const [images, setImages] = useState(new Array<ImageBrowserViewModel>());
+
+  const { i18n } = useTranslation();
 
   const selectIndex = function (i: number) {
     // HACK: disable animations by setting prevIndex equal to the future index value
@@ -128,7 +135,11 @@ const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
         <h5>No reports</h5>
       ) : (
         <>
-          <h5 className="fw-bold">{images[index].date}</h5>
+          <h5 className="fw-bold">
+            {formatDate(new Date(images[index].date * 1000), "Pp", {
+              locale: props.dateLocales?.find((dl) => dl.code === i18n.language)?.locale,
+            })}
+          </h5>
           {/* NOTE: the class name below forces a DOM update whenever the index
            * or the reports length changes, this is required to enforce the
            * clearing of the animation class and stop the images from flickering

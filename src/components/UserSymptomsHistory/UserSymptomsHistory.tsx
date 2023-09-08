@@ -6,14 +6,14 @@ import ImageBrowser from "../ImageBrowser/ImageBrowser";
 import { ImageBrowserDataReader } from "../ImageBrowser/services/ImageBrowserDataReader";
 import { UserSymptomsHistoryReportReader } from "./services/UserSymptomsHistoryReportReader";
 
-export type DateLocales = Array<{ code: string; locale: any; format: string }>;
-
 export type UserSymptomsHistoryDataReader = new (studyId: string, profileId: string) => ImageBrowserDataReader;
 
 export type UserSymptomsHistoryProps = {
   className?: string;
   studyId: string;
   DataReader?: UserSymptomsHistoryDataReader;
+  // TODO the type should be exported from case web app core
+  dateLocales: Array<{ code: string; locale: any; format: string }>;
 };
 
 const UserSymptomsHistory: React.FC<UserSymptomsHistoryProps> = (props) => {
@@ -39,7 +39,7 @@ const UserSymptomsHistoryImpl: React.FC<UserSymptomsHistoryProps> = (props) => {
           setDataReader(new DataReaderType(props.studyId, profileId));
         }}
       />
-      <ImageBrowser dataReader={dataReader} key={selectedProfileId}></ImageBrowser>
+      <ImageBrowser dataReader={dataReader} key={selectedProfileId} dateLocales={props.dateLocales}></ImageBrowser>
     </div>
   );
 };

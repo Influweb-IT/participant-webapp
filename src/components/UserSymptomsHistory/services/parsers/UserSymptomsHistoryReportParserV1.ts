@@ -9,7 +9,7 @@ class UserSymptomsHistoryReportParserV1 implements IUserSymptomsHistoryReportPar
 
   parse = (report: ParsedReport) => {
     let viewModel: ImageBrowserViewModel = {
-      date: new Date(report.timestamp * 1000).toDateString(),
+      date: report.timestamp,
       // TODO manage default image
       imageUrl:
         this.reportDataToImage(report.parsedData as SymptomsResult) ??

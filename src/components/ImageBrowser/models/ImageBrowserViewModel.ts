@@ -1,4 +1,4 @@
 export interface ImageBrowserViewModel {
-  date: string;
+  date: number;
   imageUrl: string;
 }

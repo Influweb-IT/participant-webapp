@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 
 import "./UserProfilesSelector.scss";
+import React from "react";
 
 interface UserProfilesSelectorProps {
   selectedProfileId: string;
