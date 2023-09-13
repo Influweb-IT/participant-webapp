@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ImageBrowserViewModel } from "./models/ImageBrowserViewModel";
 import { ImageBrowserDataReader } from "./services/ImageBrowserDataReader";
 
@@ -17,26 +17,31 @@ export interface ImageBrowserProps {
 
 const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
   const [index, setIndex] = useState(0);
+  const [imgIndex, setImgIndex] = useState(index);
+
   const [images, setImages] = useState(new Array<ImageBrowserViewModel>());
 
   const { i18n } = useTranslation();
 
-  const selectIndex = function (i: number) {
-    // HACK: disable animations by setting prevIndex equal to the future index value
-    if (!props.enableAnimations) prevIndex.current = i;
+  const transitionDivRef = useRef<HTMLDivElement>(null);
 
-    setIndex(i);
+  const shiftIndexes = function (delta: number) {
+    const newIndex = index + delta;
+
+    if (props.enableAnimations) setImgIndex(index);
+    else setImgIndex(newIndex);
+
+    setIndex(newIndex);
   };
 
-  // can we rewrite these using callback
-  const prev = () => {
-    const newIndex = Math.max(0, index - 1);
-    selectIndex(newIndex);
+  const prev = function () {
+    shiftIndexes(-1);
+    return true;
   };
 
-  const next = () => {
-    const newIndex = Math.min(images.length - 1, index + 1);
-    selectIndex(newIndex);
+  const next = function () {
+    shiftIndexes(1);
+    return true;
   };
 
   useEffect(() => {
@@ -61,78 +66,51 @@ const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
     };
   }, [props.dataReader, index, images]);
 
-  const prevIndex = useRef(0);
-  const animationRequestId = useRef(0);
-
-  const transitionDivRef = useRef<HTMLDivElement>(null);
-
-  /* NOTE: this useEffect handles the CSS animation between two adjacent states
-   * whenever the index changes.
+  /* NOTE: this effect runs each time a render is triggered by a change of
+   * index, before the browser repaints the screen.
    *
-   * This runs each time the component is rendered by React an the index
-   * changes. When entering this effect, the transition div won't have a
-   * transition class.
-   *
-   * The appropriate transition class is added directly to the DOM by this
-   * effect and the animation is reset.
-   *
-   * At the next render, React won't be aware of the added class and will fail
-   * to remove it from the DOM, a crucial step we need in order to have all the
-   * images in the right place before restarting the animation, avoiding
-   * flickering
-   *
-   * As a workaround, we introduced a dependency on the index value inside the
-   * transition div className attribute so that the transition class will be
-   * cleared from the DOM at each render. */
-  useEffect(() => {
+   * When entering this effect, a transition class will be added to the
+   * transition div, eventually resetting and re-triggering the associated
+   * animation.
+   */
+  useLayoutEffect(() => {
     if (!transitionDivRef.current) return;
 
-    // NOTE: default is no transition
+    transitionDivRef.current.className = "";
+
     let transitionClass = "transition-none";
-
-    // NOTE: compute the direction of the transition
-    if (prevIndex.current > index) {
-      transitionClass = "transition-right";
-    } else if (prevIndex.current < index) {
-      transitionClass = "transition-left";
-    }
-
-    prevIndex.current = index;
-
-    transitionDivRef.current!.className = "";
-
-    // NOTE: cancel the previous request to avoid concurrency
-    if (animationRequestId.current > 0) {
-      cancelAnimationFrame(animationRequestId.current);
-    }
+    if (index < imgIndex) transitionClass = "transition-right";
+    else if (index > imgIndex) transitionClass = "transition-left";
 
     // NOTE: this resets the CSS animation, see:
     // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips#run_an_animation_again
-    animationRequestId.current = requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         transitionDivRef.current!.classList.add(transitionClass);
-        animationRequestId.current = 0;
         return true;
       });
       return true;
     });
-  }, [index]);
+  }, [index, imgIndex]);
 
-  /* NOTE: the placement of the images inside the component reflects the
+  /* NOTE: the placement of the images inside this component always reflects the
    * configuration associated to the previous value of the index variable.
    *
-   * If the previous index value is different from the current one, the right
-   * animation will be triggered by the associated useEffect(), transitioning
-   * the images into a configuration reflecting the current index value.
+   * If the previous index value was different from the current one, the right
+   * animation will be triggered by the associated useLayoutEffect(),
+   * transitioning the images into a configuration reflecting the actual index
+   * value.
    *
-   * If the previous index value equals the current one, a render of the
-   * component will place the images in a configuration reflecting the current
-   * index value and clear the animation class. As a result, the on-screen
-   * placement of the images will be unchanged. */
+   * If the previous index value did equal the current one, the render of the
+   * component will place the images in a configuration already reflecting the
+   * actual index value and no transition will be triggered.
+   */
   return (
-    <div className={`symptoms-history ${props.className} d-flex flex-column flex-grow-1 align-items-center p-2 `}>
+    <div className={`symptoms-history ${props.className} d-flex flex-column flex-grow-1 align-items-center p-2`}>
       {images.length === 0 ? (
-        <h5>No reports</h5>
+        <>
+          <h5>No reports</h5>
+        </>
       ) : (
         <>
           <h5 className="fw-bold">
@@ -140,52 +118,40 @@ const ImageBrowser: React.FC<ImageBrowserProps> = (props) => {
               locale: props.dateLocales?.find((dl) => dl.code === i18n.language)?.locale,
             })}
           </h5>
-          {/* NOTE: the class name below forces a DOM update whenever the index
-           * or the reports length changes, this is required to enforce the
-           * clearing of the animation class and stop the images from flickering
-           * when resetting the CSS animation */}
-          <div ref={transitionDivRef} id="transition-div" className={`index-${index} n-reports-${images.length}`}>
+          <div ref={transitionDivRef} id="transition-div">
             <div className="d-flex align-items-center">
               <div id="left_arrow" className="d-sm-none">
                 <i className="bi-arrow-left-circle" style={{ fontSize: "300%" }}></i>
               </div>
-              <div className="feedback-slot d-flex align-items-center justify-content-center position-relative">
-                <div className="feedback-slot-small position-relative">
-                  {prevIndex.current > 0 && (
-                    /* eslint-disable-next-line */
-                    <img src={images[prevIndex.current - 1]!.imageUrl} className="img-thumbnail" id="prev-week"></img>
+              <div className="image-slot d-flex align-items-center justify-content-center position-relative">
+                <div className="image-slot-small position-relative">
+                  {imgIndex > 0 && (
+                    // eslint-disable-next-line jsx-a11y/alt-text
+                    <img src={images[imgIndex - 1]!.imageUrl} className="img-thumbnail" id="prev-week"></img>
                   )}
-                  {prevIndex.current > 1 && (
-                    /* eslint-disable-next-line */
-                    <img
-                      src={images[prevIndex.current - 2]!.imageUrl}
-                      className="img-thumbnail"
-                      id="new-prev-week"
-                    ></img>
+                  {imgIndex > 1 && (
+                    // eslint-disable-next-line jsx-a11y/alt-text
+                    <img src={images[imgIndex - 2]!.imageUrl} className="img-thumbnail" id="new-prev-week"></img>
                   )}
                   {index > 0 && <div className="click-layer" onClick={prev} />}
                 </div>
               </div>
-              <div className="feedback-slot">
+              <div className="image-slot">
                 <div className="position-relative">
-                  {/* eslint-disable-next-line */}
-                  <img src={images[prevIndex.current]!.imageUrl} className="img-thumbnail" id="current-week"></img>
+                  {/* eslint-disable-next-line jsx-a11y/alt-text */}
+                  <img src={images[imgIndex]!.imageUrl} className="img-thumbnail" id="current-week"></img>
                   <div className="click-layer"></div>
                 </div>
               </div>
-              <div className=" feedback-slot d-flex align-items-center justify-content-center position-relative">
-                <div className="feedback-slot-small position-relative">
-                  {images.length - prevIndex.current > 1 && (
-                    /* eslint-disable-next-line */
-                    <img src={images[prevIndex.current + 1]!.imageUrl} className="img-thumbnail" id="next-week"></img>
+              <div className=" image-slot d-flex align-items-center justify-content-center position-relative">
+                <div className="image-slot-small position-relative">
+                  {images.length - imgIndex > 1 && (
+                    // eslint-disable-next-line jsx-a11y/alt-text
+                    <img src={images[imgIndex + 1]!.imageUrl} className="img-thumbnail" id="next-week"></img>
                   )}
-                  {images.length - prevIndex.current > 2 && (
-                    /* eslint-disable-next-line */
-                    <img
-                      src={images[prevIndex.current + 2]!.imageUrl}
-                      className="img-thumbnail"
-                      id="new-next-week"
-                    ></img>
+                  {images.length - imgIndex > 2 && (
+                    // eslint-disable-next-line jsx-a11y/alt-text
+                    <img src={images[imgIndex + 2]!.imageUrl} className="img-thumbnail" id="new-next-week"></img>
                   )}
                   {images.length - index > 1 && <div className="click-layer" onClick={next}></div>}
                 </div>

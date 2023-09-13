@@ -1,6 +1,6 @@
 @import "src/theme/selected_color_scheme";
 
-// TODO: maybe introduce a width variable for feedback-slots cards?
+// TODO: maybe introduce a width variable for controllig the width of the images
 
 .symptoms-history {
   #next-week,
@@ -130,14 +130,14 @@
     }
   }
 
-  // feedback cards styling
+  // image cards styling
 
-  .feedback-slot {
+  .image-slot {
     height: 135px;
     width: 135px;
   }
 
-  .feedback-slot-small {
+  .image-slot-small {
     height: 100px;
     width: 100px;
   }
