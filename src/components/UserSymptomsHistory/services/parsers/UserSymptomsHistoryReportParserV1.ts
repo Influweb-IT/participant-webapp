@@ -10,10 +10,7 @@ class UserSymptomsHistoryReportParserV1 implements IUserSymptomsHistoryReportPar
   parse = (report: ParsedReport) => {
     let viewModel: ImageBrowserViewModel = {
       date: report.timestamp,
-      // TODO manage default image
-      imageUrl:
-        this.reportDataToImage(report.parsedData as SymptomsResult) ??
-        "assets/images/feedback/feedback_bene_f_icon.jpg",
+      imageUrl: this.reportDataToImage(report.parsedData as SymptomsResult),
     };
 
     return viewModel;
@@ -21,17 +18,19 @@ class UserSymptomsHistoryReportParserV1 implements IUserSymptomsHistoryReportPar
 
   private reportDataToImage(data: SymptomsResult) {
     const config: any = symptomsConfig;
+    const genderConfig = config[data.gender];
 
-    // we need to loop through the config first because
-    // it's where we define the priority for the image being shown
-    // when multiple symptoms are present in the repo
-
-    for (let symptoms of config[data.gender]) {
-      for (let symptom in symptoms) {
+    for (const symptoms of genderConfig) {
+      for (const symptom in symptoms) {
         if (data.symptoms.includes(symptom)) {
           return symptoms[symptom];
         }
       }
+    }
+
+    const defaultSymptom = genderConfig.find((element: any) => element.hasOwnProperty("default"));
+    if (defaultSymptom) {
+      return defaultSymptom["default"];
     }
   }
 }
