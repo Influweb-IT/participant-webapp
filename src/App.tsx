@@ -15,8 +15,22 @@ import * as footerConfig from "./configs/footer.json";
 import * as headerConfig from "./configs/header.json";
 import * as navbarConfig from "./configs/navbar.json";
 import * as pagesConfig from "./configs/pages.json";
+import { useSelector } from "react-redux";
+import StudyManager from "./StudyManager";
 
 const App: React.FC = () => {
+  // const profileEnable = useSelector(
+  //   (state: any) => state.profile.profileEnabled
+  // );
+
+  // const pc: any = pagesConfig;
+
+  // pc.pages
+  //   .find((page: any) => page.path === "/settings")
+  //   .rows.find(
+  //     (row: any) => row.key === "mainRow"
+  //   ).columns[0].items[0].config.hideProfileSettings = !profileEnable;
+
   const { i18n } = useTranslation();
 
   const dateLocales = [{ code: "it", locale: it, format: "dd/MM/yyyy" }];
@@ -37,6 +51,7 @@ const App: React.FC = () => {
         footerConfig={footerConfig as FooterConfig}
         dateLocales={dateLocales}
       />
+      <StudyManager></StudyManager>
     </React.Fragment>
   );
 };

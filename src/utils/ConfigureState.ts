@@ -1,18 +1,15 @@
-import { StateFromReducersMapObject } from '@reduxjs/toolkit';
-import { localStorageManager, reducersManager } from 'case-web-app-core';
-import { cookiePreferenceSlice } from '../reducers/consentReducers';
-import { contactVerifiedReducer } from '../reducers/signupReducers';
-
-import { onSaveState as signupOnSaveState } from '../localStorage/signup';
+import { StateFromReducersMapObject } from "@reduxjs/toolkit";
+import { reducersManager } from "case-web-app-core";
+import { preselezioneStudyReducer } from "../reducers/preselezioneStudyReducers";
+import { studyGroupReducer } from "../reducers/studyGroupReducers";
 
 const reducersMap = {
-  'signup': contactVerifiedReducer,
-  [cookiePreferenceSlice.name]: cookiePreferenceSlice.reducer
+  preselezioneStudy: preselezioneStudyReducer,
+  studyGroup: studyGroupReducer,
 };
 
 export function configureState() {
   reducersManager.add(reducersMap);
-  localStorageManager.onSave(signupOnSaveState);
 }
 
 export type InfluwebState = StateFromReducersMapObject<typeof reducersMap>;
