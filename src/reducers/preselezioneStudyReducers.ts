@@ -20,6 +20,7 @@ export const preselezioneStudyReducer = createReducer(
     builder.addCase(
       initializePreselezioneStudy.fulfilled,
       (state = initialState, action) => {
+        // @ts-ignore
         state.status = action.payload;
       }
     );
@@ -55,7 +56,7 @@ export const preselezioneStudyReducer = createReducer(
     });
 
     builder.addCase(coreReduxActions.userActions.reset, (state, action) => {
-      state = initialState;
+      state.status = initialState.status;
     });
 
     builder.addCase(checkUserGroup.fulfilled, (state, action) => {

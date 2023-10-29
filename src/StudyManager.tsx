@@ -7,7 +7,10 @@ import {
   inviteToPreselezioneStudy,
 } from "./thunks/preselezioneStudyThunks";
 import { RootState } from "case-web-app-core/build/store/rootReducer";
-import { inviteToOperatoreStudy } from "./thunks/studyGroupThunks";
+import {
+  initializeStudyGroup,
+  inviteToOperatoreStudy,
+} from "./thunks/studyGroupThunks";
 
 const StudyManager: React.FC = () => {
   const dispatch = useDispatch();
@@ -39,6 +42,10 @@ const StudyManager: React.FC = () => {
   }, [dispatch, currentUser, preselezioneStudyStatus, surveyMode]);
 
   useEffect(() => {
+    if (!studyGroup.group) {
+      dispatch(initializeStudyGroup(currentUser));
+    }
+
     if (
       studyGroup.group === "operatore" &&
       studyGroup.status === "pending_invitation"

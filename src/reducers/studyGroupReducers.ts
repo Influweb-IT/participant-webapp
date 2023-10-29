@@ -1,6 +1,9 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { checkUserGroup } from "../thunks/preselezioneStudyThunks";
-import { inviteToOperatoreStudy } from "../thunks/studyGroupThunks";
+import {
+  initializeStudyGroup,
+  inviteToOperatoreStudy,
+} from "../thunks/studyGroupThunks";
 import { coreReduxActions } from "case-web-app-core";
 
 export type StudyGroup = {
@@ -24,12 +27,19 @@ export const studyGroupReducer = createReducer(initialState, (builder) => {
       action.payload === "operatore" ? "pending_invitation" : "assigned";
   });
 
+  builder.addCase(initializeStudyGroup.fulfilled, (state, action) => {
+    state.group = action.payload.group;
+    // @ts-ignore
+    state.status = action.payload.status;
+  });
+
   builder.addCase(inviteToOperatoreStudy.fulfilled, (state, action) => {
     state.status = "assigned";
   });
 
   builder.addCase(coreReduxActions.userActions.reset, (state, action) => {
-    state = initialState;
+    state.group = initialState.group;
+    state.status = initialState.status;
   });
 
   builder.addDefaultCase((state = initialState) => {

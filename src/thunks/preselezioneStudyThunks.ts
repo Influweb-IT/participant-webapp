@@ -8,6 +8,8 @@ import { getMainProfileId } from "../utils/helpers";
 
 // TODO use simplified definition
 
+// TODO clean logic
+
 export const initializePreselezioneStudy = createAsyncThunk(
   "preselezioneStudy/initialize",
   async (currentUser: User, thunkAPI) => {
@@ -29,13 +31,30 @@ export const initializePreselezioneStudy = createAsyncThunk(
 
       const mainProfileId = getMainProfileId(currentUser);
 
-      return studyInfoForPreselezioneStudy.profileIds.some(
+      if (!mainProfileId) {
+        return "unassigned";
+      }
+
+      let studyStatus = studyInfoForPreselezioneStudy.profileIds.some(
         (profileId) => profileId === mainProfileId
       )
         ? "assigned"
         : currentUser.account.accountConfirmedAt > 0
         ? "pending_invitation"
         : "unassigned";
+
+      if (studyStatus === "assigned") {
+        const repResponse = await studyAPI.getReportsForUser(
+          ["stellari_preselezione"],
+          [mainProfileId],
+          "preselezione"
+        );
+
+        studyStatus =
+          repResponse.data.reports?.length > 0 ? "completed" : studyStatus;
+      }
+
+      return studyStatus;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(error.message);
     }
