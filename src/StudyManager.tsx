@@ -11,6 +11,7 @@ import {
   initializeStudyGroup,
   inviteToOperatoreStudy,
 } from "./thunks/studyGroupThunks";
+import { inviteProfileToBambinoStudy } from "./thunks/bambinoStudyThunks";
 
 const StudyManager: React.FC = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const StudyManager: React.FC = () => {
 
   const studyGroup = useSelector((state: InfluwebState) => state.studyGroup);
 
+  // preselezizone study
   useEffect(() => {
     if (preselezioneStudyStatus === "unassigned" && currentUser) {
       dispatch(initializePreselezioneStudy(currentUser));
@@ -41,6 +43,7 @@ const StudyManager: React.FC = () => {
     }
   }, [dispatch, currentUser, preselezioneStudyStatus, surveyMode]);
 
+  // study group
   useEffect(() => {
     if (!studyGroup.group) {
       dispatch(initializeStudyGroup(currentUser));
@@ -53,6 +56,17 @@ const StudyManager: React.FC = () => {
       dispatch(inviteToOperatoreStudy(currentUser));
     }
   }, [dispatch, studyGroup, currentUser]);
+
+  // profile
+  useEffect(() => {
+    if (
+      currentUser.id &&
+      studyGroup.group === "genitore" &&
+      studyGroup.status === "assigned"
+    ) {
+      dispatch(inviteProfileToBambinoStudy(currentUser));
+    }
+  }, [dispatch, currentUser, studyGroup.group, studyGroup.status]);
 
   const instance = useRef<HTMLDivElement>(null);
 
