@@ -15,8 +15,9 @@ import * as footerConfig from "./configs/footer.json";
 import * as headerConfig from "./configs/header.json";
 import * as navbarConfig from "./configs/navbar.json";
 import * as pagesConfig from "./configs/pages.json";
-import { useSelector } from "react-redux";
 import StudyManager from "./StudyManager";
+import { Extension } from "case-web-app-core/build/AppCore";
+import { ProfileSettingsBox } from "./extensions/ProfileSettingsBox";
 
 const App: React.FC = () => {
   // const profileEnable = useSelector(
@@ -35,6 +36,12 @@ const App: React.FC = () => {
 
   const dateLocales = [{ code: "it", locale: it, format: "dd/MM/yyyy" }];
 
+  const profileSettingsBox: Extension = {
+    name: "profileSettingsBox",
+    component: ProfileSettingsBox,
+  };
+  const extensions = [profileSettingsBox];
+
   useEffect(() => {
     if (!i18n.language) {
       i18n.changeLanguage(`${process.env.REACT_APP_DEFAULT_LANGUAGE}`);
@@ -50,6 +57,7 @@ const App: React.FC = () => {
         pagesConfig={pagesConfig as PagesConfig}
         footerConfig={footerConfig as FooterConfig}
         dateLocales={dateLocales}
+        extensions={extensions}
       />
       <StudyManager></StudyManager>
     </React.Fragment>

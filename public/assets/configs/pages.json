@@ -222,12 +222,13 @@
               "className": "col-12 col-lg-8",
               "items": [
                 {
-                  "itemKey": "messages",
-                  "className": "p-2 bg-warning-light mb-2",
+                  "itemKey": "profileSettingsBox",
                   "config": {
-                    "type": "markdown",
-                    "markdownUrl": "markdowns/survey_messages.md",
-                    "flavor": "chart-renderer"
+                    "type": "extension",
+
+                    "config": {
+                      "type": "profileSettingsBox"
+                    }
                   }
                 },
                 {
@@ -272,11 +273,6 @@
                     "type": "linkList",
                     "links": [
                       {
-                        "linkKey": "profileSettings",
-                        "type": "dialog",
-                        "value": "manageProfiles"
-                      },
-                      {
                         "linkKey": "communicationSettings",
                         "type": "dialog",
                         "value": "changeNotifications"
@@ -312,7 +308,7 @@
                   "itemKey": "account",
                   "config": {
                     "type": "accountSettings",
-                    "allowProfileSettings": true
+                    "hideProfileSettings": true
                   }
                 },
                 {
