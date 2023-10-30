@@ -12,6 +12,7 @@ import {
   inviteToOperatoreStudy,
 } from "./thunks/studyGroupThunks";
 import { inviteProfileToBambinoStudy } from "./thunks/bambinoStudyThunks";
+import { coreReduxActions } from "case-web-app-core";
 
 const StudyManager: React.FC = () => {
   const dispatch = useDispatch();
@@ -67,6 +68,17 @@ const StudyManager: React.FC = () => {
       dispatch(inviteProfileToBambinoStudy(currentUser));
     }
   }, [dispatch, currentUser, studyGroup.group, studyGroup.status]);
+
+  // TODO remove and properly fix the problem in case web app core
+
+  useEffect(() => {
+    if (
+      preselezioneStudyStatus === "assigned" ||
+      studyGroup.status === "assigned"
+    ) {
+      dispatch(coreReduxActions.userActions.setUser(currentUser));
+    }
+  }, [dispatch, currentUser, preselezioneStudyStatus, studyGroup]);
 
   const instance = useRef<HTMLDivElement>(null);
 
