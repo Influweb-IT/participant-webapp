@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { InfluwebState } from "../utils/ConfigureState";
-import { EditBtn } from "case-web-ui";
-import { coreReduxActions } from "case-web-app-core";
+import { EditBtn } from "@influenzanet/case-web-ui";
+import { coreReduxActions } from "@influenzanet/case-web-app-core";
 
 export const ProfileSettingsBox: React.FC = (props) => {
   const studyGroup = useSelector((state: InfluwebState) => state.studyGroup);

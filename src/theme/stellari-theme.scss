@@ -1,13 +1,13 @@
-@import './selected_color_scheme';
-@import './iubenda_banner';
-@import '~case-web-ui/build/scss/helpers/spacing.scss';
-@import '~case-web-ui/build/scss/helpers/forms.scss';
-@import '~case-web-ui/build/scss/helpers/custom_range.scss';
-@import '~case-web-ui/build/scss/helpers/navbar.scss';
-@import '~case-web-ui/build/scss/helpers/borders.scss';
-@import '~case-web-ui/build/scss/helpers/date_input.scss';
-@import '~case-web-ui/build/scss/helpers//typography.scss';
-@import '~case-web-ui/build/scss/helpers/utilities.scss';
+@import "./selected_color_scheme";
+@import "./iubenda_banner";
+@import "~@influenzanet/case-web-ui/build/scss/helpers/spacing.scss";
+@import "~@influenzanet/case-web-ui/build/scss/helpers/forms.scss";
+@import "~@influenzanet/case-web-ui/build/scss/helpers/custom_range.scss";
+@import "~@influenzanet/case-web-ui/build/scss/helpers/navbar.scss";
+@import "~@influenzanet/case-web-ui/build/scss/helpers/borders.scss";
+@import "~@influenzanet/case-web-ui/build/scss/helpers/date_input.scss";
+@import "~@influenzanet/case-web-ui/build/scss/helpers//typography.scss";
+@import "~@influenzanet/case-web-ui/build/scss/helpers/utilities.scss";
 
 @include datepicker_classes($theme-colors);
 
@@ -23,20 +23,21 @@ $enable-rounded: false !default;
   }
 }
 
-.grecaptcha-badge { visibility: hidden; }
+.grecaptcha-badge {
+  visibility: hidden;
+}
 
 .min-h-478 {
   @media (min-width: 768px) {
-    min-height: 478px
+    min-height: 478px;
   }
 }
 
 .chart-center {
   @media (min-width: 990px) {
-    margin-left: 22.5%
+    margin-left: 22.5%;
   }
 }
 
-
-@import '~case-web-ui/build/scss/iconfonts';
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~@influenzanet/case-web-ui/build/scss/iconfonts";
+@import "~bootstrap/scss/bootstrap.scss";

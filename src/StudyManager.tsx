@@ -6,13 +6,13 @@ import {
   initializePreselezioneStudy,
   inviteToPreselezioneStudy,
 } from "./thunks/preselezioneStudyThunks";
-import { RootState } from "case-web-app-core/build/store/rootReducer";
+import { RootState } from "@influenzanet/case-web-app-core/build/store/rootReducer";
 import {
   initializeStudyGroup,
   inviteToOperatoreStudy,
 } from "./thunks/studyGroupThunks";
 import { inviteProfileToBambinoStudy } from "./thunks/bambinoStudyThunks";
-import { coreReduxActions } from "case-web-app-core";
+import { coreReduxActions } from "@influenzanet/case-web-app-core";
 
 const StudyManager: React.FC = () => {
   const dispatch = useDispatch();

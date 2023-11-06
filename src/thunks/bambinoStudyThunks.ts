@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { studyAPI } from "case-web-app-core";
-import { User } from "case-web-app-core/build/api/types/user";
+import { studyAPI } from "@influenzanet/case-web-app-core";
+import { User } from "@influenzanet/case-web-app-core/build/api/types/user";
 
 // TODO completely rewrite this code just for demo purpose
 

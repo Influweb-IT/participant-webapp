@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { User } from "case-web-app-core/build/api/types/user";
+import { User } from "@influenzanet/case-web-app-core/build/api/types/user";
 import { getMainProfileId } from "../utils/helpers";
-import { studyAPI } from "case-web-app-core";
-import { StudyInfoForUser } from "case-web-ui/build/types/studyAPI";
+import { studyAPI } from "@influenzanet/case-web-app-core";
+import { StudyInfoForUser } from "@influenzanet/case-web-ui/build/types/studyAPI";
 
 // TODO add action payload typing
 

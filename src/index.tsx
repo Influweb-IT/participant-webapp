@@ -2,9 +2,9 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { store, initI18n } from "case-web-app-core";
+import { store, initI18n } from "@influenzanet/case-web-app-core";
 
-import { LoadingPlaceholder } from "case-web-ui";
+import { LoadingPlaceholder } from "@influenzanet/case-web-ui";
 
 import "./index.scss";
 

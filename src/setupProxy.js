@@ -1,21 +1,20 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
-const target = "https://minikube.influweb.org";
+const target = "https://stellari.staging.influenzanet.info";
 
-module.exports = function(app) {
-
+module.exports = function (app) {
   app.use(
-    '/api',
+    "/api",
     createProxyMiddleware({
       target: target,
       changeOrigin: true,
       secure: false,
       pathRewrite: {
-        '^/api/': '/api/',
+        "^/api/": "/api/",
       },
-      onProxyReq: function(request) {
+      onProxyReq: function (request) {
         request.setHeader("origin", target);
       },
     })
   );
-}
+};

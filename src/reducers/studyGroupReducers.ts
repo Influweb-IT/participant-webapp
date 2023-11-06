@@ -4,7 +4,7 @@ import {
   initializeStudyGroup,
   inviteToOperatoreStudy,
 } from "../thunks/studyGroupThunks";
-import { coreReduxActions } from "case-web-app-core";
+import { coreReduxActions } from "@influenzanet/case-web-app-core";
 
 export type StudyGroup = {
   group: "operatore" | "genitore" | undefined;

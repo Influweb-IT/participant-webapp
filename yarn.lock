@@ -2258,10 +2258,17 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influweb-it/case-web-app-core@v2.7.2-influweb-1.1", "case-web-app-core@npm:@influweb-it/case-web-app-core@^v2.7.2-influweb-1.1":
-  version "2.7.2-influweb-1.1"
-  resolved "https://npm.pkg.github.com/download/@influweb-it/case-web-app-core/2.7.2-influweb-1.1/a98d62952c5da47bcb80ba671f2372bc3ac7f8ed#a98d62952c5da47bcb80ba671f2372bc3ac7f8ed"
-  integrity sha512-5x9R+dU8Zl0MsPJBbWJFB4g1yX1Ldu46tDMfMGQSgcoHpv9P4n92o0CDfxAgX3+9F7IcydzXu4KZF+ffHf3rAg==
+"@influenzanet/case-web-app-core@2.7.4-staging.7":
+  version "2.7.4-staging.7"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.7.4-staging.7.tgz#2dd76d7701fb7d8c9eaccb3a9d91845afca347a3"
+  integrity sha512-9j1yMrUr7f0XYLnlamxKDcZqOaPqu5r5dBCOp+5XLH7AOsqbIL9CdJSUX43SmcwMI/XDCeMWN1A7nh0KSIsIGQ==
+
+"@influenzanet/case-web-ui@1.15.0-staging.1":
+  version "1.15.0-staging.1"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-ui/-/case-web-ui-1.15.0-staging.1.tgz#ac18c8c68de48d8600902b27f77ff2f9d0bded51"
+  integrity sha512-ZhJTDYmMke8JfdpJKjRKKaJhSvUeHHtfeqsm67XNg3Bh2OHzUmGuytuSvpWuvC4KI3hUGjpFd13ZVQsLfghl1w==
+  dependencies:
+    "@fortawesome/fontawesome-free" "^5.15.4"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -4089,13 +4096,6 @@ case-sensitive-paths-webpack-plugin@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.4.0.tgz#db64066c6422eed2e08cc14b986ca43796dbc6d4"
   integrity sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==
-
-case-web-ui@1.14.5:
-  version "1.14.5"
-  resolved "https://registry.yarnpkg.com/case-web-ui/-/case-web-ui-1.14.5.tgz#17651244b1290c17b107fa05402a26e4b65cea14"
-  integrity sha512-8OnlZIbQDPBB1Yj58dXkULKrLnza93jo+zA2+fwYob7SxlghNigIfeDDqSuNNu27QZHExubd87RH7AvUiOC+JA==
-  dependencies:
-    "@fortawesome/fontawesome-free" "^5.15.4"
 
 chalk@^2.0.0, chalk@^2.4.1:
   version "2.4.2"

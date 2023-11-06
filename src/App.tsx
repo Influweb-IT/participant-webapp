@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { AppCore } from "case-web-app-core";
+import { AppCore } from "@influenzanet/case-web-app-core";
 import { useTranslation } from "react-i18next";
 
-import { AppConfig } from "case-web-app-core/build/types/appConfig";
-import { FooterConfig } from "case-web-app-core/build/types/footerConfig";
-import { HeaderConfig } from "case-web-app-core/build/types/headerConfig";
-import { NavbarConfig } from "case-web-app-core/build/types/navbarConfig";
-import { PagesConfig } from "case-web-app-core/build/types/pagesConfig";
+import { AppConfig } from "@influenzanet/case-web-app-core/build/types/appConfig";
+import { FooterConfig } from "@influenzanet/case-web-app-core/build/types/footerConfig";
+import { HeaderConfig } from "@influenzanet/case-web-app-core/build/types/headerConfig";
+import { NavbarConfig } from "@influenzanet/case-web-app-core/build/types/navbarConfig";
+import { PagesConfig } from "@influenzanet/case-web-app-core/build/types/pagesConfig";
 
 import { it } from "date-fns/locale";
 
@@ -16,7 +16,7 @@ import * as headerConfig from "./configs/header.json";
 import * as navbarConfig from "./configs/navbar.json";
 import * as pagesConfig from "./configs/pages.json";
 import StudyManager from "./StudyManager";
-import { Extension } from "case-web-app-core/build/AppCore";
+import { Extension } from "@influenzanet/case-web-app-core/build/AppCore";
 import { ProfileSettingsBox } from "./extensions/ProfileSettingsBox";
 
 const App: React.FC = () => {

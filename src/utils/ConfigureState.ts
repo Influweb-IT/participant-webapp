@@ -1,5 +1,5 @@
 import { StateFromReducersMapObject } from "@reduxjs/toolkit";
-import { reducersManager } from "case-web-app-core";
+import { reducersManager } from "@influenzanet/case-web-app-core";
 import { preselezioneStudyReducer } from "../reducers/preselezioneStudyReducers";
 import { studyGroupReducer } from "../reducers/studyGroupReducers";
 

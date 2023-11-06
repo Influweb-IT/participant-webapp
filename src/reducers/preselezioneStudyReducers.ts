@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { coreReduxActions } from "case-web-app-core";
+import { coreReduxActions } from "@influenzanet/case-web-app-core";
 import {
   checkUserGroup,
   initializePreselezioneStudy,
