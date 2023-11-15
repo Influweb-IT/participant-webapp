@@ -1,5 +1,5 @@
 {
-  "title": "Influweb",
+  "title": "StellARI",
   "loginCard": {
     "title": "Login",
     "info": "",
@@ -29,7 +29,7 @@
   },
   "aboutCard": {
     "imageAlt": "Informazioni sull'immagine Influweb",
-    "title": "Informazioni su Influweb",
+    "title": "Informazioni su StellARI",
     "body": "Con Influweb monitoriamo la diffusione dei sintomi in tutta Italia. È uno degli strumenti che il team di ricerca utilizza per monitorare la diffusione del virus.",
     "actionLabel": "Per saperne di più"
   },
@@ -69,7 +69,7 @@
     }
   },
   "teaserImage": {
-    "title": "Benvenuto in Influweb",
-    "content": "Aiutaci a monitorare il COVID-19 e l’influenza in Italia iscrivendoti al nostro studio"
+    "title": "Benvenuto in StellARI",
+    "content": "Questa piattaforma è dedicata ai partecipanti allo studio StellARI, iscriviti e compila i tuoi questionari!"
   }
 }

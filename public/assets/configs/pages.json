@@ -25,8 +25,7 @@
                     "type": "teaserImage",
                     "image": {
                       "url": "/images/landing.jpg",
-                      "height": 367,
-                      "backgroundPosition": "47% 27%"
+                      "height": 367
                     },
                     "textBox": {
                       "className": "col col-md-6 col-lg-4 offset-0 offset-lg-1"
@@ -51,25 +50,6 @@
                   "config": {
                     "type": "loginCard",
                     "showInfoText": false
-                  }
-                }
-              ]
-            },
-            {
-              "key": "cardResultsCol",
-              "className": "col-12 col-md-6 col-lg-4 mt-3",
-              "items": [
-                {
-                  "itemKey": "currentResultCard",
-                  "className": "h-100",
-                  "config": {
-                    "type": "imageCard",
-                    "showActionBtn": true,
-                    "action": {
-                      "type": "navigate",
-                      "value": "/results"
-                    },
-                    "imageSrc": "/images/results.jpg"
                   }
                 }
               ]
@@ -108,25 +88,6 @@
                       "value": "/about"
                     },
                     "imageSrc": "/images/about.jpg"
-                  }
-                }
-              ]
-            },
-            {
-              "key": "infoCard",
-              "className": "col-12 col-lg-4 mt-3 min-h-478",
-              "items": [
-                {
-                  "itemKey": "infoCard",
-                  "className": "h-100",
-                  "config": {
-                    "type": "imageCard",
-                    "showActionBtn": true,
-                    "action": {
-                      "type": "navigate",
-                      "value": "/info"
-                    },
-                    "imageSrc": "/images/info.jpg"
                   }
                 }
               ]
