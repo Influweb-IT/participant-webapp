@@ -5,5 +5,11 @@
     "title": "Partecipa a Stell-ARI",
     "body": "Registrati alla piattaforma per partecipare al progetto Stell-ARI.",
     "actionLabel": "Registrati"
+  },
+  "surveyCard": {
+    "imageAlt": "Compila!",
+    "title": "Compila il questionario!",
+    "body": "Informaci sul tuo stato di salute, anche se non hai sintomi.",
+    "actionLabel": "Questionari"
   }
 }
