@@ -21,5 +21,65 @@
     "actionLabel": "Questionari"
   },
   "faq": [
+    {
+      "title": "Chi ha creato Stell-ARI?",
+      "content": "Siamo un gruppo di ricercatori dell'Università di Pisa provenienti da diverse aree scientifiche, tra cui biologia, medicina, chimica e statistica. Il nostro obiettivo principale è studiare la diffusione delle malattie respiratorie in piccole comunità e prevenire la diffusione delle infezioni respiratorie acute."
+    },
+    {
+      "title": "Chi può partecipare a Stell-ARI?",
+      "content": "Possono partecipare i bambini della 1° alla 5° elementare con l’aiuto dei loro genitori/tutor e tutti gli operatori scolastici."
+    },
+    {
+      "title": "Come si può partecipare a Stell-ARI?",
+      "content": "Basterà registrarti al sito e rispondere al primo questionario sulle condizioni generali di salute del bambino o dell’operatore e ad un breve questionario che il sistema invierà settimanalmente con domande sullo stato di salute nella settimana appena trascorsa."
+    },
+    {
+      "title": "Perché è importante partecipare?",
+      "content": "Perché potrai aiutarci a studiare e a prevenire alcune malattie respiratorie."
+    },
+    {
+      "title": "Quanto tempo ci vuole a compilare i questionari di Influweb?",
+      "content": "Il primo questionario avrà una durata di circa 12 minuti. Al questionario settimanale, se il bimbo o l’operatore scolastico non hanno avuto sintomi nell’ultima settimana, basterà rispondere “no”. Se invece il bimbo o l’operatore avranno avuto sintomi nell’ultima settimana la compilazione del questionario durerà circa 5 minuti."
+    },
+    {
+      "title": "Non ho avuto alcun sintomo recentemente. Devo comunque compilare il questionario?",
+      "content": "Si, basterà cliccare su “No”. Questa per noi sarà comunque un’informazione molto utile."
+    },
+    {
+      "title": "Quanto tempo durerà il progetto Influweb?",
+      "content": "Un anno circa."
+    },
+    {
+      "title": "Devo pagare per partecipare?",
+      "content": "Assolutamente no."
+    },
+    {
+      "title": "Cosa devo fare dopo essermi registrato?",
+      "content": "Nel primo questionario, verranno poste domande sulla salute in generale e sullo stile di vita del bambino o dell’operatore. Ti verrà richiesto di compilare questo questionario soltanto una volta. In seguito, riceverai un'email settimanale per invitarti a compilare il questionario dei sintomi."
+    },
+    {
+      "title": "Non so se riuscirò a compilare il questionario ogni settimana. Posso comunque partecipare?",
+      "content": "Si, certo. Puoi semplicemente compilare il questionario quando ne hai la possibilità. Più spesso partecipi, migliore sarà la qualità delle informazioni che potremo raccogliere."
+    },
+    {
+      "title": "I miei dati sono al sicuro?",
+      "content": "Teniamo molto alla sicurezza dei tuoi dati. Il sistema soddisfa i criteri più stringenti per privacy e sicurezza."
+    },
+    {
+      "title": "Ho dimenticato la mia password. Cosa devo fare per risolvere il problema?",
+      "content": "Clicca su 'password dimenticata?' nella finestra di login. Inserisci il tuo indirizzo email e riceverai un link a una pagina per creare una nuova password."
+    },
+    {
+      "title": "Posso decidere se ricevere o no le email di Influweb?",
+      "content": "Si, certo. Clicca sul tuo nickname nella barra in alto a destra. Vai alla pagina di configurazione, dove puoi indicare se ricevere o no le email di influweb - per esempio il reminder settimanale per la compilazione del questionario dei sintomi. Anche se decidi di non ricevere il reminder settimanale, ci sarà sempre un questionario nuovo da riempire settimanalmente a tua disposizione."
+    },
+    {
+      "title": "Non voglio più partecipare. Come posso ritirarmi dal progetto?",
+      "content": "È davvero un peccato! Potrai comunque ritirarti dal progetto in qualunque momento smettendo di compilare il questionario settimanale o cancellando il tuo account sulla piattaforma."
+    },
+    {
+      "title": "Se segnalo i sintomi del/la mio/a bambino/a, riceverò una diagnosi alla fine del questionario?",
+      "content": "No, non potremo darti una diagnosi con la compilazione del questionario. Sarà comunque necessario un consulto dal tuo medico."
+    }
   ]
 }
