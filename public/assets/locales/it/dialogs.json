@@ -170,7 +170,6 @@
     "defaultLanguageLabel": "Lingua predefinita",
     "info": "Qui puoi cambiare la lingua predefinita. Se disponibile, anche le email verranno inviate in questa lingua.",
     "languages": {
-      "en": "English",
       "it": "Italiano"
     },
     "cancelBtn": "Annulla",

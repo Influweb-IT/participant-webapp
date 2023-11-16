@@ -240,7 +240,7 @@
                   "itemKey": "communication",
                   "config": {
                     "type": "communicationSettings",
-                    "hideLanguageSelector": false
+                    "hideLanguageSelector": true
                   }
                 },
                 {
