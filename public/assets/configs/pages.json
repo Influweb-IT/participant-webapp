@@ -378,9 +378,9 @@
                   "config": {
                     "type": "teaserImage",
                     "image": {
-                      "url": "/images/about-teaser.jpg",
+                      "url": "/images/landing.jpg",
                       "backgroundPosition": "50% 43%",
-                      "height": 420
+                      "height": 367
                     }
                   }
                 }
