@@ -1,1 +1,0 @@
-Se nella lista dei questionari ritrovi un questionario già compilato in passato, ti chiediamo gentilmente di ricompilarlo per verificare i tuoi dati e rispondere a delle domande aggiuntive. Grazie per il tuo impegno!

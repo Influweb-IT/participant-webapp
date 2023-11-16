@@ -5,7 +5,7 @@
     "close": "Nascondere"
   },
   "topFaq": {
-    "title": "Domande frequenti su Influweb",
+    "title": "Domande frequenti su Stell-ARI",
     "content": ""
   },
   "signupCard": {
@@ -21,105 +21,5 @@
     "actionLabel": "Questionari"
   },
   "faq": [
-    {
-      "title": "Chi ha creato Influweb?",
-      "content": "Influweb è un progetto attivo in Italia da più di dieci anni ed è stato creato per il monitoraggio delle malattie di tipo influenzale nella popolazione. Influweb fa parte di Influenzanet, una network Europea composta da vari istituti di salute pubblica e di ricerca. Fondazione ISI fa parte di questa network. Lo scopo di Influenzanet è di monitorare lo stato di salute della popolazione e creare una mappa della diffusione di malattie infettive come ad esempio il COVID-19 o l'influenza. I dati sono utilizzati per avanzare la conoscenza scientifica."
-    },
-    {
-      "title": "Chi può partecipare a Influweb?",
-      "content": "Chiunque sia residente in Italia e ha una connessione Internet può partecipare al progetto, in modo del tutto volontario."
-    },
-    {
-      "title": "Come si può partecipare a Influweb?",
-      "content": "È sufficiente registrarsi, fornendo un indirizzo email e una password."
-    },
-    {
-      "title": "Perché è importante partecipare?",
-      "content": "Per avere un'accurata fotografia della situazione su COVID-19 e influenza, è importante avere il contributo di più volontari possibile, indipendentemente dal profilo personale o dai propri fattori di rischio. Un'ampia partecipazione può aiutarci ad approfondire ed estendere la nostra conoscenza di malattie come il COVID-19 o l'influenza."
-    },
-    {
-      "title": "Non sono Italiano/a ma vivo in Italia: posso partecipare a Influweb?",
-      "content": "Certo che si! La nostra iniziativa è interessata a fare una mappa della situazione in Italia. Chiunque sia residente in Italia può partecipare."
-    },
-    {
-      "title": "Sono Italiano/a ma vivo all'estero: posso partecipare?",
-      "content": "Purtroppo no. Soltanto coloro che vivono in Italia possono partecipare a questo studio. Tuttavia, se sei residente in Germania, Australia, Svizzera, Italia, Francia, Portogallo, Stati Uniti, Danimarca, Spagna puoi partecipare a studi simili che sono attivi in questi paesi. Visita il sito di influenzanet.info per la lista completa delle piattaforme attive in Europa."
-    },
-    {
-      "title": "Ho fatto il vaccino per l'influenza quest'anno. Posso partecipare?",
-      "content": "Il progetto può includere chiunque, indipendentemente dallo stado vaccinale."
-    },
-    {
-      "title": "Quanto tempo ci vuole a compilare i questionari di Influweb?",
-      "content": "Ci vogliono soltanto pochi minuti per registrarsi e compilare il primo questionario di profilo. La compilazione del questionario settimanale relativo ai sintomi richiede soltanto pochi secondi (un click sull'opzione 'nessun sintomo', se non hai alcun sintomo). Sono comunque sufficienti pochi minuti per completare il questionario nel caso tu abbia sintomi da segnalare."
-    },
-    {
-      "title": "Quanto tempo durerà il progetto Influweb?",
-      "content": "Lo studio non ha una data di fine. Abbiamo iniziato nel 2007 e portiamo avanti lo studio da più di una decade. I nostri volontari possono interrompere la partecipazione in qualunque momento, cancellando l'iscrizione al questionario settimanale. Si può riprendere la partecipazione in qualunque momento."
-    },
-    {
-      "title": "Devo pagare per partecipare?",
-      "content": "No, la partecipazione è gratuita e volontaria."
-    },
-    {
-      "title": "Cosa devo fare dopo essermi registrato?",
-      "content": "Nel primo questionario di profilo, ti verranno poste domande sulla tua salute in generale e sul tuo stile di vita. Ti verrà richiesto di compilare questo questionario di profilo soltanto una volta. In seguito, riceverai un'email settimanale per invitarti a compilare il questionario dei sintomi."
-    },
-    {
-      "title": "Quali domande vengono poste nel questionario di profilo?",
-      "content": "Lo scopo del questionario di profilo è di conoscere meglio i nostri volontari. Per la maggior parte delle domande, c'è comunque la possibilità di non rispondere selezionando l'opzione 'non saprei'. Sono sufficienti pochi minuti per completare il questionario."
-    },
-    {
-      "title": "Quali domande vengono poste nel questionario settimanale dei sintomi?",
-      "content": "Il questionario settimanale dei sintomi riguarda qualunque sintomo (o assenza di tali) che tu abbia avuto dall'ultima volta che hai visitato la piattaforma (naso che cola, tosse, febbre o assenza di sintomi). Sono sufficienti pochi minuti per completare il questionario. Nel caso tu stia segnalando dei sintomi, ti verrà chiesto quando i sintomi sono cominciati, se sei stato visitato da un medico e se sei dovuto rimanere a casa dal lavoro o da scuola."
-    },
-    {
-      "title": "Posso compilare il questionario da parte di qualcun'altro, ad esempio mio/a figlio/a?",
-      "content": "Si, puoi completare il questionario per i TUOI figli minorenni. Per altre persone maggiorenni, sarebbe meglio che queste creino il loro proprio account. Se decidi di compilare il questionario per una persona maggiorenne, dovrai dichiarare di avere il consenso di questa persona."
-    },
-    {
-      "title": "Non so se riuscirò a compilare il questionario ogni settimana. Posso comunque partecipare?",
-      "content": "Si, certo. Puoi semplicemente compilare il questionario quando ne hai la possibilità. Più spesso partecipi, migliore sarà la qualità delle informazioni che potremo raccogliere."
-    },
-    {
-      "title": "I miei dati sono al sicuro?",
-      "content": "Prendiamo molto sul serio la sicurezza dei dati dei nostri partecipanti. Il sistema soddisfa i criteri più stringenti per privacy e sicurezza. Il sistema è stato estensivamente testato da partner esterni in termini di sicurezza. I rischi relativi ai diritti e alla libertà personale di coloro che inseriscono i propri dati sono stati accuratamente valutati."
-    },
-    {
-      "title": "Ho già avuto il COVID-19/l'influenza. Ha comunque senso che io partecipi al progetto?",
-      "content": "Si, siamo interessati comunque alla tua partecipazione, anche se hai già avuto il COVID-19 o l'influenza. Influweb ha lo scopo di studiare lo stato di salute della popolazione, inclusi coloro che sonon già stati malati. Al momento della registrazione, ti chiederemo se sei già stato contagiato in passato."
-    },
-    {
-      "title": "Ho dimenticato la mia password. Cosa devo fare per risolvere il problema?",
-      "content": "Clicca su 'password dimenticata?' nella finestra di login. Inserisci il tuo indirizzo email e riceverai un link a una pagina per creare una nuova password."
-    },
-    {
-      "title": "Posso decidere se ricevere o no le email di Influweb?",
-      "content": "Si, certo. Clicca sul tuo nickname nella barra in alto a destra. Vai alla pagina di configurazione, dove puoi indicare se ricevere o no le email di influweb - per esempio il reminder settimanale per la compilazione del questionario dei sintomi. Anche se decidi di non ricevere il reminder settimanale, ci sarà sempre un questionario nuovo da riempire settimanalmente a tua disposizione."
-    },
-    {
-      "title": "Posso creare dei profili per i miei figli e compilare i questionari per loro?",
-      "content": "Certamente! Clicca sul tuo nickname in alto a destra. Ti verrà proposta un'interfaccia per aggiungere nuovi profili per i quali potrai inserire i dettagli del quetionario di profilo e dei sintomi."
-    },
-    {
-      "title": "Non voglio più partecipare. Come posso ritirarmi dal progetto?",
-      "content": "È davvero un peccato che tu non voglia più partecipare al progetto ma comprendiamo qualunque ragione tu possa avere. Per ritirarti dal progetto, puoi semplicemente smettere di compilare il questionario settimanale dei sintomi. Puoi anche cancellare definitivamente il tuo account sulla piattaforma visitando la pagina dedicata alla configurazione."
-    },
-    {
-      "title": "Posso modificare le risposte che ho inserito?",
-      "content": "Puoi modificare le tue risposte come preferisci durante la compilazione del questionario. Una volta che hai completato il questionario di profilo, puoi tornare a compilarlo con risposte diverse in qualunque momento. Una volta che hai compilato il questionario dei sintomi, non puoi modificare le risposte che hai appena inserito ma, dopo un'ora, puoi compilare un nuovo questionario con risposte diverse. Terremo conto di queste modifiche in fase di analisi dei dati."
-    },
-    {
-      "title": "Se segnalo i miei sintomi, riceverò una diagnosi alla fine del questionario?",
-      "content": "No, il questionario ti permette di segnalare i tuoi sintomi ma non sostituisce in alcun modo un consulto medico che rimane l'unico modo di ottenere una diagnosi."
-    },
-    {
-      "title": "Soffro di una condizione di salute cronica, quindi spesso ho sintomi che compaiono anche nel questionario: devo segnalare comunque i miei sintomi?",
-      "content": "Alcune condizioni croniche (come ad esempio la sindrome da stanchezza cronica o l'artrite reumatoide) provocano sintomi che possono essere tra quelli elencati nel questionario settimanale. Non è necessario segnalare questi sintomi ogni volta a meno che i sintomi non siano cambiati. Ad esempio, se soffri di reumatismi, seleziona la casella 'Dolore articolare' solo se questi sintomi sono recentemente peggiorati o sono diversi dal solito."
-    },
-    {
-      "title": "Non ho avuto alcun sintomo recentemente. Devo comunque compilare il questionario?",
-      "content": "Si, poiché per avere una fotografia accurata della situazione in Italia è importante sapere anche quante persone sono sane e non hanno sintomi per poter stimare correttamente la velocità di diffusione del virus. Se non hai sintomi, sono sufficienti pochi secondi per completare il questionario."
-    }
   ]
 }

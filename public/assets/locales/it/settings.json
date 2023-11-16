@@ -1,10 +1,10 @@
 {
-  "title": "Impostazioni Influweb",
+  "title": "Impostazioni Stell-ARI",
   "account": {
     "title": "Impostazioni dell'account",
     "email": {
       "title": "Indirizzo e-mail",
-      "info": "Vuoi utilizzare un indirizzo e-mail diverso? Modifica il tuo indirizzo email facendo clic sul pulsante in basso. Nota: non puoi accedere nuovamente a Influweb.org finché non hai confermato l'indirizzo email."
+      "info": "Vuoi utilizzare un indirizzo e-mail diverso? Modifica il tuo indirizzo email facendo clic sul pulsante in basso. Nota: non puoi accedere nuovamente finché non avrai confermato il nuovo indirizzo email."
     },
     "password": {
       "title": "Password",
@@ -35,20 +35,20 @@
     }
   },
   "deletion": {
-    "title": "Cancellare iscrizione a Influweb / revoca il consenso",
-    "warning": "Se annulli l'iscrizione a Influweb / revochi il consenso, i dati del tuo account verranno eliminati.",
+    "title": "Cancellare iscrizione a Stell-ARI / revoca il consenso",
+    "warning": "Se annulli l'iscrizione a Stell-ARI / revochi il consenso, i dati del tuo account verranno eliminati.",
     "deleteBtn": "Revoca iscrizione"
   },
   "references": {
     "title": "Hai bisogno di assistenza?",
     "faqLink": "FAQ",
     "privacyStatementLink": "Informativa sulla privacy",
-    "contactLink": "Contatta Influweb"
+    "contactLink": "Contatta il team Stell-ARI"
   },
   "systemInfo": {
     "title": "Informazioni di sistema",
     "appNameLabel": "Nome applicazione",
-    "appName": "Influweb",
+    "appName": "Stell-ARI",
     "versionLabel": "Versione",
     "browserNameLabel": "Nome browser",
     "browserVersionLabel": "Versione del browser"

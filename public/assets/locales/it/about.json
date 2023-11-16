@@ -1,15 +1,9 @@
 {
-  "title": "Il progetto Influweb",
+  "title": "Il progetto Stell-ARI",
   "signupCard": {
     "imageAlt": "Immagine partecipa",
-    "title": "Partecipa",
-    "body": "Aiutaci a tenere d'occhio la diffusione del coronavirus e dell'influenza. Segnalaci settimanalmente se stai bene o se hai qualche sintomo.",
+    "title": "Partecipa a Stell-ARI",
+    "body": "Registrati alla piattaforma per partecipare al progetto Stell-ARI.",
     "actionLabel": "Registrati"
-  },
-  "surveyCard": {
-    "imageAlt": "Segnala ora!",
-    "title": "Segnala ora!",
-    "body": "Segnala se hai qualche sintomo.",
-    "actionLabel": "Questionari"
   }
 }

@@ -24,36 +24,12 @@
     },
     {
       "columnKey": "about",
+      "classNameOverride": "col-12 col-sm-10 col-md-8 col-lg-4 col-xl-3 mt-3 text-white ms-lg-auto",
       "items": [
         {
           "type": "internal",
           "itemKey": "privacy",
           "value": "/privacy"
-        },
-        {
-          "type": "internal",
-          "itemKey": "disclaimer",
-          "value": "/disclaimer"
-        },
-        {
-          "type": "internal",
-          "itemKey": "accessibility",
-          "value": "/accessibility"
-        }
-      ]
-    },
-    {
-      "columnKey": "languages",
-      "items": [
-        {
-          "type": "language",
-          "itemKey": "it",
-          "value": "it"
-        },
-        {
-          "type": "language",
-          "itemKey": "en",
-          "value": "en"
         }
       ]
     }

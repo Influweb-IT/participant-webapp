@@ -6,7 +6,7 @@
       "success": "Successo! Il tuo indirizzo email è stato confermato. \n\n Accedi ora.",
       "btn": {
         "successWithAuth": "Home",
-        "successWithoutAuth": "Login",
+        "successWithoutAuth": "Accedi",
         "errorWithAuth": "Home",
         "errorWithoutAuth": "Vai al login"
       }
@@ -41,7 +41,7 @@
   "invitation": {
     "title": "Benvenuto!",
     "content": {
-      "info": "## Benvenuto! \n\n Prima di iniziare a utilizzare il sistema, devi impostare una password per il tuo nuovo profilo Influweb.",
+      "info": "## Benvenuto! \n\n Prima di iniziare a utilizzare il sistema, devi impostare una password per il tuo nuovo profilo Stell-ARI.",
       "emailLabel": "E-mail",
       "emailPlaceholder": "Inserisci E-mail",
       "newPasswordLabel": "Password",

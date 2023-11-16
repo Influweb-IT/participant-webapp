@@ -118,32 +118,6 @@
       ]
     },
     {
-      "path": "/results",
-      "pageKey": "results",
-      "rows": [
-        {
-          "key": "contentRow",
-          "containerClassName": "my-3 min-vh-60",
-          "columns": [
-            {
-              "key": "contentCol",
-              "className": "col-12 col-lg-8",
-              "items": [
-                {
-                  "itemKey": "results",
-                  "config": {
-                    "type": "markdown",
-                    "markdownUrl": "markdowns/results_template.md",
-                    "flavor": "chart-renderer"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "path": "/home",
       "hideWhen": "unauth",
       "pageKey": "landing",
@@ -211,11 +185,6 @@
                     "type": "linkList",
                     "links": [
                       {
-                        "linkKey": "resultsLink",
-                        "type": "internal",
-                        "value": "/results"
-                      },
-                      {
                         "linkKey": "aboutLink",
                         "type": "internal",
                         "value": "/about"
@@ -237,11 +206,6 @@
                         "linkKey": "communicationSettings",
                         "type": "dialog",
                         "value": "changeNotifications"
-                      },
-                      {
-                        "linkKey": "languageSettings",
-                        "type": "dialog",
-                        "value": "changeLanguage"
                       }
                     ]
                   }
@@ -550,84 +514,6 @@
                   "config": {
                     "type": "markdown",
                     "markdownUrl": "/consent/study.md"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "/accessibility",
-      "pageKey": "accessibility",
-      "rows": [
-        {
-          "key": "content",
-          "containerClassName": "my-3 min-vh-60",
-          "columns": [
-            {
-              "key": "pCol",
-              "className": "col-12 col-sm-10 col-md-8",
-              "items": [
-                {
-                  "itemKey": "accessibility",
-                  "className": "",
-                  "config": {
-                    "type": "markdown",
-                    "markdownUrl": "/markdowns/accessibility.md"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "/disclaimer",
-      "pageKey": "disclaimer",
-      "rows": [
-        {
-          "key": "content",
-          "containerClassName": "my-3 min-vh-60",
-          "columns": [
-            {
-              "key": "pCol",
-              "className": "col-12 col-sm-10 col-md-8",
-              "items": [
-                {
-                  "itemKey": "disclaimer",
-                  "className": "",
-                  "config": {
-                    "type": "markdown",
-                    "markdownUrl": "/markdowns/disclaimer.md"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "/info",
-      "pageKey": "info",
-      "rows": [
-        {
-          "key": "content",
-          "containerClassName": "my-3 min-vh-60",
-          "columns": [
-            {
-              "key": "pCol",
-              "className": "col-12 col-sm-10 col-md-8",
-              "items": [
-                {
-                  "itemKey": "info",
-                  "className": "",
-                  "config": {
-                    "type": "markdown",
-                    "markdownUrl": "/markdowns/info.md"
                   }
                 }
               ]

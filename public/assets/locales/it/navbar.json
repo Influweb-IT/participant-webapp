@@ -1,11 +1,9 @@
 {
   "home": "Home",
-  "authhome": "My Influweb",
-  "results": "Risultati",
-  "about": "Il progetto StellARI",
+  "authhome": "Il mio Stell-ARI",
+  "about": "Il progetto Stell-ARI",
   "faq": "FAQ",
-  "news": "News",
-  "login": "Entra",
+  "login": "Accedi",
   "signup": "Registrati",
   "rightMenu": {
     "settings": "Configurazione",

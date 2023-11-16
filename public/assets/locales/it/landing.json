@@ -1,7 +1,7 @@
 {
-  "title": "StellARI",
+  "title": "Stell-ARI",
   "loginCard": {
-    "title": "Login",
+    "title": "Accedi",
     "info": "",
     "emailInputLabel": "Email",
     "emailInputPlaceholder": "Inserisci Email",
@@ -15,22 +15,16 @@
   "logoCredits": {
     "title": "I nostri sostenitori"
   },
-  "currentResultCard": {
-    "imageAlt": "Immagine dei risultati aggiornati",
-    "title": "Risultati aggiornati",
-    "body": "Influweb ha lo scopo di studiare lo stato di salute dei cittadini italiani. Ecco tutti i risultati ottenuti grazie ai dati raccolti con l'aiuto dei nostri volontari",
-    "actionLabel": "Vai ai risultati"
-  },
   "signupCard": {
     "imageAlt": "Immagine partecipa",
-    "title": "Partecipa",
-    "body": "Aiutaci a tenere d'occhio la diffusione del coronavirus e dell'influenza. Segnalaci settimanalmente se stai bene o se hai qualche sintomo.",
+    "title": "Partecipa a Stell-ARI",
+    "body": "Registrati alla piattaforma per partecipare al progetto Stell-ARI.",
     "actionLabel": "Registrati"
   },
   "aboutCard": {
-    "imageAlt": "Informazioni sull'immagine Influweb",
-    "title": "Informazioni su StellARI",
-    "body": "Con Influweb monitoriamo la diffusione dei sintomi in tutta Italia. È uno degli strumenti che il team di ricerca utilizza per monitorare la diffusione del virus.",
+    "imageAlt": "Informazioni Stell-ARI",
+    "title": "Informazioni su Stell-ARI",
+    "body": "Il nostro obiettivo è studiare la diffusione delle malattie respiratorie in piccole comunità.",
     "actionLabel": "Per saperne di più"
   },
   "infoCard": {
@@ -42,7 +36,7 @@
   "references": {
     "title": "Leggi di più",
     "faqLink": "FAQ",
-    "aboutLink": "Informazioni su Influweb",
+    "aboutLink": "Informazioni su Stell-ARI",
     "resultsLink": "Risultati"
   },
   "settingsReferences": {
@@ -69,7 +63,7 @@
     }
   },
   "teaserImage": {
-    "title": "Benvenuto in StellARI",
-    "content": "Questa piattaforma è dedicata ai partecipanti allo studio StellARI, iscriviti e compila i tuoi questionari!"
+    "title": "Benvenuto in Stell-ARI",
+    "content": "Benvenuti a Stell-ARI - Progetto di Sorveglianza Integrata per la Prevenzione delle Infezioni Respiratorie Acute"
   }
 }

@@ -1,13 +1,13 @@
 {
-  "title": "Influweb",
+  "title": "Stell-ARI",
   "topImage": {
     "title": "",
-    "content": "Partecipando a Influweb contribuisci a creare la mappa della diffusione delle malattie infettive, permettendoci di vedere rapidamente la situazione attuale in Italia"
+    "content": "Partecipando a Stell-ARI contribuisci a studiare la diffusione delle malattie respiratorie in piccole comunità"
   },
   "requiredSurveys": {
     "title": "Questionari da completare",
     "info": "I diversi questionari per lo studio possono essere trovati qui.",
-    "successMsg": "Grazie! Hai completato tutti i questionari. Speriamo di avere tue notizie la prossima settimana. Nel caso in cui desideri fornire nuove informazioni prima, puoi ripetere il questionario tra poche ore."
+    "successMsg": "Grazie! Hai completato tutti i questionari. Nel caso in cui desideri fornire nuove informazioni, potrai ripetere il questionario dei sintomi tra poche ore."
   },
   "optionalSurveys": {
     "title": "Cambia i questionari di profilo",
@@ -19,7 +19,7 @@
     "title": "Vedi anche",
     "faqLink": "Domande frequenti",
     "resultsLink": "Risultati attuali",
-    "aboutLink": "Informazioni su Influweb"
+    "aboutLink": "Informazioni su Stell-ARI"
   },
   "quickSettingsBox": {
     "title": "Impostazioni",
