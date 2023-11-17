@@ -6,8 +6,14 @@ import {
   inviteToPreselezioneStudy,
 } from "../thunks/preselezioneStudyThunks";
 
+export type StudyStatus =
+  | "unassigned"
+  | "pending_invitation"
+  | "assigned"
+  | "completed";
+
 export type StudyStatusState = {
-  status: "unassigned" | "pending_invitation" | "assigned" | "completed";
+  status: StudyStatus;
 };
 
 const initialState: StudyStatusState = {
@@ -20,7 +26,6 @@ export const preselezioneStudyReducer = createReducer(
     builder.addCase(
       initializePreselezioneStudy.fulfilled,
       (state = initialState, action) => {
-        // @ts-ignore
         state.status = action.payload;
       }
     );
@@ -43,7 +48,7 @@ export const preselezioneStudyReducer = createReducer(
 
     builder.addCase(
       inviteToPreselezioneStudy.fulfilled,
-      (state = initialState, action) => {
+      (state = initialState) => {
         state.status = "assigned";
       }
     );

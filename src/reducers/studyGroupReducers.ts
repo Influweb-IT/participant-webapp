@@ -6,9 +6,11 @@ import {
 } from "../thunks/studyGroupThunks";
 import { coreReduxActions } from "@influenzanet/case-web-app-core";
 
+type StudyGroupStatus = "unassigned" | "pending_invitation" | "assigned";
+
 export type StudyGroup = {
   group: "operatore" | "genitore" | undefined;
-  status: "unassigned" | "pending_invitation" | "assigned";
+  status: StudyGroupStatus;
 };
 
 const initialState: StudyGroup = {
@@ -22,18 +24,17 @@ export const studyGroupReducer = createReducer(initialState, (builder) => {
       return;
     }
 
-    state.group = action.payload;
+    state.group = action.payload as "operatore" | "genitore" | undefined;
     state.status =
       action.payload === "operatore" ? "pending_invitation" : "assigned";
   });
 
   builder.addCase(initializeStudyGroup.fulfilled, (state, action) => {
-    state.group = action.payload.group;
-    // @ts-ignore
+    state.group = action.payload.group as "operatore" | "genitore" | undefined;
     state.status = action.payload.status;
   });
 
-  builder.addCase(inviteToOperatoreStudy.fulfilled, (state, action) => {
+  builder.addCase(inviteToOperatoreStudy.fulfilled, (state) => {
     state.status = "assigned";
   });
 

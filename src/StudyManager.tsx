@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { InfluwebState } from "./utils/ConfigureState";
 import {
@@ -12,7 +12,6 @@ import {
   inviteToOperatoreStudy,
 } from "./thunks/studyGroupThunks";
 import { inviteProfileToBambinoStudy } from "./thunks/bambinoStudyThunks";
-import { coreReduxActions } from "@influenzanet/case-web-app-core";
 
 const StudyManager: React.FC = () => {
   const dispatch = useDispatch();
@@ -31,28 +30,33 @@ const StudyManager: React.FC = () => {
 
   // preselezizone study
   useEffect(() => {
-    if (preselezioneStudyStatus === "unassigned" && currentUser) {
+    if (preselezioneStudyStatus === "unassigned" && currentUser.id) {
       dispatch(initializePreselezioneStudy(currentUser));
     }
 
-    if (preselezioneStudyStatus === "pending_invitation") {
+    if (preselezioneStudyStatus === "pending_invitation" && currentUser.id) {
       dispatch(inviteToPreselezioneStudy(currentUser));
     }
 
-    if (preselezioneStudyStatus === "assigned" && !surveyMode) {
+    if (
+      preselezioneStudyStatus === "assigned" &&
+      !surveyMode &&
+      currentUser.id
+    ) {
       dispatch(checkUserGroup(currentUser));
     }
   }, [dispatch, currentUser, preselezioneStudyStatus, surveyMode]);
 
   // study group
   useEffect(() => {
-    if (!studyGroup.group) {
+    if (!studyGroup.group && currentUser.id) {
       dispatch(initializeStudyGroup(currentUser));
     }
 
     if (
       studyGroup.group === "operatore" &&
-      studyGroup.status === "pending_invitation"
+      studyGroup.status === "pending_invitation" &&
+      currentUser.id
     ) {
       dispatch(inviteToOperatoreStudy(currentUser));
     }
@@ -63,30 +67,14 @@ const StudyManager: React.FC = () => {
     if (
       currentUser.id &&
       studyGroup.group === "genitore" &&
-      studyGroup.status === "assigned"
+      studyGroup.status === "assigned" &&
+      currentUser.id
     ) {
       dispatch(inviteProfileToBambinoStudy(currentUser));
     }
   }, [dispatch, currentUser, studyGroup.group, studyGroup.status]);
 
-  // TODO remove and properly fix the problem in case web app core
-
-  useEffect(() => {
-    if (
-      preselezioneStudyStatus === "assigned" ||
-      studyGroup.status === "assigned"
-    ) {
-      dispatch(coreReduxActions.userActions.setUser(currentUser));
-    }
-  }, [dispatch, currentUser, preselezioneStudyStatus, studyGroup]);
-
-  const instance = useRef<HTMLDivElement>(null);
-
-  return (
-    <>
-      <div ref={instance} />
-    </>
-  );
+  return <></>;
 };
 
 export default StudyManager;

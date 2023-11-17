@@ -1,31 +1,27 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { User } from "@influenzanet/case-web-app-core/build/api/types/user";
 import { getMainProfileId } from "../utils/helpers";
-import { studyAPI } from "@influenzanet/case-web-app-core";
+import { coreReduxThunks, studyAPI } from "@influenzanet/case-web-app-core";
 import { StudyInfoForUser } from "@influenzanet/case-web-ui/build/types/studyAPI";
-
-// TODO add action payload typing
-
-// TODO add initialization thunk
+import { StudyGroup } from "../reducers/studyGroupReducers";
 
 export const inviteToOperatoreStudy = createAsyncThunk(
-  "studyGroup/invitedToOperatoreStudy",
-  async (currentUser: User) => {
+  "studyGroup/inviteToOperatoreStudy",
+  async (currentUser: User, { dispatch }) => {
     const mainProfileId = getMainProfileId(currentUser);
     if (mainProfileId) {
-      const response = await studyAPI.enterStudyReq(
-        "stellari_operatore",
-        mainProfileId
+      await dispatch(
+        coreReduxThunks.enterStudy({
+          profileId: mainProfileId,
+          studyKey: "stellari_operatore",
+        })
       );
-      return response.data;
     }
-
-    throw new Error("main profile not found");
   }
 );
 
-export const initializeStudyGroup = createAsyncThunk(
-  "studyGroup/inizializedStudyGroup",
+export const initializeStudyGroup = createAsyncThunk<StudyGroup, User>(
+  "studyGroup/inizializeStudyGroup",
   async (currentUser: User) => {
     if (!currentUser.id) {
       return { group: undefined, status: "unassigned" };
