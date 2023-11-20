@@ -21,8 +21,11 @@ export const ProfileSettingsBox: React.FC = (props) => {
           </div>
           <div className="card-body">
             <p className="card-text">
-              Da qui puoi gestire facilmente i profili degli alunni per i quali
-              compilerai i questionari. Clicca sul pulsante sotto per iniziare!
+              Per visualizzare il questionario basale per il bambino/a, è
+              necessario creare un profilo attraverso "Gestisci profili",
+              cliccare su "Nuovo profilo per il bambino/a" a quel punto è
+              possibile creare uno o più profili per i bambini inserendo il loro
+              nome e cliccando sul tasto "Crea un profilo per il bambino/a"
             </p>
             <EditBtn
               onClick={() =>
