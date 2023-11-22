@@ -4,55 +4,55 @@ import { User } from "@influenzanet/case-web-app-core/build/api/types/user";
 import { StudyInfoForUser } from "@influenzanet/case-web-ui/build/types/studyAPI";
 import { getMainProfileId } from "../utils/helpers";
 import { StudyStatus } from "../reducers/preselezioneStudyReducers";
-
-// TODO add action payload typing
-
-// TODO use simplified definition
-
-// TODO clean logic
+import {
+  PRESELEZIONE_REPORT,
+  PRESELEZIONE_STUDY,
+  STATUS_ASSIGNED,
+  STATUS_COMPLETED,
+  STATUS_PENDING_INVITATION,
+  STATUS_UNASSIGNED,
+} from "../constant/stellariStudies";
 
 export const initializePreselezioneStudy = createAsyncThunk<StudyStatus, User>(
   "preselezioneStudy/initialize",
   async (currentUser: User) => {
     if (!currentUser.id) {
-      return "unassigned";
+      return STATUS_UNASSIGNED;
     }
 
     const response = await studyAPI.getStudiesForUserReq();
 
-    const studyInfoForPreselezioneStudy: StudyInfoForUser =
-      response.data.studies?.find(
-        (study: StudyInfoForUser) => study.key === "stellari_preselezione"
-      );
+    const preselezioneStudyInfo: StudyInfoForUser = response.data.studies?.find(
+      (study: StudyInfoForUser) => study.key === PRESELEZIONE_STUDY
+    );
 
-    if (!studyInfoForPreselezioneStudy) {
-      return "pending_invitation";
+    if (!preselezioneStudyInfo) {
+      return STATUS_PENDING_INVITATION;
     }
 
     const mainProfileId = getMainProfileId(currentUser);
 
     if (!mainProfileId) {
-      return "unassigned";
+      return STATUS_UNASSIGNED;
     }
 
-    let studyStatus: StudyStatus =
-      studyInfoForPreselezioneStudy.profileIds.some(
-        (profileId) => profileId === mainProfileId
-      )
-        ? "assigned"
-        : currentUser.account.accountConfirmedAt > 0
-        ? "pending_invitation"
-        : "unassigned";
+    let studyStatus: StudyStatus = preselezioneStudyInfo.profileIds.some(
+      (profileId) => profileId === mainProfileId
+    )
+      ? STATUS_ASSIGNED
+      : currentUser.account.accountConfirmedAt > 0
+      ? STATUS_PENDING_INVITATION
+      : STATUS_UNASSIGNED;
 
-    if (studyStatus === "assigned") {
+    if (studyStatus === STATUS_ASSIGNED) {
       const repResponse = await studyAPI.getReportsForUser(
-        ["stellari_preselezione"],
+        [PRESELEZIONE_STUDY],
         [mainProfileId],
-        "preselezione"
+        PRESELEZIONE_REPORT
       );
 
       studyStatus =
-        repResponse.data.reports?.length > 0 ? "completed" : studyStatus;
+        repResponse.data.reports?.length > 0 ? STATUS_COMPLETED : studyStatus;
     }
 
     return studyStatus;
@@ -67,7 +67,7 @@ export const inviteToPreselezioneStudy = createAsyncThunk(
       await dispatch(
         coreReduxThunks.enterStudyThunk({
           profileId: mainProfileId,
-          studyKey: "stellari_preselezione",
+          studyKey: PRESELEZIONE_STUDY,
         })
       );
     }
@@ -85,9 +85,9 @@ export const checkUserGroup = createAsyncThunk<string | undefined, User>(
     }
 
     const response = await studyAPI.getReportsForUser(
-      ["stellari_preselezione"],
+      [PRESELEZIONE_STUDY],
       [mainProfileId],
-      "preselezione"
+      PRESELEZIONE_REPORT
     );
 
     if (!response.data?.reports) {

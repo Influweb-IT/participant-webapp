@@ -11,7 +11,7 @@ import {
   initializeStudyGroup,
   inviteToOperatoreStudy,
 } from "./thunks/studyGroupThunks";
-import { inviteProfileToBambinoStudy } from "./thunks/bambinoStudyThunks";
+import { inviteProfilesToBambinoStudy } from "./thunks/bambinoStudyThunks";
 
 const StudyManager: React.FC = () => {
   const dispatch = useDispatch();
@@ -63,14 +63,20 @@ const StudyManager: React.FC = () => {
   }, [dispatch, studyGroup, currentUser]);
 
   // profile
+  /**
+   *
+   * we could listen specifically to profiles but since a profile exist
+   * before even the currentUser.id (this is the case during registration)
+   * we are forced to listen to the currentUser and since every time a new
+   * profile is added the whole currentUser is set there would make no difference
+   */
   useEffect(() => {
     if (
       currentUser.id &&
       studyGroup.group === "genitore" &&
-      studyGroup.status === "assigned" &&
-      currentUser.id
+      studyGroup.status === "assigned"
     ) {
-      dispatch(inviteProfileToBambinoStudy(currentUser));
+      dispatch(inviteProfilesToBambinoStudy(currentUser));
     }
   }, [dispatch, currentUser, studyGroup.group, studyGroup.status]);
 

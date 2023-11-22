@@ -5,17 +5,29 @@ import {
   inviteToOperatoreStudy,
 } from "../thunks/studyGroupThunks";
 import { coreReduxActions } from "@influenzanet/case-web-app-core";
+import {
+  GENITORE_GROUP,
+  OPERATORE_GROUP,
+  STATUS_ASSIGNED,
+  STATUS_PENDING_INVITATION,
+  STATUS_UNASSIGNED,
+} from "../constant/stellariStudies";
 
-type StudyGroupStatus = "unassigned" | "pending_invitation" | "assigned";
+type StudyGroupStatus =
+  | typeof STATUS_UNASSIGNED
+  | typeof STATUS_PENDING_INVITATION
+  | typeof STATUS_ASSIGNED;
+
+type Group = typeof OPERATORE_GROUP | typeof GENITORE_GROUP | undefined;
 
 export type StudyGroup = {
-  group: "operatore" | "genitore" | undefined;
+  group: Group;
   status: StudyGroupStatus;
 };
 
 const initialState: StudyGroup = {
   group: undefined,
-  status: "unassigned",
+  status: STATUS_UNASSIGNED,
 };
 
 export const studyGroupReducer = createReducer(initialState, (builder) => {
@@ -24,18 +36,20 @@ export const studyGroupReducer = createReducer(initialState, (builder) => {
       return;
     }
 
-    state.group = action.payload as "operatore" | "genitore" | undefined;
+    state.group = action.payload as Group;
     state.status =
-      action.payload === "operatore" ? "pending_invitation" : "assigned";
+      action.payload === OPERATORE_GROUP
+        ? STATUS_PENDING_INVITATION
+        : STATUS_ASSIGNED;
   });
 
   builder.addCase(initializeStudyGroup.fulfilled, (state, action) => {
-    state.group = action.payload.group as "operatore" | "genitore" | undefined;
+    state.group = action.payload.group as Group;
     state.status = action.payload.status;
   });
 
   builder.addCase(inviteToOperatoreStudy.fulfilled, (state) => {
-    state.status = "assigned";
+    state.status = STATUS_ASSIGNED;
   });
 
   builder.addCase(coreReduxActions.userActions.reset, (state, action) => {

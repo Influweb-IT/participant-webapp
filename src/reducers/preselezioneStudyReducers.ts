@@ -5,19 +5,25 @@ import {
   initializePreselezioneStudy,
   inviteToPreselezioneStudy,
 } from "../thunks/preselezioneStudyThunks";
+import {
+  STATUS_ASSIGNED,
+  STATUS_COMPLETED,
+  STATUS_PENDING_INVITATION,
+  STATUS_UNASSIGNED,
+} from "../constant/stellariStudies";
 
 export type StudyStatus =
-  | "unassigned"
-  | "pending_invitation"
-  | "assigned"
-  | "completed";
+  | typeof STATUS_UNASSIGNED
+  | typeof STATUS_PENDING_INVITATION
+  | typeof STATUS_ASSIGNED
+  | typeof STATUS_COMPLETED;
 
 export type StudyStatusState = {
   status: StudyStatus;
 };
 
 const initialState: StudyStatusState = {
-  status: "unassigned",
+  status: STATUS_UNASSIGNED,
 };
 
 export const preselezioneStudyReducer = createReducer(
@@ -42,19 +48,19 @@ export const preselezioneStudyReducer = createReducer(
     builder.addCase(
       coreReduxActions.signupActions.contactVerified,
       (state = initialState) => {
-        state.status = "pending_invitation";
+        state.status = STATUS_PENDING_INVITATION;
       }
     );
 
     builder.addCase(
       inviteToPreselezioneStudy.fulfilled,
       (state = initialState) => {
-        state.status = "assigned";
+        state.status = STATUS_ASSIGNED;
       }
     );
 
     builder.addCase(inviteToPreselezioneStudy.rejected, (state, action) => {
-      state.status = "pending_invitation";
+      state.status = STATUS_PENDING_INVITATION;
 
       // same as above
       console.log(action.payload);
@@ -69,7 +75,7 @@ export const preselezioneStudyReducer = createReducer(
         return;
       }
 
-      state.status = "completed";
+      state.status = STATUS_COMPLETED;
     });
 
     builder.addDefaultCase((state = initialState) => {
