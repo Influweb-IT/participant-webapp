@@ -20,18 +20,6 @@ import { Extension } from "@influenzanet/case-web-app-core/build/AppCore";
 import { ProfileSettingsBox } from "./extensions/ProfileSettingsBox";
 
 const App: React.FC = () => {
-  // const profileEnable = useSelector(
-  //   (state: any) => state.profile.profileEnabled
-  // );
-
-  // const pc: any = pagesConfig;
-
-  // pc.pages
-  //   .find((page: any) => page.path === "/settings")
-  //   .rows.find(
-  //     (row: any) => row.key === "mainRow"
-  //   ).columns[0].items[0].config.hideProfileSettings = !profileEnable;
-
   const { i18n } = useTranslation();
 
   const dateLocales = [{ code: "it", locale: it, format: "dd/MM/yyyy" }];

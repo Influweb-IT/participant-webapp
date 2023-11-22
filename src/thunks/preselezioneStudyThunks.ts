@@ -65,7 +65,7 @@ export const inviteToPreselezioneStudy = createAsyncThunk(
     const mainProfileId = getMainProfileId(currentUser);
     if (mainProfileId) {
       await dispatch(
-        coreReduxThunks.enterStudy({
+        coreReduxThunks.enterStudyThunk({
           profileId: mainProfileId,
           studyKey: "stellari_preselezione",
         })

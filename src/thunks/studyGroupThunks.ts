@@ -11,7 +11,7 @@ export const inviteToOperatoreStudy = createAsyncThunk(
     const mainProfileId = getMainProfileId(currentUser);
     if (mainProfileId) {
       await dispatch(
-        coreReduxThunks.enterStudy({
+        coreReduxThunks.enterStudyThunk({
           profileId: mainProfileId,
           studyKey: "stellari_operatore",
         })

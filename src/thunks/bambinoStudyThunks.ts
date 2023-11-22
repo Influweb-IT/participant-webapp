@@ -17,7 +17,7 @@ export const inviteProfileToBambinoStudy = createAsyncThunk(
       }
 
       await dispatch(
-        coreReduxThunks.enterStudy({
+        coreReduxThunks.enterStudyThunk({
           profileId: profile.id,
           studyKey: "stellari_bambino",
         })
