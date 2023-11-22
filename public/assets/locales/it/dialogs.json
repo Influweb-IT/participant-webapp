@@ -64,7 +64,7 @@
   },
   "signupSuccess": {
     "title": "Benvenuto!",
-    "successMsg": "Sei quasi iscritto! \n\n Prima conferma il tuo indirizzo e-mail facendo clic sul link nell'e-mail di conferma che ti abbiamo inviato \n Se non riesci a trovare l'e-mail, prima controlla la tua cartella spam. Puoi anche richiedere una nuova email qui sotto.",
+    "successMsg": "Sei quasi iscritto! \n\n Prima conferma il tuo indirizzo e-mail facendo clic sul link nell'e-mail di conferma che ti abbiamo inviato. \n\n Se non riesci a trovare l'e-mail, prima controlla la tua cartella spam. Puoi anche richiedere una nuova email qui sotto.",
     "emailSentMsg": "L'e-mail è stata inviata",
     "msgForVerifiedAccount": "Se hai verificato il tuo account puoi usare il bottone qui sotto per ricaricare la pagina",
     "reloadUser": "Controlla verifica",
