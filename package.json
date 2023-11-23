@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/open-sans": "^4.2.1",
-    "@influenzanet/case-web-app-core": "2.7.5-staging.4",
+    "@influenzanet/case-web-app-core": "2.7.5-staging.5",
     "@influenzanet/case-web-ui": "1.15.0-staging.1",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
