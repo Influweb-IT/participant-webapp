@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { InfluwebState } from "./utils/ConfigureState";
 import {
@@ -12,11 +12,34 @@ import {
   inviteToOperatoreStudy,
 } from "./thunks/studyGroupThunks";
 import { inviteProfilesToBambinoStudy } from "./thunks/bambinoStudyThunks";
+import {
+  GENITORE_GROUP,
+  OPERATORE_GROUP,
+  STATUS_ASSIGNED,
+  STATUS_COMPLETED,
+  STATUS_PENDING_INVITATION,
+  STATUS_UNASSIGNED,
+} from "./constant/stellariStudies";
+import { selectMainProfileId } from "./reducers/preselezioneStudyReducers";
 
 const StudyManager: React.FC = () => {
   const dispatch = useDispatch();
 
-  const currentUser = useSelector((state: RootState) => state.user.currentUser);
+  const currentUserId = useSelector(
+    (state: RootState) => state.user.currentUser.id
+  );
+
+  const mainProfileId = useSelector(selectMainProfileId);
+
+  const prevProfilesLength = useRef(-1);
+
+  const accountConfirmedAt = useSelector(
+    (state: RootState) => state.user.currentUser.account.accountConfirmedAt
+  );
+
+  const profiles = useSelector(
+    (state: RootState) => state.user.currentUser.profiles
+  );
 
   const preselezioneStudyStatus = useSelector(
     (state: InfluwebState) => state.preselezioneStudy.status
@@ -30,57 +53,82 @@ const StudyManager: React.FC = () => {
 
   // preselezizone study
   useEffect(() => {
-    if (preselezioneStudyStatus === "unassigned" && currentUser.id) {
-      dispatch(initializePreselezioneStudy(currentUser));
-    }
-
-    if (preselezioneStudyStatus === "pending_invitation" && currentUser.id) {
-      dispatch(inviteToPreselezioneStudy(currentUser));
+    if (preselezioneStudyStatus === STATUS_UNASSIGNED && currentUserId) {
+      dispatch(
+        initializePreselezioneStudy({ mainProfileId, accountConfirmedAt })
+      );
     }
 
     if (
-      preselezioneStudyStatus === "assigned" &&
-      !surveyMode &&
-      currentUser.id
+      preselezioneStudyStatus === STATUS_PENDING_INVITATION &&
+      currentUserId
     ) {
-      dispatch(checkUserGroup(currentUser));
+      dispatch(inviteToPreselezioneStudy(mainProfileId));
     }
-  }, [dispatch, currentUser, preselezioneStudyStatus, surveyMode]);
+  }, [
+    dispatch,
+    preselezioneStudyStatus,
+    currentUserId,
+    accountConfirmedAt,
+    mainProfileId,
+  ]);
+
+  useEffect(() => {
+    if (
+      preselezioneStudyStatus === STATUS_ASSIGNED &&
+      !surveyMode &&
+      currentUserId
+    ) {
+      dispatch(checkUserGroup(mainProfileId));
+    }
+  }, [
+    dispatch,
+    currentUserId,
+    preselezioneStudyStatus,
+    surveyMode,
+    mainProfileId,
+  ]);
 
   // study group
   useEffect(() => {
-    if (!studyGroup.group && currentUser.id) {
-      dispatch(initializeStudyGroup(currentUser));
+    if (
+      !studyGroup.group &&
+      currentUserId &&
+      preselezioneStudyStatus === STATUS_COMPLETED
+    ) {
+      dispatch(initializeStudyGroup(mainProfileId));
     }
 
     if (
-      studyGroup.group === "operatore" &&
-      studyGroup.status === "pending_invitation" &&
-      currentUser.id
+      studyGroup.group === OPERATORE_GROUP &&
+      studyGroup.status === STATUS_PENDING_INVITATION &&
+      currentUserId
     ) {
-      dispatch(inviteToOperatoreStudy(currentUser));
+      dispatch(inviteToOperatoreStudy(mainProfileId));
     }
-  }, [dispatch, studyGroup, currentUser]);
+  }, [
+    dispatch,
+    studyGroup.group,
+    studyGroup.status,
+    currentUserId,
+    preselezioneStudyStatus,
+    mainProfileId,
+  ]);
 
   // profile
-  /**
-   *
-   * we could listen specifically to profiles but since a profile exist
-   * before even the currentUser.id (this is the case during registration)
-   * we are forced to listen to the currentUser and since every time a new
-   * profile is added the whole currentUser is set there would make no difference
-   */
   useEffect(() => {
     if (
-      currentUser.id &&
-      studyGroup.group === "genitore" &&
-      studyGroup.status === "assigned"
+      profiles.length > 1 &&
+      profiles.length !== prevProfilesLength.current &&
+      studyGroup.group === GENITORE_GROUP &&
+      studyGroup.status === STATUS_ASSIGNED
     ) {
-      dispatch(inviteProfilesToBambinoStudy(currentUser));
+      prevProfilesLength.current = profiles.length;
+      dispatch(inviteProfilesToBambinoStudy(profiles));
     }
-  }, [dispatch, currentUser, studyGroup.group, studyGroup.status]);
+  }, [dispatch, profiles, studyGroup.group, studyGroup.status]);
 
-  return <></>;
+  return null;
 };
 
 export default StudyManager;
