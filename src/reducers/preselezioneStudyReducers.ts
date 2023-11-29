@@ -1,4 +1,4 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createReducer, createSelector } from "@reduxjs/toolkit";
 import { coreReduxActions } from "@influenzanet/case-web-app-core";
 import {
   checkUserGroup,
@@ -11,6 +11,7 @@ import {
   STATUS_PENDING_INVITATION,
   STATUS_UNASSIGNED,
 } from "../constant/stellariStudies";
+import { RootState } from "@influenzanet/case-web-app-core/build/store/rootReducer";
 
 export type StudyStatus =
   | typeof STATUS_UNASSIGNED
@@ -25,6 +26,17 @@ export type StudyStatusState = {
 const initialState: StudyStatusState = {
   status: STATUS_UNASSIGNED,
 };
+
+export const selectMainProfileId = createSelector(
+  [(state: RootState) => state.user.currentUser.profiles],
+  (profilesState) => {
+    const mainProfile = profilesState.find(
+      (profile) => profile.mainProfile === true
+    );
+
+    return mainProfile ? mainProfile.id : undefined;
+  }
+);
 
 export const preselezioneStudyReducer = createReducer(
   initialState,

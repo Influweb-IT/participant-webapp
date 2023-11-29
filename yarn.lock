@@ -1482,10 +1482,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.1.tgz#e5211452df060fa8522b55c7b3c0c4d1981cb044"
   integrity sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==
 
-"@influenzanet/case-web-app-core@2.7.5-staging.5":
-  version "2.7.5-staging.5"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.7.5-staging.5.tgz#f43cbc40c22990ffd716297cdb4317ae6028b776"
-  integrity sha512-jqcqvbC3fSi1hziMBKZ0QtO3HpB2q4XcqT7qqSRYf/jcaqIFVXHwmy6S0i3PuHdYFyeDRTYzJfliXo0KQtHqxQ==
+"@influenzanet/case-web-app-core@2.7.5-staging.6":
+  version "2.7.5-staging.6"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.7.5-staging.6.tgz#5f26002824108fcc756f29895e5e09bf2f2ab13d"
+  integrity sha512-2R+gsOt48sdZ9jECng+iISsxnt0iDWQvfcdS1HA+Kz6WaEOHg1tM7RQnj1TVIH+Whb0k7ro9qDJ8y5eNbErlYQ==
 
 "@influenzanet/case-web-ui@1.15.0-staging.1":
   version "1.15.0-staging.1"

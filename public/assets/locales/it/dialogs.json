@@ -31,7 +31,7 @@
   },
   "signup": {
     "title": "Registrati",
-    "info": "Premendo il pulsante **Registrati** accetti di partecipare allo studio promosso dal progetto <a href='http://stellari.influweb.org/study-consent'>Stell-ARI</a>",
+    "info": "Premendo il pulsante **Registrati** accetti di partecipare allo studio promosso dal progetto Stell-ARI",
     "emailInputLabel": "E-mail",
     "emailInputPlaceholder": "Inserisci E-mail",
     "passwordInputLabel": "Password",

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { User } from "@influenzanet/case-web-app-core/build/api/types/user";
+import { Profile } from "@influenzanet/case-web-app-core/build/api/types/user";
 import { coreReduxThunks } from "@influenzanet/case-web-app-core";
 import { BAMBINO_STUDY } from "../constant/stellariStudies";
 
@@ -10,12 +10,12 @@ import { BAMBINO_STUDY } from "../constant/stellariStudies";
  */
 export const inviteProfilesToBambinoStudy = createAsyncThunk(
   "bambinoStudy/invite",
-  async (currentUser: User, { dispatch }) => {
-    if (currentUser.profiles.length === 0) {
+  async (profiles: Profile[], { dispatch }) => {
+    if (profiles.length < 2) {
       return;
     }
 
-    currentUser.profiles.forEach(async (profile) => {
+    profiles.forEach(async (profile) => {
       if (
         profile.mainProfile ||
         (profile.studies && profile.studies.includes(BAMBINO_STUDY))
