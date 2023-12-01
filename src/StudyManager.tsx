@@ -123,9 +123,10 @@ const StudyManager: React.FC = () => {
       studyGroup.group === GENITORE_GROUP &&
       studyGroup.status === STATUS_ASSIGNED
     ) {
-      prevProfilesLength.current = profiles.length;
       dispatch(inviteProfilesToBambinoStudy(profiles));
     }
+
+    prevProfilesLength.current = profiles.length;
   }, [dispatch, profiles, studyGroup.group, studyGroup.status]);
 
   return null;
