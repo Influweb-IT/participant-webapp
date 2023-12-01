@@ -34,55 +34,55 @@ A tal fine ai partecipanti sarà chiesto di svolgere le seguenti
 attività:
 
 -   (Esercente la potestà genitoriale/operatore) Compilazione di
-    > questionari pseudonimizzati con codice identificativo che
-    > impediranno l\'identificazione del partecipante da parte di terzi
-    > soggetti. I questionari saranno somministrati online ai soggetti
-    > partecipanti e al personale delle strutture, per la rilevazione di
-    > sintomi e fattori di rischio individuali. Sarà somministrato un
-    > primo questionario al momento iniziale della ricerca per valutare
-    > la presenza di fattori di rischio relativi al minore/operatore ed
-    > ulteriori questionari in caso di insorgenza di sintomatologia
-    > respiratoria nel minore e operatore. Per i minori, i successivi
-    > questionari saranno compilati dall'esercente la potestà
-    > genitoriale attraverso il portale "STELL-ARI influweb"
-    > (http://stellari.influweb.org), mentre gli operatori li
-    > completeranno autonomamente utilizzando la stessa piattaforma
-    > online.
+    questionari pseudonimizzati con codice identificativo che
+    impediranno l\'identificazione del partecipante da parte di terzi
+    soggetti. I questionari saranno somministrati online ai soggetti
+    partecipanti e al personale delle strutture, per la rilevazione di
+    sintomi e fattori di rischio individuali. Sarà somministrato un
+    primo questionario al momento iniziale della ricerca per valutare
+    la presenza di fattori di rischio relativi al minore/operatore ed
+    ulteriori questionari in caso di insorgenza di sintomatologia
+    respiratoria nel minore e operatore. Per i minori, i successivi
+    questionari saranno compilati dall'esercente la potestà
+    genitoriale attraverso il portale "STELL-ARI influweb"
+    (http://stellari.influweb.org), mentre gli operatori li
+    completeranno autonomamente utilizzando la stessa piattaforma
+    online.
 
 -   (Studente-minore) Indossare sensori di prossimità (dispositivi
-    > prodotti non in serie dall\'azienda Bitmanufaktur, Cambridge UK)
-    > le cui informazioni raccolte saranno memorizzate internamente ai
-    > dispositivi (tag) ed estratte al termine della raccolta dati,
-    > tramite una connessione fisica fra i sensori e i computer degli
-    > operatori. I dati raccolti da ciascun sensore rappresentano le
-    > relazioni di prossimità, temporalmente risolte, fra quel sensore e
-    > gli altri sensori del sistema, insieme alle informazioni sullo
-    > stato di movimento del sensore ottenute attraverso un
-    > accelerometro a bordo del dispositivo. I sensori sono identificati
-    > attraverso pseudonimi numerici, e i dati presenti nella memoria di
-    > ciascun sensore non contengono alcuna associazione fra tali
-    > pseudonimi ed altri identificativi usati nello studio.
+    prodotti non in serie dall\'azienda Bitmanufaktur, Cambridge UK)
+    le cui informazioni raccolte saranno memorizzate internamente ai
+    dispositivi (tag) ed estratte al termine della raccolta dati,
+    tramite una connessione fisica fra i sensori e i computer degli
+    operatori. I dati raccolti da ciascun sensore rappresentano le
+    relazioni di prossimità, temporalmente risolte, fra quel sensore e
+    gli altri sensori del sistema, insieme alle informazioni sullo
+    stato di movimento del sensore ottenute attraverso un
+    accelerometro a bordo del dispositivo. I sensori sono identificati
+    attraverso pseudonimi numerici, e i dati presenti nella memoria di
+    ciascun sensore non contengono alcuna associazione fra tali
+    pseudonimi ed altri identificativi usati nello studio.
 
 -   (Studente-minore/Operatore) Durante il corso dell\'indagine, saranno
-    > identificati eventuali cluster epidemici. Coloro che presentano
-    > sintomi acuti di natura respiratoria saranno sottoposti a tamponi
-    > molecolari per la malattia da COVID-19, nonché per il Virus
-    > Respiratorio Sinciziale, il virus dell\'influenza e adenovirus.
-    > Pertanto, nel caso di sintomi acuti, all\'esercente la potestà
-    > genitoriale sarà richiesto di effettuare un tampone al minore che
-    > presenta i sintomi, e agli operatori per se stessi.
-    > Successivamente, dovranno riportare il codice identificativo,
-    > fornito al momento della registrazione sul portale Influweb, sul
-    > tampone ed allertare un corriere allo scopo incaricato che
-    > provvederà al ritiro a domicilio dei campioni e alla rispettiva
-    > consegna presso il Laboratorio di Igiene e Virologia Ambientale,
-    > Dipartimento di Biologia, Università di Pisa, Via S. Zeno 35/39,
-    > Pisa, dove verranno conservati e analizzati. La procedura di
-    > ritiro e consegna dei tamponi è gratuita. Dal momento che il
-    > Laboratorio di riferimento per le analisi non è accreditato per il
-    > rilascio di referti clinico-diagnostici e che i campioni sono
-    > pseudonimizzati, non sarà possibile fornire il risultato
-    > dell'analisi al singolo partecipante.
+    identificati eventuali cluster epidemici. Coloro che presentano
+    sintomi acuti di natura respiratoria saranno sottoposti a tamponi
+    molecolari per la malattia da COVID-19, nonché per il Virus
+    Respiratorio Sinciziale, il virus dell\'influenza e adenovirus.
+    Pertanto, nel caso di sintomi acuti, all\'esercente la potestà
+    genitoriale sarà richiesto di effettuare un tampone al minore che
+    presenta i sintomi, e agli operatori per se stessi.
+    Successivamente, dovranno riportare il codice identificativo,
+    fornito al momento della registrazione sul portale Influweb, sul
+    tampone ed allertare un corriere allo scopo incaricato che
+    provvederà al ritiro a domicilio dei campioni e alla rispettiva
+    consegna presso il Laboratorio di Igiene e Virologia Ambientale,
+    Dipartimento di Biologia, Università di Pisa, Via S. Zeno 35/39,
+    Pisa, dove verranno conservati e analizzati. La procedura di
+    ritiro e consegna dei tamponi è gratuita. Dal momento che il
+    Laboratorio di riferimento per le analisi non è accreditato per il
+    rilascio di referti clinico-diagnostici e che i campioni sono
+    pseudonimizzati, non sarà possibile fornire il risultato
+    dell'analisi al singolo partecipante.
 
 2\. Il trattamento dei dati personali sarà effettuato con le seguenti
 modalità: Manuale e Automatizzata. I co-titolari del trattamento
