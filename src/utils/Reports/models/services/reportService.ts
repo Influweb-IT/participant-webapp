@@ -1,5 +1,5 @@
-import { studyAPI } from "case-web-app-core";
-import { Report as RR } from "case-web-app-core/build/api/types/studyAPI";
+import { studyAPI } from "@influenzanet/case-web-app-core";
+import { Report as RR } from "@influenzanet/case-web-app-core/build/api/types/studyAPI";
 
 interface ReportData {
   key: string;

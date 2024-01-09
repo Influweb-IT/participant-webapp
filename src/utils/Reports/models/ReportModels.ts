@@ -1,4 +1,4 @@
-import { Report } from "case-web-app-core/build/api/types/studyAPI";
+import { Report } from "@influenzanet/case-web-app-core/build/api/types/studyAPI";
 
 interface ReportData {
   key: string;

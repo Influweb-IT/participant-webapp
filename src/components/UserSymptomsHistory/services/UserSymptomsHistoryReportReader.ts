@@ -1,9 +1,9 @@
-import { studyAPI } from "case-web-app-core";
+import { studyAPI } from "@influenzanet/case-web-app-core";
 import { ImageBrowserViewModel } from "../../ImageBrowser/models/ImageBrowserViewModel";
 import { ImageBrowserDataReader } from "../../ImageBrowser/services/ImageBrowserDataReader";
 
 import parsers from "./parsers";
-import { Report } from "case-web-app-core/build/api/types/studyAPI";
+import { Report } from "@influenzanet/case-web-app-core/build/api/types/studyAPI";
 import { ParsedReport } from "../../../utils/Reports/models/ReportModels";
 
 type ReportRequestParameters = Parameters<typeof studyAPI.getReportsForUser>;
