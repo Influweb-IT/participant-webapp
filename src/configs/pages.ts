@@ -1,4 +1,4 @@
-import { PagesConfig } from "@influweb-it/case-web-app-core/build/types/pagesConfig";
+import { PagesConfig } from "@influenzanet/case-web-app-core/build/types/pagesConfig";
 
 const pagesConfig: PagesConfig = {
   defaultRoutes: {
