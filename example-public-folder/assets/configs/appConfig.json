@@ -13,11 +13,11 @@
   "avatars": [
     {
       "avatarId": "default",
-      "url": "/avatars/Unknown_schwarz.png"
+      "url": "/avatars/Default_schwarz.png"
     },
     {
       "avatarId": "alpaca",
-      "url": "/avatars/Alpaka_schwarz.png"
+      "url": "/avatars/Alpaca_schwarz.png"
     },
     {
       "avatarId": "delfin",
