@@ -183,6 +183,31 @@
       ]
     },
     {
+      "path": "/dengue",
+      "pageKey": "dengue",
+      "rows": [
+        {
+          "key": "contentRow",
+          "containerClassName": "my-3 min-vh-60",
+          "columns": [
+            {
+              "key": "contentCol",
+              "className": "col-12 col-lg-8",
+              "items": [
+                {
+                  "itemKey": "dengue",
+                  "config": {
+                    "type": "markdown",
+                    "markdownUrl": "markdowns/dengue.md"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "path": "/home",
       "hideWhen": "unauth",
       "pageKey": "landing",
