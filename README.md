@@ -132,6 +132,14 @@ Images with titles:
 
 In the project directory, you can run:
 
+### configure proxy for api calls
+
+In order to be able to call api endpoints when testing the web app locally, you need to proxy the requests directed to the `/api` endpoint accordingly to the platform setup you are targeting. 
+
+In case you have all the services running locally, you can use the configuration present in `setupProxy-local.js` and copy it to a file named `setupProxy.js`
+
+In case you want to run the web app locally but target a platform hosted somewhere else (for example, a Kubernetes cluster in the cloud) you can use the configuration present in `setupProxy-remote.js` and copy it to a file named `setupProxy.js`.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
