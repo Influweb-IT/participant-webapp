@@ -171,9 +171,11 @@
                 {
                   "itemKey": "results",
                   "config": {
-                    "type": "markdown",
-                    "markdownUrl": "markdowns/results_template.md",
-                    "flavor": "chart-renderer"
+                    "type": "extension",
+                    "config": {
+                      "type": "results-iframe",
+                      "baseUrl": "http://localhost:8501"
+                    }
                   }
                 }
               ]

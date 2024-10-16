@@ -17,7 +17,8 @@
     "react-redux": "^7.2.8",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "survey-engine": "^1.2.1"
+    "survey-engine": "^1.2.1",
+    "@iframe-resizer/react": "^5.3.1"
   },
   "devDependencies": {
     "@reduxjs/toolkit": "1.8.1",
