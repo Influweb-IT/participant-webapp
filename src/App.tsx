@@ -17,14 +17,14 @@ import * as navbarConfig from "./configs/navbar.json";
 import * as pagesConfig from "./configs/pages.json";
 import Iubenda from "./Iubenda";
 import Facebook from "./Facebook";
-import IFrame from "./components/IFrame";
+import Dashboard from "./components/Dashboard";
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
 
   const dateLocales = [{ code: "it", locale: it, format: "dd/MM/yyyy" }];
 
-  const extensions = [{name: "results-iframe", component: IFrame}]
+  const extensions = [{name: "results-dashboard", component: Dashboard}]
 
   useEffect(() => {
     if (!i18n.language) {

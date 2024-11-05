@@ -166,14 +166,14 @@
           "columns": [
             {
               "key": "contentCol",
-              "className": "col-12 col-lg-8",
+              "className": "col-12 col-lg-12",
               "items": [
                 {
                   "itemKey": "results",
                   "config": {
                     "type": "extension",
                     "config": {
-                      "type": "results-iframe",
+                      "type": "results-dashboard",
                       "baseUrl": "http://localhost:8501"
                     }
                   }
