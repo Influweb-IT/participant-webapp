@@ -24,9 +24,9 @@ export const inviteProfilesToBambinoStudy = createAsyncThunk(
       }
 
       await dispatch(
-        coreReduxThunks.enterStudyThunk({
+        coreReduxThunks.enterStudiesThunk({
           profileId: profile.id,
-          studyKey: BAMBINO_STUDY,
+          studyKeys: [BAMBINO_STUDY],
         })
       );
     });

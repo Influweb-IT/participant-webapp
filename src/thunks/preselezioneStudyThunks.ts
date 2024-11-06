@@ -10,7 +10,6 @@ import {
   STATUS_PENDING_INVITATION,
   STATUS_UNASSIGNED,
 } from "../constant/stellariStudies";
-import { EnterStudyPayload } from "@influenzanet/case-web-app-core/build/store/actions/studiesActions";
 
 export const initializePreselezioneStudy = createAsyncThunk<
   StudyStatus,
@@ -57,9 +56,9 @@ export const inviteToPreselezioneStudy = createAsyncThunk(
   async (mainProfileId: string | undefined, { dispatch }) => {
     if (mainProfileId) {
       await dispatch(
-        coreReduxThunks.enterStudyThunk({
+        coreReduxThunks.enterStudiesThunk({
           profileId: mainProfileId,
-          studyKey: PRESELEZIONE_STUDY,
+          studyKeys: [PRESELEZIONE_STUDY],
         })
       );
     }
