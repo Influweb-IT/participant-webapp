@@ -1482,15 +1482,17 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.1.tgz#e5211452df060fa8522b55c7b3c0c4d1981cb044"
   integrity sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==
 
-"@influenzanet/case-web-app-core@2.7.5-staging.6":
-  version "2.7.5-staging.6"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.7.5-staging.6.tgz#5f26002824108fcc756f29895e5e09bf2f2ab13d"
-  integrity sha512-2R+gsOt48sdZ9jECng+iISsxnt0iDWQvfcdS1HA+Kz6WaEOHg1tM7RQnj1TVIH+Whb0k7ro9qDJ8y5eNbErlYQ==
+"@influenzanet/case-web-app-core@2.7.8":
+  version "2.7.8"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.7.8.tgz#ae0e26a893b90cbdb2edb7334f26445541be10cd"
+  integrity sha512-EeRy+ox3iasMZb/8dV1nQdStRn0y9RIFT4ZU5DrfbvFVq6yy/uycvYoiW0dhXj9jL6CZS9/0hoeVrGL6sFpwqA==
+  dependencies:
+    react-bootstrap-icons "^1.10.3"
 
-"@influenzanet/case-web-ui@1.15.0-staging.1":
-  version "1.15.0-staging.1"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-ui/-/case-web-ui-1.15.0-staging.1.tgz#ac18c8c68de48d8600902b27f77ff2f9d0bded51"
-  integrity sha512-ZhJTDYmMke8JfdpJKjRKKaJhSvUeHHtfeqsm67XNg3Bh2OHzUmGuytuSvpWuvC4KI3hUGjpFd13ZVQsLfghl1w==
+"@influenzanet/case-web-ui@1.15.1":
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-ui/-/case-web-ui-1.15.1.tgz#aaeb0473ac8cd5e9d4dd985858dbf493c73f2292"
+  integrity sha512-pZYrjkvmhasvlFhfibgI3RM/tP19XLHEbUej0Kjv9WKiaWn4pt6Chnkw6kweMmWMlU4KTPPmJJxbksxT+x+wWw==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.4"
 
@@ -8137,6 +8139,13 @@ react-app-polyfill@^3.0.0:
     raf "^3.4.1"
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
+
+react-bootstrap-icons@^1.10.3:
+  version "1.11.4"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-icons/-/react-bootstrap-icons-1.11.4.tgz#f4d5a852af58b5e0523df7162758b77f6fef2eec"
+  integrity sha512-lnkOpNEZ/Zr7mNxvjA9efuarCPSgtOuGA55XiRj7ASJnBjb1wEAdtJOd2Aiv9t07r7FLI1IgyZPg9P6jqWD/IA==
+  dependencies:
+    prop-types "^15.7.2"
 
 react-dev-utils@^12.0.1:
   version "12.0.1"

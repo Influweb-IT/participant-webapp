@@ -17,9 +17,9 @@ export const inviteToOperatoreStudy = createAsyncThunk(
   async (mainProfileId: string | undefined, { dispatch }) => {
     if (mainProfileId) {
       await dispatch(
-        coreReduxThunks.enterStudyThunk({
+        coreReduxThunks.enterStudiesThunk({
           profileId: mainProfileId,
-          studyKey: OPERATORE_STUDY,
+          studyKeys: [OPERATORE_STUDY],
         })
       );
     }
