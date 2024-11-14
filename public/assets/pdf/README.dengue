@@ -1,1 +1,5 @@
-convert -scale '500x500+0+0>' -crop 1x3@ -colorspace rgb -strip -density 300 report-dengue-1.pdf[0] report-dengue-1.png
+use Image Magick v7
+
+beware to change the colorspace to the appropriate one if the png generated si not what you expect
+
+magick convert -scale '500x500+0+0>' -crop 1x3@ -colorspace rgb -strip -density 300 "report-dengue-1.pdf[0]"" report-dengue-1.png

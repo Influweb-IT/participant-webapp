@@ -16,10 +16,11 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-6">
     <div class="card" style="width: 18rem;margin-top: 2em">
       <div class="card-body" style="background-color: #dddddd">
-        <p><strong>Report Dengue #1</p>
+        <p><strong>Report Dengue</strong></p>
+        <p>[03 Luglio 2024]
       </div>
       <img class="card-img-top" src="assets/images/report-dengue-1-it.png" style="height:15vh;object-fit: none" alt="Report dengue #1">
       <div class="card-body" style=''>
@@ -27,5 +28,16 @@
       </div>
     </div>
   </div>
+  <div class="col-md-6">
+    <div class="card" style="width: 18rem;margin-top: 2em">
+      <div class="card-body" style="background-color: #dddddd">
+        <p><strong>Report Dengue</strong></p>
+        <p>[14 Novembre 2024]
+      </div>
+      <img class="card-img-top" src="assets/images/report-dengue-2-it.png" style="height:15vh;object-fit: none" alt="Report dengue #2">
+      <div class="card-body" style=''>
+        <a href="assets/pdf/report-dengue-2-it.pdf" class="btn btn-primary" target="_blank">Scarica</a>
+      </div>
+    </div>
+  </div>
 </div>
-  
