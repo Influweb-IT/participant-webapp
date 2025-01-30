@@ -550,6 +550,14 @@
                     "imageSrc": "/images/survey.jpg",
                     "showActionBtn": true
                   }
+                },
+                {
+                  "itemKey": "poster",
+                  "className": "",
+                  "config": {
+                    "type": "markdown",
+                    "markdownUrl": "/markdowns/posters.md"
+                  }
                 }
               ]
             }
