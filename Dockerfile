@@ -11,6 +11,8 @@ COPY yarn.lock /app
 COPY .yalc/ /app/.yalc/
 COPY yalc.lock /app/
 RUN yarn install
+# Restore yalc links after yarn install
+RUN yalc add @influenzanet/case-web-app-core --no-save
 COPY . .
 COPY ${ENV_FILE} /app/.env.local
 RUN yarn build
