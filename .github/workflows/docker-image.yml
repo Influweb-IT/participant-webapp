@@ -48,7 +48,7 @@ jobs:
       - name: Checkout case-web-app-core
         uses: actions/checkout@v2
         with:
-          repository: Influweb-IT/case-web-app-core
+          repository: influenzanet/case-web-app-core
           path: case-web-app-core
           ref: orbyta-features-frontend
       - name: Setup Node.js
