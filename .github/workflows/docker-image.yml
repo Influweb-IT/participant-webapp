@@ -1,7 +1,10 @@
 name: Build docker image
-run-name: ${{ inputs.image_version }}
+run-name: ${{ inputs.image_version || github.ref_name }}
 
 on:
+  push:
+    tags:
+      - 'v*-staging*'
   workflow_call:
     inputs:
       image_version:
@@ -34,8 +37,12 @@ on:
 
 jobs:
   build:
-    environment: ${{ inputs.environment }}
+    environment: ${{ inputs.environment || 'default' }}
     runs-on: ubuntu-latest
+    env:
+      IMAGE_VERSION: ${{ inputs.image_version || github.ref_name }}
+      DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION || 'influweb' }}
+      DOCKER_REPO_NAME: ${{ secrets.DOCKER_REPO_NAME || 'participant-webapp' }}
     steps:
     - uses: actions/checkout@v2
     - run: git fetch --prune --unshallow --tags
@@ -57,7 +64,7 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build --file Dockerfile --tag ${{secrets.DOCKER_ORGANIZATION}}/${{secrets.DOCKER_REPO_NAME}}:${{inputs.image_version}} .
+      run: docker build --file Dockerfile --tag ${{ env.DOCKER_ORGANIZATION }}/${{ env.DOCKER_REPO_NAME }}:${{ env.IMAGE_VERSION }} .
     - name: Push Docker image
-      run: docker push ${{secrets.DOCKER_ORGANIZATION}}/${{secrets.DOCKER_REPO_NAME}}:${{inputs.image_version}}
+      run: docker push ${{ env.DOCKER_ORGANIZATION }}/${{ env.DOCKER_REPO_NAME }}:${{ env.IMAGE_VERSION }}
 
