@@ -1,5 +1,5 @@
 # build environment
-FROM node:16.17.1 as build
+FROM node:18-alpine as build
 # default env_file
 ARG ENV_FILE=".env.local"
 WORKDIR /app
