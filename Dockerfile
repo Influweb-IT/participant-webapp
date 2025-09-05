@@ -7,12 +7,13 @@ WORKDIR /app
 RUN npm install -g yalc
 COPY package.json /app
 COPY yarn.lock /app
-# Copy yalc files if they exist
+# Copy yalc files
 COPY .yalc/ /app/.yalc/
-COPY yalc.lock /app/
+COPY yalc.lock /app/yalc.lock
 RUN yarn install
-# Restore yalc links after yarn install
-RUN yalc add @influenzanet/case-web-app-core --no-save
+COPY . .
+COPY ${ENV_FILE} /app/.env.local
+RUN yarn build
 COPY . .
 COPY ${ENV_FILE} /app/.env.local
 RUN yarn build

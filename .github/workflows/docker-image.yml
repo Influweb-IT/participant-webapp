@@ -45,6 +45,26 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git fetch --prune --unshallow --tags
+      - name: Checkout case-web-app-core
+        uses: actions/checkout@v2
+        with:
+          repository: Influweb-IT/case-web-app-core
+          path: case-web-app-core
+          ref: orbyta-features-frontend
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install yalc globally
+        run: npm install -g yalc
+      - name: Build and publish case-web-app-core with yalc
+        run: |
+          cd case-web-app-core
+          yarn install
+          yarn build
+          yalc publish
+      - name: Add case-web-app-core via yalc
+        run: yalc add @influenzanet/case-web-app-core
       - name: Move sample .env-local
         if: ${{ github.repository_owner == 'influenzanet' }}
         run: mv env-sample.config .env.local
