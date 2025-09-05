@@ -3,8 +3,13 @@ FROM node:16.17.1 as build
 # default env_file
 ARG ENV_FILE=".env.local"
 WORKDIR /app
+# Install yalc globally
+RUN npm install -g yalc
 COPY package.json /app
 COPY yarn.lock /app
+# Copy yalc files if they exist
+COPY .yalc/ /app/.yalc/
+COPY yalc.lock /app/
 RUN yarn install
 COPY . .
 COPY ${ENV_FILE} /app/.env.local
