@@ -29,11 +29,10 @@ on:
         required: true
         type: string
       environment:
-        description: "github environment to use"
-        default: ""
+        description: 'github environment to use'
+        default: ''
         required: false
         type: string
-
 
 jobs:
   build:
@@ -44,27 +43,29 @@ jobs:
       DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION || 'influweb' }}
       DOCKER_REPO_NAME: ${{ secrets.DOCKER_REPO_NAME || 'participant-webapp' }}
     steps:
-    - uses: actions/checkout@v2
-    - run: git fetch --prune --unshallow --tags
-    - name: Move sample .env-local
-      if: ${{ github.repository_owner == 'influenzanet' }}
-      run: mv env-sample.config .env.local
-    - name: Copy sample public
-      if: ${{ github.repository_owner == 'influenzanet' }}
-      run: mv example-public-folder public
-    - name: Override instanceId
-      env:
-        INSTANCE_ID: ${{ secrets.INSTANCE_ID }}
-      if: ${{ env.INSTANCE_ID != '' }}
-      run: |
-        echo "REACT_APP_DEFAULT_INSTANCE=${{ secrets.INSTANCE_ID }}" > .env.production.local
-    - name: docker login
-      env:
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - name: Build the Docker image
-      run: docker build --file Dockerfile --tag ${{ env.DOCKER_ORGANIZATION }}/${{ env.DOCKER_REPO_NAME }}:${{ env.IMAGE_VERSION }} .
-    - name: Push Docker image
-      run: docker push ${{ env.DOCKER_ORGANIZATION }}/${{ env.DOCKER_REPO_NAME }}:${{ env.IMAGE_VERSION }}
-
+      - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow --tags
+      - name: Move sample .env-local
+        if: ${{ github.repository_owner == 'influenzanet' }}
+        run: mv env-sample.config .env.local
+      - name: Create .env.local for Influweb-IT
+        if: ${{ github.repository_owner == 'Influweb-IT' }}
+        run: cp .env .env.local
+      - name: Copy sample public
+        if: ${{ github.repository_owner == 'influenzanet' }}
+        run: mv example-public-folder public
+      - name: Override instanceId
+        env:
+          INSTANCE_ID: ${{ secrets.INSTANCE_ID }}
+        if: ${{ env.INSTANCE_ID != '' }}
+        run: |
+          echo "REACT_APP_DEFAULT_INSTANCE=${{ secrets.INSTANCE_ID }}" > .env.production.local
+      - name: docker login
+        env:
+          DOCKER_USER: ${{secrets.DOCKER_USER}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - name: Build the Docker image
+        run: docker build --file Dockerfile --tag ${{ env.DOCKER_ORGANIZATION }}/${{ env.DOCKER_REPO_NAME }}:${{ env.IMAGE_VERSION }} .
+      - name: Push Docker image
+        run: docker push ${{ env.DOCKER_ORGANIZATION }}/${{ env.DOCKER_REPO_NAME }}:${{ env.IMAGE_VERSION }}
