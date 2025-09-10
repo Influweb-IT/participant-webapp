@@ -22,7 +22,7 @@ const dateLocales = [
   { code: 'it', locale: it, format: 'dd/MM/yyyy' }
 ];
 
-let appConfig_: AppConfig  = {...appConfig};
+let appConfig_: AppConfig = { ...appConfig };
 if (process.env.REACT_APP_DEFAULT_INSTANCE) {
   appConfig_.instanceId = process.env.REACT_APP_DEFAULT_INSTANCE;
 }

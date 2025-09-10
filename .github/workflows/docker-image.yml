@@ -6,39 +6,37 @@ on:
       tags:
         description: 'Docker Tag override: [leave empty if not needed]'
   push:
-      tags:
-        - "v*"
+    tags:
+      - 'v*'
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - run: git fetch --prune --unshallow --tags
-    - name: Get current version
-      id: version
-      run: echo "REPO_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
-    - name: Docker image tag override
-      if: ${{ github.event.inputs.tags && github.event.inputs.tags != '' }}
-      run: echo "REPO_VERSION=${{github.event.inputs.tags}}" >> $GITHUB_ENV
-    - name: Get version from tags push
-      run: echo "REPO_VERSION=${{github.ref_name}}" >> $GITHUB_ENV
-      if: ${{ github.event_name == 'push' }}
-    - name: Move sample .env-local
-      if: ${{ github.repository_owner == 'influenzanet' }}
-      run: mv env-sample.config .env.local
-    - name: Copy sample public
-      if: ${{ github.repository_owner == 'influenzanet' }}
-      run: mv example-public-folder public
-    - name: docker login
-      env:
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_ORGANIZATION}}/${{secrets.DOCKER_REPO_NAME}}:$REPO_VERSION --build-arg NPM_TOKEN=${{ secrets.GITHUB_TOKEN }}
-    - name: Push Docker image
-      run: docker push ${{secrets.DOCKER_ORGANIZATION}}/${{secrets.DOCKER_REPO_NAME}}:$REPO_VERSION
+      - uses: actions/checkout@v3
+      - run: git fetch --prune --unshallow --tags
+      - name: Get current version
+        id: version
+        run: echo "REPO_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+      - name: Docker image tag override
+        if: ${{ github.event.inputs.tags && github.event.inputs.tags != '' }}
+        run: echo "REPO_VERSION=${{github.event.inputs.tags}}" >> $GITHUB_ENV
+      - name: Get version from tags push
+        run: echo "REPO_VERSION=${{github.ref_name}}" >> $GITHUB_ENV
+        if: ${{ github.event_name == 'push' }}
+      - name: Move sample .env-local
+        if: ${{ github.repository_owner == 'influenzanet' }}
+        run: mv env-sample.config .env.local
+      - name: Copy sample public
+        if: ${{ github.repository_owner == 'influenzanet' }}
+        run: mv example-public-folder public
+      - name: docker login
+        env:
+          DOCKER_USER: ${{secrets.DOCKER_USER}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_ORGANIZATION}}/${{secrets.DOCKER_REPO_NAME}}:$REPO_VERSION --build-arg NPM_TOKEN=${{ secrets.GITHUB_TOKEN }}
+      - name: Push Docker image
+        run: docker push ${{secrets.DOCKER_ORGANIZATION}}/${{secrets.DOCKER_REPO_NAME}}:$REPO_VERSION
