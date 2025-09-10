@@ -144,7 +144,7 @@
     "phoneInputLabel": "New phone number",
     "phoneInputPlaceholder": "New phone number",
     "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below.",
-    "infoAdd": "Add a phone number to your account by clicking on the button below.",
+    "infoAdd": "Add a phone number to your account by clicking on the button below. You will receive a verification code via WhatsApp.",
     "cancelBtn": "Cancel",
     "confirmBtn": "Change phone number",
     "confirmBtnAdd": "Add phone number",
@@ -154,13 +154,13 @@
     },
     "warningDialog": {
       "title": "Confirm new phone number",
-      "content": "Note: you cannot log back in to Infectieradar.be until you have confirmed the new phone number via the SMS that we have sent you.",
+      "content": "Note: you will need to verify your new phone number via WhatsApp verification code that we will send you.",
       "cancelBtn": "Cancel",
       "confirmBtn": "Confirm"
     },
     "successDialog": {
       "title": "Phone number changed",
-      "content": "Success! Your phone number has been changed.",
+      "content": "Success! Your phone number has been changed. Please verify it with the WhatsApp code we sent you.",
       "btn": "Ok"
     }
   },
@@ -168,7 +168,7 @@
     "title": "Add phone number",
     "phoneInputLabel": "Phone number",
     "phoneInputPlaceholder": "Phone number",
-    "info": "Enter the phone number of your account",
+    "info": "Enter your phone number. You will receive a verification code via WhatsApp.",
     "cancelBtn": "Cancel",
     "confirmBtn": "Add phone number",
     "errors": {
@@ -177,12 +177,13 @@
     },
     "warningDialog": {
       "title": "Confirm phone number",
+      "content": "We will send you a WhatsApp verification code to confirm your phone number.",
       "cancelBtn": "Cancel",
       "confirmBtn": "Confirm"
     },
     "successDialog": {
       "title": "Phone number added",
-      "content": "Success! Your phone number has been added.",
+      "content": "Success! Your phone number has been added. Please verify it with the WhatsApp code we sent you.",
       "btn": "Ok"
     }
   },
@@ -264,6 +265,25 @@
     "addPhone": "Add phone number",
     "verifyPhone": "Verify phone number"
   },
+  "verifyWhatsApp": {
+    "title": "Verify phone number",
+    "info": "Please enter the 6-digit code we sent to your phone via WhatsApp.",
+    "codeInputLabel": "WhatsApp verification code",
+    "codeInputPlaceholder": "Enter 6-digit code",
+    "submitBtn": "Verify",
+    "resendBtn": "Resend code",
+    "errors": {
+      "wrongCode": "Wrong code. Check the code we sent via WhatsApp.",
+      "phoneNotFound": "Phone number not found. Please add your phone number first.",
+      "rateLimit": "You will need to wait a while before you can request a new code.",
+      "unknown": "Something has gone wrong. Check your information or try again later."
+    },
+    "successDialog": {
+      "title": "Phone number verified",
+      "content": "Success! Your phone number has been verified via WhatsApp.",
+      "btn": "Ok"
+    }
+  },
   "deleteAccount": {
     "title": "Withdraw from study",
     "info": "Are you sure you want to delete your account? \nThis action cannot be undone.",
@@ -283,25 +303,6 @@
     "successDialog": {
       "title": "Phone number deleted",
       "content": "Done! Your phone number has been deleted.",
-      "btn": "Ok"
-    }
-  },
-  "verifyWhatsApp": {
-    "title": "Verify WhatsApp Code",
-    "info": "Please enter the verification code we sent to your WhatsApp number.",
-    "codeInputLabel": "Verification Code",
-    "codeInputPlaceholder": "Enter the code",
-    "cancelBtn": "Cancel",
-    "submitBtn": "Verify",
-    "errors": {
-      "invalidCode": "Invalid verification code. Please try again.",
-      "expiredCode": "The verification code has expired. Please request a new one.",
-      "tooManyAttempts": "Too many failed attempts. Phone number has been removed for security.",
-      "unknown": "An error occurred. Please try again later."
-    },
-    "successDialog": {
-      "title": "Phone number verified",
-      "content": "Great! Your phone number has been successfully verified.",
       "btn": "Ok"
     }
   }

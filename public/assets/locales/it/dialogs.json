@@ -117,49 +117,50 @@
     }
   },
   "changePhone": {
-    "title": "Change phone number",
-    "phoneInputLabel": "New phone number",
-    "phoneInputPlaceholder": "New phone number",
-    "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below.",
-    "infoAdd": "Add a phone number to your account by clicking on the button below.",
-    "cancelBtn": "Cancel",
-    "confirmBtn": "Change phone number",
-    "confirmBtnAdd": "Add phone number",
+    "title": "Cambia numero di telefono",
+    "phoneInputLabel": "Nuovo numero di telefono",
+    "phoneInputPlaceholder": "Nuovo numero di telefono",
+    "info": "Vuoi utilizzare un numero di telefono diverso? Cambia il tuo numero di telefono cliccando sul pulsante qui sotto.",
+    "infoAdd": "Aggiungi un numero di telefono al tuo account cliccando sul pulsante qui sotto. Riceverai un codice di verifica tramite WhatsApp.",
+    "cancelBtn": "Annulla",
+    "confirmBtn": "Cambia numero di telefono",
+    "confirmBtnAdd": "Aggiungi numero di telefono",
     "errors": {
-      "wrongPasswordOrAccountId": "Something has gone wrong. Check your information. (phone number may be wrong)",
-      "unknown": "Something has gone wrong. Check your information or try again later."
+      "wrongPasswordOrAccountId": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
     },
     "warningDialog": {
-      "title": "Confirm new phone number",
-      "content": "Note: you cannot log back in to Infectieradar.be until you have confirmed the new phone number via the SMS that we have sent you.",
-      "cancelBtn": "Cancel",
-      "confirmBtn": "Confirm"
+      "title": "Conferma nuovo numero di telefono",
+      "content": "Nota: dovrai verificare il tuo nuovo numero di telefono tramite il codice di verifica WhatsApp che ti invieremo.",
+      "cancelBtn": "Annulla",
+      "confirmBtn": "Conferma"
     },
     "successDialog": {
-      "title": "Phone number changed",
-      "content": "Success! Your phone number has been changed.",
+      "title": "Numero di telefono cambiato",
+      "content": "Successo! Il tuo numero di telefono è stato cambiato. Verificalo con il codice WhatsApp che ti abbiamo inviato.",
       "btn": "Ok"
     }
   },
   "addPhone": {
-    "title": "Add phone number",
-    "phoneInputLabel": "Phone number",
-    "phoneInputPlaceholder": "Phone number",
-    "info": "Enter the phone number of your account",
-    "cancelBtn": "Cancel",
-    "confirmBtn": "Add phone number",
+    "title": "Aggiungi numero di telefono",
+    "phoneInputLabel": "Numero di telefono",
+    "phoneInputPlaceholder": "Numero di telefono",
+    "info": "Inserisci il tuo numero di telefono. Riceverai un codice di verifica tramite WhatsApp.",
+    "cancelBtn": "Annulla",
+    "confirmBtn": "Aggiungi numero di telefono",
     "errors": {
-      "wrongPhoneFormat": "Something has gone wrong. Check your information. (phone number may be wrong)",
-      "unknown": "Something has gone wrong. Check your information or try again later."
+      "wrongPhoneFormat": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
     },
     "warningDialog": {
-      "title": "Confirm phone number",
-      "cancelBtn": "Cancel",
-      "confirmBtn": "Confirm"
+      "title": "Conferma numero di telefono",
+      "content": "Ti invieremo un codice di verifica WhatsApp per confermare il tuo numero di telefono.",
+      "cancelBtn": "Annulla",
+      "confirmBtn": "Conferma"
     },
     "successDialog": {
-      "title": "Phone number added",
-      "content": "Success! Your phone number has been added.",
+      "title": "Numero di telefono aggiunto",
+      "content": "Successo! Il tuo numero di telefono è stato aggiunto. Verificalo con il codice WhatsApp che ti abbiamo inviato.",
       "btn": "Ok"
     }
   },
@@ -261,8 +262,27 @@
       "content": "Done! Your email/phone settings are changed.",
       "btn": "Ok"
     },
-    "addPhone": "Add phone number",
-    "verifyPhone": "Verify phone number"
+    "addPhone": "Aggiungi numero di telefono",
+    "verifyPhone": "Verifica numero di telefono"
+  },
+  "verifyWhatsApp": {
+    "title": "Verifica numero di telefono",
+    "info": "Inserisci il codice a 6 cifre che abbiamo inviato al tuo telefono tramite WhatsApp.",
+    "codeInputLabel": "Codice di verifica WhatsApp",
+    "codeInputPlaceholder": "Inserisci il codice a 6 cifre",
+    "submitBtn": "Verifica",
+    "resendBtn": "Invia nuovo codice",
+    "errors": {
+      "wrongCode": "Codice errato. Controlla il codice che abbiamo inviato tramite WhatsApp.",
+      "phoneNotFound": "Numero di telefono non trovato. Aggiungi prima il tuo numero di telefono.",
+      "rateLimit": "Dovrai aspettare un po' prima di poter richiedere un nuovo codice.",
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
+    },
+    "successDialog": {
+      "title": "Numero di telefono verificato",
+      "content": "Ottimo lavoro! Il tuo numero di telefono è stato verificato tramite WhatsApp.",
+      "btn": "Ok"
+    }
   },
   "deleteAccount": {
     "title": "Withdraw from study",
@@ -283,25 +303,6 @@
     "successDialog": {
       "title": "Phone number deleted",
       "content": "Done! Your phone number has been deleted.",
-      "btn": "Ok"
-    }
-  },
-  "verifyWhatsApp": {
-    "title": "Verifica Codice WhatsApp",
-    "info": "Inserisci il codice di verifica che abbiamo inviato al tuo numero WhatsApp.",
-    "codeInputLabel": "Codice di Verifica",
-    "codeInputPlaceholder": "Inserisci il codice",
-    "cancelBtn": "Annulla",
-    "submitBtn": "Verifica",
-    "errors": {
-      "invalidCode": "Codice di verifica non valido. Riprova.",
-      "expiredCode": "Il codice di verifica è scaduto. Richiedine uno nuovo.",
-      "tooManyAttempts": "Troppi tentativi falliti. Il numero di telefono è stato rimosso per sicurezza.",
-      "unknown": "Si è verificato un errore. Riprova più tardi."
-    },
-    "successDialog": {
-      "title": "Numero di telefono verificato",
-      "content": "Perfetto! Il tuo numero di telefono è stato verificato con successo.",
       "btn": "Ok"
     }
   }
