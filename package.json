@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/open-sans": "^4.2.1",
-    "@influenzanet/case-web-app-core": "2.7.8",
+    "@influenzanet/case-web-app-core": "file:.yalc/@influenzanet/case-web-app-core",
     "@influenzanet/case-web-ui": "1.15.1",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
@@ -20,10 +20,13 @@
     "survey-engine": "^1.2.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@reduxjs/toolkit": "1.8.1",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
     "check-peer-dependencies": "^4.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "http-proxy-middleware": "2.0.1",
     "sass": "^1.49.8",
     "typescript": "^4.2.4",

@@ -193,11 +193,19 @@
       "on": "Vorrei ricevere l'e-mail di promemoria settimanale",
       "off": "Non ricevere l'e-mail di promemoria settimanale"
     },
+    "weeklyReminderPhone": {
+      "label": "Promemoria settimanale telefonico",
+      "on": "Vorrei ricevere il promemoria settimanale telefonico",
+      "off": "Non ricevere il promemoria settimanale telefonico"
+    },
     "newsletter": {
       "label": "Newsletter inviata a tutti i partecipanti. Per comunicare i risultati dello studio e aggiornamenti sull'andamendo dell'epidemia di COVID-19 e influenza, invieremo una newsletter periodica a tutti i partecipanti.",
       "on": "Vorrei ricevere la newsletter",
       "off": "Non ricevere la newsletter"
     },
+    "phoneNotConfirmed": "Non hai ancora confermato il tuo numero di telefono. Per favore conferma prima il tuo numero di telefono.",
+    "addPhone": "Aggiungi numero di telefono",
+    "verifyPhone": "Verifica numero di telefono",
     "cancelBtn": "Annulla",
     "submitBtn": "Invia",
     "successDialog": {
@@ -214,6 +222,88 @@
     "successDialog": {
       "title": "Account cancellato",
       "content": "Fatto! Il tuo account è stato cancellato. Grazie per il tuo contributo. Puoi sempre partecipare di nuovo creando un nuovo account.",
+      "btn": "Ok"
+    }
+  },
+  "addPhone": {
+    "title": "Aggiungi numero di telefono",
+    "phoneInputLabel": "Numero di telefono",
+    "phoneInputPlaceholder": "Numero di telefono",
+    "completeNumber": "Numero completo",
+    "info": "Inserisci il tuo numero di telefono. Riceverai un codice di verifica tramite WhatsApp.",
+    "cancelBtn": "Annulla",
+    "confirmBtn": "Aggiungi numero di telefono",
+    "errors": {
+      "wrongPhoneFormat": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
+    },
+    "warningDialog": {
+      "title": "Conferma numero di telefono",
+      "content": "Ti invieremo un codice di verifica WhatsApp per confermare il tuo numero di telefono.",
+      "cancelBtn": "Annulla",
+      "confirmBtn": "Conferma"
+    },
+    "successDialog": {
+      "title": "Numero di telefono aggiunto",
+      "content": "Successo! Il tuo numero di telefono è stato aggiunto. Verificalo con il codice WhatsApp che ti abbiamo inviato.",
+      "btn": "Ok"
+    }
+  },
+  "changePhone": {
+    "title": "Cambia numero di telefono",
+    "phoneInputLabel": "Nuovo numero di telefono",
+    "phoneInputPlaceholder": "Nuovo numero di telefono",
+    "completeNumber": "Numero completo",
+    "info": "Vuoi utilizzare un numero di telefono diverso? Cambia il tuo numero di telefono cliccando sul pulsante qui sotto.",
+    "infoAdd": "Aggiungi un numero di telefono al tuo account cliccando sul pulsante qui sotto. Riceverai un codice di verifica tramite WhatsApp.",
+    "cancelBtn": "Annulla",
+    "confirmBtn": "Cambia numero di telefono",
+    "confirmBtnAdd": "Aggiungi numero di telefono",
+    "errors": {
+      "wrongPasswordOrAccountId": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
+    },
+    "warningDialog": {
+      "title": "Conferma nuovo numero di telefono",
+      "content": "Nota: dovrai verificare il tuo nuovo numero di telefono tramite il codice di verifica WhatsApp che ti invieremo.",
+      "cancelBtn": "Annulla",
+      "confirmBtn": "Conferma"
+    },
+    "successDialog": {
+      "title": "Numero di telefono cambiato",
+      "content": "Successo! Il tuo numero di telefono è stato cambiato. Verificalo con il codice WhatsApp che ti abbiamo inviato.",
+      "btn": "Ok"
+    }
+  },
+  "verifyWhatsApp": {
+    "title": "Verifica numero di telefono",
+    "info": "Inserisci il codice a 6 cifre che abbiamo inviato al tuo telefono tramite WhatsApp.",
+    "codeInputLabel": "Codice di verifica WhatsApp",
+    "codeInputPlaceholder": "Inserisci il codice a 6 cifre",
+    "submitBtn": "Verifica",
+    "resendBtn": "Invia nuovo codice",
+    "cancelBtn": "Annulla",
+    "errors": {
+      "wrongCode": "Codice errato. Controlla il codice che abbiamo inviato tramite WhatsApp.",
+      "phoneNotFound": "Numero di telefono non trovato. Aggiungi prima il tuo numero di telefono.",
+      "rateLimit": "Dovrai aspettare un po' prima di poter richiedere un nuovo codice.",
+      "verificationFailed": "Verifica fallita. Controlla il codice e riprova.",
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
+    },
+    "successDialog": {
+      "title": "Numero di telefono verificato",
+      "content": "Ottimo lavoro! Il tuo numero di telefono è stato verificato tramite WhatsApp.",
+      "btn": "Ok"
+    }
+  },
+  "deletePhone": {
+    "title": "Elimina numero di telefono",
+    "info": "Sei sicuro di voler eliminare il tuo numero di telefono?",
+    "cancelBtn": "Annulla",
+    "confirmBtn": "Conferma",
+    "successDialog": {
+      "title": "Numero di telefono eliminato",
+      "content": "Fatto! Il tuo numero di telefono è stato eliminato.",
       "btn": "Ok"
     }
   }

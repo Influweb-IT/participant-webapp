@@ -6,6 +6,13 @@
       "title": "Indirizzo e-mail",
       "info": "Vuoi utilizzare un indirizzo e-mail diverso? Modifica il tuo indirizzo email facendo clic sul pulsante in basso. Nota: non puoi accedere nuovamente a Influweb.org finché non hai confermato l'indirizzo email."
     },
+    "phone": {
+      "title": "Numero di telefono",
+      "btn": "Aggiungi numero di telefono",
+      "deleteBtn": "Elimina numero di telefono",
+      "infoAdd": "Aggiungi il tuo numero di telefono cliccando sul pulsante qui sotto.",
+      "info": "Vuoi utilizzare un numero di telefono diverso? Modifica il tuo numero di telefono cliccando sul pulsante qui sotto. Nota: non puoi accedere nuovamente finché non hai confermato il numero di telefono."
+    },
     "password": {
       "title": "Password",
       "info": "Vuoi cambiare la password? Modifica la tua password cliccando sul pulsante qui sotto. Nota: avrai bisogno della tua password attuale."

@@ -3,8 +3,6 @@ FROM node:18-alpine as build
 # default env_file
 ARG ENV_FILE=".env"
 WORKDIR /app
-COPY .npmrc /app
-ARG NPM_TOKEN
 COPY package.json /app
 COPY yarn.lock /app
 RUN yarn install

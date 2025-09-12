@@ -1,3 +1,13 @@
 {
-
+  "buttons": {
+    "cancel": "Annulla",
+    "confirm": "Conferma",
+    "ok": "Ok",
+    "close": "Chiudi",
+    "submit": "Invia",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "add": "Aggiungi"
+  }
 }

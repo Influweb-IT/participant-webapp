@@ -6,6 +6,13 @@
       "title": "Email address",
       "info": "Do you want to use a different email address? Change your email address by clicking on the button below. Note: you cannot log back in to Influweb until you have confirmed the email address."
     },
+    "phone": {
+      "title": "Phone number",
+      "btn": "Add phone number",
+      "deleteBtn": "Delete phone number",
+      "infoAdd": "Add your phone number by clicking on the button below.",
+      "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below. Note: you cannot log back in until you have confirmed the phone number."
+    },
     "password": {
       "title": "Password",
       "info": "Do you want to change the password? Change your password by clicking on the button below. Note: you will need your current password."
