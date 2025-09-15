@@ -38,6 +38,8 @@
     "passwordInputPlaceholder": "Inserisci Password",
     "confirmPasswordInputLabel": "Conferma Password",
     "confirmPasswordInputPlaceholder": "Inserisci nuovamente la password",
+    "phoneInputLabel": "Numero di telefono",
+    "phoneInputPlaceholder": "Inserisci il numero di telefono",
     "informedConsentCheckbox": "Accetta l'<1>informativa sulla privacy</1>.*",
     "reCaptchaCookieCheckbox": "Accetta l'<1>informativa reCAPTCHA</1>.*",
     "signupBtn": "Registrati",
@@ -47,6 +49,7 @@
       "emailRules": "L'indirizzo email che hai inserito non è valido",
       "passwordRules": "La tua password deve avere almeno 8 caratteri e contenere 3 dei seguenti 4 elementi: lettere minuscole, maiuscole, numeri, segni di punteggiatura.",
       "passwordMatch": "Le password non sono le stesse",
+      "phone": "Formato numero di telefono non valido",
       "invalidEmail": "Il tuo indirizzo email sembra non essere corretto",
       "userCreationFailed": "Qualcosa è andato storto.",
       "unknown": "Qualcosa è andato storto."

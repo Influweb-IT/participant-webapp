@@ -1,8 +1,8 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-const target = "https://influweb.staging.influenzanet.info";
+// const target = "https://influweb.staging.influenzanet.info";
 
-// const target = 'http://localhost:3231';
+const target = 'http://localhost:3231';
 
 module.exports = function (app) {
   app.use(

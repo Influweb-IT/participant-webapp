@@ -9,5 +9,19 @@
     "delete": "Elimina",
     "edit": "Modifica",
     "add": "Aggiungi"
+  },
+  "signup": {
+    "info": "Premendo il pulsante Registrati accetti di partecipare allo studio promosso dal progetto Influweb",
+    "emailInputLabel": "E-mail",
+    "emailInputPlaceholder": "Inserisci E-mail",
+    "passwordInputLabel": "Password",
+    "passwordInputPlaceholder": "Inserisci Password",
+    "confirmPasswordInputLabel": "Conferma Password",
+    "confirmPasswordInputPlaceholder": "Conferma Password",
+    "phoneInputLabel": "Numero di telefono",
+    "phoneInputPlaceholder": "Inserisci il numero di telefono",
+    "errors": {
+      "phone": "Formato numero di telefono non valido"
+    }
   }
 }

@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "@influenzanet/case-web-app-core": {
-      "signature": "b1b6335ae055c61cecbf2f81e3b356da",
+      "signature": "16db976dc20dc01a19fca4c70d46eb05",
       "file": true,
       "replaced": "2.8.0-staging"
     }
