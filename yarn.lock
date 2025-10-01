@@ -2397,10 +2397,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influenzanet/case-web-app-core@2.7.8":
-  version "2.7.8"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.7.8.tgz#ae0e26a893b90cbdb2edb7334f26445541be10cd"
-  integrity sha512-EeRy+ox3iasMZb/8dV1nQdStRn0y9RIFT4ZU5DrfbvFVq6yy/uycvYoiW0dhXj9jL6CZS9/0hoeVrGL6sFpwqA==
+"@influenzanet/case-web-app-core@2.8.1-staging":
+  version "2.8.1-staging"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.8.1-staging.tgz#f9fa0177c227fa987b94ca00fab30bc929ed638d"
+  integrity sha512-elOwifdDmi3eH8X12BZTWJABNjmmzXy0277ErdzX6SG4UBMge6gQ8j/0m/I4naomlnhk8aQLBwpiA8vo0BhaHg==
   dependencies:
     react-bootstrap-icons "^1.10.3"
 
@@ -8981,9 +8981,9 @@ react-app-polyfill@^3.0.0:
     whatwg-fetch "^3.6.2"
 
 react-bootstrap-icons@^1.10.3:
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/react-bootstrap-icons/-/react-bootstrap-icons-1.10.3.tgz#5d64a93c7b172856b03c7d3cd5119a025b094966"
-  integrity sha512-j4hSby6gT9/enhl3ybB1tfr1slZNAYXDVntcRrmVjxB3//2WwqrzpESVqKhyayYVaWpEtnwf9wgUQ03cuziwrw==
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-icons/-/react-bootstrap-icons-1.11.6.tgz#211b58b2f2b32a624c4f5b24b9a4dae8df3d3268"
+  integrity sha512-ycXiyeSyzbS1C4+MlPTYe0riB+UlZ7LV7YZQYqlERV2cxDiKtntI0huHmP/3VVvzPt4tGxqK0K+Y6g7We3U6tQ==
   dependencies:
     prop-types "^15.7.2"
 
