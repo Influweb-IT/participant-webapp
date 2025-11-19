@@ -49,6 +49,8 @@
       "passwordMatch": "The passwords are not the same",
       "invalidEmail": "Your email address seems to be incorrect",
       "userCreationFailed": "Something has gone wrong.",
+      "phoneAlreadyRegistered": "This phone number is already registered",
+      "invalidPhone": "The phone number you entered is not valid",
       "unknown": "Something has gone wrong."
     }
   },

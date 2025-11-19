@@ -11,7 +11,9 @@
       "btn": "Add phone number",
       "deleteBtn": "Delete phone number",
       "infoAdd": "Add your phone number by clicking on the button below.",
-      "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below. Note: you cannot log back in until you have confirmed the phone number."
+      "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below. Note: you cannot log back in until you have confirmed the phone number.",
+      "confirmed": "Verified",
+      "notConfirmed": "Not verified"
     },
     "password": {
       "title": "Password",

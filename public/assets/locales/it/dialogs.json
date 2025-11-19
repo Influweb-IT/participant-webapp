@@ -52,6 +52,8 @@
       "phone": "Formato numero di telefono non valido",
       "invalidEmail": "Il tuo indirizzo email sembra non essere corretto",
       "userCreationFailed": "Qualcosa è andato storto.",
+      "phoneAlreadyRegistered": "Questo numero di telefono è già registrato",
+      "invalidPhone": "Il numero di telefono inserito non è valido",
       "unknown": "Qualcosa è andato storto."
     }
   },

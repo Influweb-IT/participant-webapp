@@ -11,7 +11,9 @@
       "btn": "Aggiungi numero di telefono",
       "deleteBtn": "Elimina numero di telefono",
       "infoAdd": "Aggiungi il tuo numero di telefono cliccando sul pulsante qui sotto.",
-      "info": "Vuoi utilizzare un numero di telefono diverso? Modifica il tuo numero di telefono cliccando sul pulsante qui sotto. Nota: non puoi accedere nuovamente finché non hai confermato il numero di telefono."
+      "info": "Vuoi utilizzare un numero di telefono diverso? Modifica il tuo numero di telefono cliccando sul pulsante qui sotto. Nota: non puoi accedere nuovamente finché non hai confermato il numero di telefono.",
+      "confirmed": "Verificato",
+      "notConfirmed": "Non verificato"
     },
     "password": {
       "title": "Password",
