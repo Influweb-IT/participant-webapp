@@ -40,6 +40,8 @@
     "confirmPasswordInputPlaceholder": "Inserisci nuovamente la password",
     "phoneInputLabel": "Numero di telefono",
     "phoneInputPlaceholder": "Inserisci il numero di telefono",
+    "phoneOptional": " (opzionale)",
+    "phoneOptionalWithExplanation": " (opzionale per notifiche WhatsApp)",
     "informedConsentCheckbox": "Accetta l'<1>informativa sulla privacy</1>.*",
     "reCaptchaCookieCheckbox": "Accetta l'<1>informativa reCAPTCHA</1>.*",
     "signupBtn": "Registrati",
