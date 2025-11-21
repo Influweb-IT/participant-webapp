@@ -293,6 +293,7 @@
       "phoneNotFound": "Numero di telefono non trovato. Aggiungi prima il tuo numero di telefono.",
       "rateLimit": "Dovrai aspettare un po' prima di poter richiedere un nuovo codice.",
       "verificationFailed": "Verifica fallita. Controlla il codice e riprova.",
+      "codeRequired": "Inserisci il codice di verifica.",
       "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
     },
     "successDialog": {

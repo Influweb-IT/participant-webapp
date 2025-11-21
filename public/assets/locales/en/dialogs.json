@@ -38,6 +38,8 @@
     "passwordInputPlaceholder": "Enter Password",
     "confirmPasswordInputLabel": "Confirm Password",
     "confirmPasswordInputPlaceholder": "Enter Password Again",
+    "phoneInputLabel": "Phone number",
+    "phoneInputPlaceholder": "Enter phone number",
     "informedConsentCheckbox": "Accept the <1>privacy policy</1>.*",
     "reCaptchaCookieCheckbox": "Accept <1>reCAPTCHA policy</1>.*",
     "signupBtn": "Sign up",
@@ -205,6 +207,89 @@
     "successDialog": {
       "title": "Settings are changed",
       "content": "Done! Your email setting are changed.",
+      "btn": "Ok"
+    }
+  },
+  "verifyWhatsApp": {
+    "title": "Verify phone number",
+    "info": "Please enter the 6-digit code we sent to your phone via WhatsApp.",
+    "codeInputLabel": "WhatsApp verification code",
+    "codeInputPlaceholder": "Enter 6-digit code",
+    "submitBtn": "Verify",
+    "resendBtn": "Resend code",
+    "cancelBtn": "Cancel",
+    "errors": {
+      "wrongCode": "Wrong code. Check the code we sent via WhatsApp.",
+      "phoneNotFound": "Phone number not found. Please add your phone number first.",
+      "rateLimit": "You will need to wait a while before you can request a new code.",
+      "verificationFailed": "Verification failed. Check the code and try again.",
+      "codeRequired": "Please enter the verification code.",
+      "unknown": "Something has gone wrong. Check your information or try again later."
+    },
+    "successDialog": {
+      "title": "Phone number verified",
+      "content": "Success! Your phone number has been verified via WhatsApp.",
+      "btn": "Ok"
+    }
+  },
+  "addPhone": {
+    "title": "Add phone number",
+    "phoneInputLabel": "Phone number",
+    "phoneInputPlaceholder": "Phone number",
+    "completeNumber": "Complete number",
+    "info": "Enter your phone number. You will receive a verification code via WhatsApp.",
+    "cancelBtn": "Cancel",
+    "confirmBtn": "Add phone number",
+    "errors": {
+      "wrongPhoneFormat": "Something went wrong. Check your information. (the phone number might be incorrect)",
+      "unknown": "Something went wrong. Check your information or try again later."
+    },
+    "warningDialog": {
+      "title": "Confirm phone number",
+      "content": "We will send you a WhatsApp verification code to confirm your phone number.",
+      "cancelBtn": "Cancel",
+      "confirmBtn": "Confirm"
+    },
+    "successDialog": {
+      "title": "Phone number added",
+      "content": "Success! Your phone number has been added. Verify it with the WhatsApp code we sent you.",
+      "btn": "Ok"
+    }
+  },
+  "changePhone": {
+    "title": "Change phone number",
+    "phoneInputLabel": "New phone number",
+    "phoneInputPlaceholder": "New phone number",
+    "completeNumber": "Complete number",
+    "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below.",
+    "infoAdd": "Add a phone number to your account by clicking on the button below. You will receive a verification code via WhatsApp.",
+    "cancelBtn": "Cancel",
+    "confirmBtn": "Change phone number",
+    "confirmBtnAdd": "Add phone number",
+    "errors": {
+      "wrongPasswordOrAccountId": "Something went wrong. Check your information. (the phone number might be incorrect)",
+      "unknown": "Something went wrong. Check your information or try again later."
+    },
+    "warningDialog": {
+      "title": "Confirm new phone number",
+      "content": "Note: you will need to verify your new phone number with the WhatsApp verification code we will send you.",
+      "cancelBtn": "Cancel",
+      "confirmBtn": "Confirm"
+    },
+    "successDialog": {
+      "title": "Phone number changed",
+      "content": "Success! Your phone number has been changed. Verify it with the WhatsApp code we sent you.",
+      "btn": "Ok"
+    }
+  },
+  "deletePhone": {
+    "title": "Delete phone number",
+    "info": "Are you sure you want to delete your phone number?",
+    "cancelBtn": "Cancel",
+    "confirmBtn": "Confirm",
+    "successDialog": {
+      "title": "Phone number deleted",
+      "content": "Done! Your phone number has been deleted.",
       "btn": "Ok"
     }
   },
