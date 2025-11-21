@@ -11,9 +11,13 @@
       "btn": "Add phone number",
       "deleteBtn": "Delete phone number",
       "infoAdd": "Add your phone number by clicking on the button below.",
-      "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below. Note: you cannot log back in until you have confirmed the phone number.",
+      "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below.",
       "confirmed": "Verified",
-      "notConfirmed": "Not verified"
+      "notConfirmed": "Not verified",
+      "resendBtn": "Resend code",
+      "resending": "Sending...",
+      "resendSuccess": "Code sent successfully!",
+      "resendError": "Error sending code. Please try again."
     },
     "password": {
       "title": "Password",
@@ -39,9 +43,7 @@
       "info": "You can change the language here.",
       "languages": {
         "en": "English",
-        "nl-be": "Nederlands",
-        "fr-be": "Français",
-        "de-be": "Deutsch"
+        "it": "Italiano"
       }
     }
   },
