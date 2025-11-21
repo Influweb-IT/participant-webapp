@@ -14,7 +14,7 @@
       "info": "Do you want to use a different phone number? Change your phone number by clicking on the button below.",
       "confirmed": "Verified",
       "notConfirmed": "Not verified",
-      "resendBtn": "Resend code",
+      "resendBtn": "Send code",
       "resending": "Sending...",
       "resendSuccess": "Code sent successfully!",
       "resendError": "Error sending code. Please try again."

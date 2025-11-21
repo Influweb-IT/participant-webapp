@@ -14,7 +14,7 @@
       "info": "Vuoi utilizzare un numero di telefono diverso? Modifica il tuo numero di telefono cliccando sul pulsante qui sotto. ",
       "confirmed": "Verificato",
       "notConfirmed": "Non verificato",
-      "resendBtn": "Invia di nuovo codice",
+      "resendBtn": "Invia codice",
       "resending": "Invio...",
       "resendSuccess": "Codice inviato con successo!",
       "resendError": "Errore nell'invio del codice. Riprova."
