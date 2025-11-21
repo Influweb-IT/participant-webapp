@@ -218,7 +218,7 @@
     "codeInputLabel": "WhatsApp verification code",
     "codeInputPlaceholder": "Enter 6-digit code",
     "submitBtn": "Verify",
-    "resendBtn": "Resend code",
+    "resendBtn": "Send code",
     "cancelBtn": "Cancel",
     "errors": {
       "wrongCode": "Wrong code. Check the code we sent via WhatsApp.",

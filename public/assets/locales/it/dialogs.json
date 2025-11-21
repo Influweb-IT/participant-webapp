@@ -288,7 +288,7 @@
     "codeInputLabel": "Codice di verifica WhatsApp",
     "codeInputPlaceholder": "Inserisci il codice a 6 cifre",
     "submitBtn": "Verifica",
-    "resendBtn": "Invia nuovo codice",
+    "resendBtn": "Invia codice",
     "cancelBtn": "Annulla",
     "errors": {
       "wrongCode": "Codice errato. Controlla il codice che abbiamo inviato tramite WhatsApp.",
