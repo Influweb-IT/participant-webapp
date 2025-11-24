@@ -1,5 +1,5 @@
 {
-  "phoneVerificationBanner": {
+  "phoneVerification": {
     "title": "Attention!",
     "message": "Your phone number has not been verified yet.",
     "button": "Verify now"
