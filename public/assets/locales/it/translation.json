@@ -24,9 +24,9 @@
       "phone": "Formato numero di telefono non valido"
     }
   },
-  "phoneVerification": {
+  "phoneVerificationBanner": {
     "title": "Attenzione!",
-    "message": "Il tuo numero di telefono non è ancora stato verificato.",
+    "message": "Il numero di telefono non è ancora stato verificato.",
     "button": "Verifica ora"
   }
 }
