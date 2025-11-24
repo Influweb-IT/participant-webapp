@@ -213,6 +213,25 @@
       "pageKey": "landing",
       "rows": [
         {
+          "key": "phoneVerificationBanner",
+          "fullWidth": true,
+          "columns": [
+            {
+              "key": "col",
+              "className": "w-100 p-0",
+              "items": [
+                {
+                  "itemKey": "phoneVerificationBanner",
+                  "config": {
+                    "type": "extension",
+                    "componentName": "PhoneVerificationBanner"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "key": "teaserImage",
           "fullWidth": true,
           "columns": [

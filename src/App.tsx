@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { AppCore } from "@influenzanet/case-web-app-core";
+import { AppCore, PhoneVerificationBanner } from "@influenzanet/case-web-app-core";
 import { useTranslation } from "react-i18next";
 
 import { AppConfig } from "@influenzanet/case-web-app-core";
@@ -47,6 +47,12 @@ const App: React.FC = () => {
         pagesConfig={pagesConfig as PagesConfig}
         footerConfig={footerConfig as FooterConfig}
         dateLocales={dateLocales}
+        extensions={[
+          {
+            name: 'PhoneVerificationBanner',
+            component: PhoneVerificationBanner
+          }
+        ]}
       />
       <Iubenda />
       <Facebook />

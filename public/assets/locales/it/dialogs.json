@@ -242,6 +242,7 @@
     "confirmBtn": "Aggiungi numero di telefono",
     "errors": {
       "wrongPhoneFormat": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
+      "phoneAlreadyTaken": "Questo numero di telefono è già registrato da un altro utente.",
       "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
     },
     "warningDialog": {
@@ -268,6 +269,7 @@
     "confirmBtnAdd": "Aggiungi numero di telefono",
     "errors": {
       "wrongPasswordOrAccountId": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
+      "phoneAlreadyTaken": "Questo numero di telefono è già registrato da un altro utente.",
       "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
     },
     "warningDialog": {
