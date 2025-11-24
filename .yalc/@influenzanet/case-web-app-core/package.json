@@ -1,7 +1,7 @@
 {
   "name": "@influenzanet/case-web-app-core",
   "description": "Common logic and components for the participant web-app",
-  "version": "2.9.2-staging",
+  "version": "2.9.3-staging",
   "scripts": {
     "build": "rollup -c",
     "storybook": "start-storybook -p 6007",
@@ -29,5 +29,5 @@
   "dependencies": {
     "react-bootstrap-icons": "^1.10.3"
   },
-  "yalcSig": "aee76fc0414a4a40561bd590ee9e3a97"
+  "yalcSig": "b52e71dc330f3eccf61dad0078afc567"
 }
