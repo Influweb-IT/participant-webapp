@@ -45,3 +45,7 @@ Thumbs.db
 !.env.local
 build
 public/content/nl/results/temp
+
+# yalc (local development linking)
+.yalc/
+yalc.lock
