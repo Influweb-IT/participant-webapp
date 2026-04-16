@@ -204,6 +204,13 @@
       "on": "I would like to receive these emails to all participants",
       "off": "Don’t receive these emails to all participants"
     },
+    "channels": {
+      "label": "Communication channel",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "whatsappDisabled": "To enable WhatsApp, add and verify a phone number.",
+      "note": "Some communications may only be available via email."
+    },
     "cancelBtn": "Cancel",
     "submitBtn": "Submit",
     "successDialog": {

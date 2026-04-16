@@ -200,19 +200,18 @@
       "on": "Vorrei ricevere l'e-mail di promemoria settimanale",
       "off": "Non ricevere l'e-mail di promemoria settimanale"
     },
-    "weeklyReminderPhone": {
-      "label": "Promemoria settimanale telefonico",
-      "on": "Vorrei ricevere il promemoria settimanale telefonico",
-      "off": "Non ricevere il promemoria settimanale telefonico"
-    },
     "newsletter": {
       "label": "Newsletter inviata a tutti i partecipanti. Per comunicare i risultati dello studio e aggiornamenti sull'andamendo dell'epidemia di COVID-19 e influenza, invieremo una newsletter periodica a tutti i partecipanti.",
       "on": "Vorrei ricevere la newsletter",
       "off": "Non ricevere la newsletter"
     },
-    "phoneNotConfirmed": "Non hai ancora confermato il tuo numero di telefono. Per favore conferma prima il tuo numero di telefono.",
-    "addPhone": "Aggiungi numero di telefono",
-    "verifyPhone": "Verifica numero di telefono",
+    "channels": {
+      "label": "Canale di comunicazione",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "whatsappDisabled": "Per abilitare WhatsApp, aggiungi e verifica un numero di telefono.",
+      "note": "Alcune comunicazioni potrebbero essere disponibili solo via email."
+    },
     "cancelBtn": "Annulla",
     "submitBtn": "Invia",
     "successDialog": {
