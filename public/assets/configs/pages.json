@@ -166,14 +166,16 @@
           "columns": [
             {
               "key": "contentCol",
-              "className": "col-12 col-lg-8",
+              "className": "col-12 col-lg-12",
               "items": [
                 {
                   "itemKey": "results",
                   "config": {
-                    "type": "markdown",
-                    "markdownUrl": "markdowns/results_template.md",
-                    "flavor": "chart-renderer"
+                    "type": "extension",
+                    "config": {
+                      "type": "results-dashboard",
+                      "baseUrl": "http://localhost:8501/dashboard"
+                    }
                   }
                 }
               ]

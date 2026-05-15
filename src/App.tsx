@@ -17,6 +17,9 @@ import * as navbarConfig from "./configs/navbar.json";
 import * as pagesConfig from "./configs/pages.json";
 import Iubenda from "./Iubenda";
 import Facebook from "./Facebook";
+import Dashboard from "./components/Dashboard";
+
+const extensions = [{ name: "results-dashboard", component: Dashboard }];
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
@@ -38,6 +41,7 @@ const App: React.FC = () => {
         pagesConfig={pagesConfig as PagesConfig}
         footerConfig={footerConfig as FooterConfig}
         dateLocales={dateLocales}
+        extensions={extensions}
       />
       <Iubenda />
       <Facebook />
