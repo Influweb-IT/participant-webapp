@@ -17,4 +17,25 @@ module.exports = function (app) {
       },
     })
   );
+
+  // Proxy Streamlit dashboard and its WebSocket to staging
+  app.use(
+    "/dashboard",
+    createProxyMiddleware({
+      target: target,
+      changeOrigin: true,
+      secure: false,
+      ws: true,
+    })
+  );
+
+  app.use(
+    "/_stcore",
+    createProxyMiddleware({
+      target: target,
+      changeOrigin: true,
+      secure: false,
+      ws: true,
+    })
+  );
 };
