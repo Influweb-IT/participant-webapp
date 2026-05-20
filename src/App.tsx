@@ -18,8 +18,9 @@ import * as pagesConfig from "./configs/pages.json";
 import Iubenda from "./Iubenda";
 import Facebook from "./Facebook";
 import Dashboard from "./components/Dashboard";
+import BlogPosts from "./extensions/BlogPosts";
 
-const extensions = [{ name: "results-dashboard", component: Dashboard }];
+const extensions = [{ name: "blogPosts", component: BlogPosts }, { name: "results-dashboard", component: Dashboard }];
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();

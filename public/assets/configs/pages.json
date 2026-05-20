@@ -134,6 +134,28 @@
           ]
         },
         {
+          "key": "blogRow",
+          "containerClassName": "my-3",
+          "columns": [
+            {
+              "key": "blogCol",
+              "className": "col-12",
+              "items": [
+                {
+                  "itemKey": "blogPosts",
+                  "config": {
+                    "type": "extension",
+                    "config": {
+                      "type": "blogPosts",
+                      "limit": 3
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "key": "sponsorRow",
           "containerClassName": "",
           "columns": [
@@ -323,6 +345,28 @@
                         "value": "changeLanguage"
                       }
                     ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "blogRow",
+          "containerClassName": "my-3",
+          "columns": [
+            {
+              "key": "blogCol",
+              "className": "col-12",
+              "items": [
+                {
+                  "itemKey": "blogPosts",
+                  "config": {
+                    "type": "extension",
+                    "config": {
+                      "type": "blogPosts",
+                      "limit": 3
+                    }
                   }
                 }
               ]
