@@ -16,7 +16,6 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.16.8",
     "react-redux": "^7.2.8",
-    "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "survey-engine": "^1.2.1"
   },
@@ -24,20 +23,20 @@
     "@reduxjs/toolkit": "1.8.1",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
-    "check-peer-dependencies": "^4.1.0",
-    "http-proxy-middleware": "2.0.1",
-    "sass": "^1.49.8",
+    "@vitejs/plugin-react": "^5.0.0",
+    "check-peer-dependencies": "^4.3.4",
+    "sass": "^1.99.0",
     "typescript": "^4.2.4",
-    "web-vitals": "^1.1.2"
+    "vite": "^6.4.2"
+  },
+  "resolutions": {
+    "lodash": ">=4.18.0",
+    "@babel/runtime": ">=7.26.10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "browserslist": {
     "production": [
