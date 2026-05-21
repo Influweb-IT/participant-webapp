@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { AppCore } from "@influenzanet/case-web-app-core";
 import { useTranslation } from "react-i18next";
 
@@ -17,8 +17,12 @@ import * as navbarConfig from "./configs/navbar.json";
 import * as pagesConfig from "./configs/pages.json";
 import Iubenda from "./Iubenda";
 import Facebook from "./Facebook";
-import Dashboard from "./components/Dashboard";
-import BlogPosts from "./extensions/BlogPosts";
+
+const LazyDashboard = React.lazy(() => import("./components/Dashboard"));
+const LazyBlogPosts = React.lazy(() => import("./extensions/BlogPosts"));
+
+const Dashboard = (props: any) => <Suspense fallback={null}><LazyDashboard {...props} /></Suspense>;
+const BlogPosts = (props: any) => <Suspense fallback={null}><LazyBlogPosts {...props} /></Suspense>;
 
 const extensions = [{ name: "blogPosts", component: BlogPosts }, { name: "results-dashboard", component: Dashboard }];
 
