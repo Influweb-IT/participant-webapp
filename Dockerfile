@@ -1,5 +1,5 @@
 # build environment
-FROM node:16.17.1 as build
+FROM node:20-alpine AS build
 # default env_file
 ARG ENV_FILE=".env"
 WORKDIR /app
@@ -13,7 +13,7 @@ COPY ${ENV_FILE} /app/.env
 RUN yarn build
 # production environment
 FROM nginx:stable-alpine
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 3000 80
 CMD ["nginx", "-g", "daemon off;"]
