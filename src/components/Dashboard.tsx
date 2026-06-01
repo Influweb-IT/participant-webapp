@@ -8,7 +8,7 @@ const Dashboard = (props: any) => {
   const { i18n } = useTranslation();
   const ref = useRef<HTMLIFrameElement>(null);
   const [loaded, setLoaded] = useState(false);
-  const url = `${props.baseUrl}/${i18n.language}`;
+  const url = `${props.baseUrl}?lang=${i18n.language}`;
 
   useEffect(() => {
     if (!ref.current) return;
