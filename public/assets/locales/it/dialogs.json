@@ -242,7 +242,9 @@
     "errors": {
       "wrongPhoneFormat": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
       "phoneAlreadyTaken": "Questo numero di telefono è già registrato da un altro utente.",
-      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi.",
+      "recipientNotAllowed": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito.",
+      "rateLimit": "Hai richiesto troppi codici di verifica. Dovrai aspettare un po' prima di riprovare."
     },
     "warningDialog": {
       "title": "Conferma numero di telefono",
@@ -269,7 +271,9 @@
     "errors": {
       "wrongPasswordOrAccountId": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
       "phoneAlreadyTaken": "Questo numero di telefono è già registrato da un altro utente.",
-      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi.",
+      "recipientNotAllowed": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito.",
+      "rateLimit": "Hai richiesto troppi codici di verifica. Dovrai aspettare un po' prima di riprovare."
     },
     "warningDialog": {
       "title": "Conferma nuovo numero di telefono",
@@ -297,7 +301,8 @@
       "rateLimit": "Dovrai aspettare un po' prima di poter richiedere un nuovo codice.",
       "verificationFailed": "Verifica fallita. Controlla il codice e riprova.",
       "codeRequired": "Inserisci il codice di verifica.",
-      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi."
+      "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi.",
+      "recipientNotAllowed": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito."
     },
     "successDialog": {
       "title": "Numero di telefono verificato",

@@ -233,7 +233,8 @@
       "rateLimit": "You will need to wait a while before you can request a new code.",
       "verificationFailed": "Verification failed. Check the code and try again.",
       "codeRequired": "Please enter the verification code.",
-      "unknown": "Something has gone wrong. Check your information or try again later."
+      "unknown": "Something has gone wrong. Check your information or try again later.",
+      "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered."
     },
     "successDialog": {
       "title": "Phone number verified",
@@ -252,7 +253,9 @@
     "errors": {
       "wrongPhoneFormat": "Something went wrong. Check your information. (the phone number might be incorrect)",
       "phoneAlreadyTaken": "This phone number is already registered by another user.",
-      "unknown": "Something went wrong. Check your information or try again later."
+      "unknown": "Something went wrong. Check your information or try again later.",
+      "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
+      "rateLimit": "You have requested too many verification codes. You will need to wait a while before trying again."
     },
     "warningDialog": {
       "title": "Confirm phone number",
@@ -279,7 +282,9 @@
     "errors": {
       "wrongPasswordOrAccountId": "Something went wrong. Check your information. (the phone number might be incorrect)",
       "phoneAlreadyTaken": "This phone number is already registered by another user.",
-      "unknown": "Something went wrong. Check your information or try again later."
+      "unknown": "Something went wrong. Check your information or try again later.",
+      "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
+      "rateLimit": "You have requested too many verification codes. You will need to wait a while before trying again."
     },
     "warningDialog": {
       "title": "Confirm new phone number",
