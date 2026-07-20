@@ -17,7 +17,9 @@
       "resendBtn": "Invia codice",
       "resending": "Invio...",
       "resendSuccess": "Codice inviato con successo!",
-      "resendError": "Errore nell'invio del codice. Riprova."
+      "resendError": "Errore nell'invio del codice. Riprova.",
+      "recipientNotAllowedError": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito.",
+      "rateLimitError": "Hai richiesto troppi codici di verifica. Riprova più tardi."
     },
     "password": {
       "title": "Password",
