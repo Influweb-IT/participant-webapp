@@ -302,7 +302,9 @@
       "verificationFailed": "Verifica fallita. Controlla il codice e riprova.",
       "codeRequired": "Inserisci il codice di verifica.",
       "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi.",
-      "recipientNotAllowed": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito."
+      "recipientNotAllowed": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito.",
+      "codeExpired": "Il codice di verifica è scaduto. Richiedine uno nuovo.",
+      "tooManyAttempts": "Troppi tentativi non riusciti: il numero è stato rimosso. Aggiungilo di nuovo per ricominciare."
     },
     "successDialog": {
       "title": "Numero di telefono verificato",

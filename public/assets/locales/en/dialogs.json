@@ -234,7 +234,9 @@
       "verificationFailed": "Verification failed. Check the code and try again.",
       "codeRequired": "Please enter the verification code.",
       "unknown": "Something has gone wrong. Check your information or try again later.",
-      "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered."
+      "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
+      "codeExpired": "The verification code has expired. Please request a new one.",
+      "tooManyAttempts": "Too many failed attempts: the number has been removed. Add it again to start over."
     },
     "successDialog": {
       "title": "Phone number verified",
