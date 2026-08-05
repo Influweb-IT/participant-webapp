@@ -51,6 +51,7 @@
       "emailRules": "The email address you entered is not valid.",
       "passwordRules": "Your password must have at least 8 characters and contain 3 of the following 4 elements: lowercase letters, capital letters, numbers, punctuation marks.",
       "passwordMatch": "The passwords are not the same",
+      "phone": "Invalid phone number format",
       "invalidEmail": "Your email address seems to be incorrect",
       "userCreationFailed": "Something has gone wrong.",
       "phoneAlreadyRegistered": "This phone number is already registered",
