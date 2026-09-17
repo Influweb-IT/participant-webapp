@@ -2397,10 +2397,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influenzanet/case-web-app-core@2.9.8-staging":
-  version "2.9.8-staging"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.8-staging.tgz#ea4b5cf7102f8f400c2bd67f3ffea2e56760625b"
-  integrity sha512-2je5U2tEb0eo+HNbSlcTfBvPrcrZ9Jbnk856Qj42U9/Q1x+45QhgFF4K1+mpNKIbsUvd+eD32pDzOZtESVpjfg==
+"@influenzanet/case-web-app-core@2.9.9-staging":
+  version "2.9.9-staging"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.9-staging.tgz#02dfe7d0c8c3483dbcd74892631eb06aa48ff5be"
+  integrity sha512-YMlFNPaTKA+4CICSwbSJP9eLoBx+kbURD7FA9F53nUgkwi3AFX6JzZefZnKbO6yZaZGpKL+CUnOZMAKYTzFssw==
   dependencies:
     react-bootstrap-icons "^1.10.3"
 
