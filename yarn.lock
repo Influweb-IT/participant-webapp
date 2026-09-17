@@ -2397,17 +2397,17 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influenzanet/case-web-app-core@2.9.10-staging":
-  version "2.9.10-staging"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.10-staging.tgz#00c56f4802709670d891571859d06bba7ae52379"
-  integrity sha512-IqWdQ5LHovM+eefGwAwVOaBY2y9YubZmyj9pKX8Z7VAgVc/NU4TfU3uHOPxwGaPKr2vlsBXH3TfmmjNrshLKRw==
+"@influenzanet/case-web-app-core@2.9.11-staging":
+  version "2.9.11-staging"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.11-staging.tgz#4eb17222b3e53e7b3a6adbfbe20f810bad7e6d9a"
+  integrity sha512-HLi+9Dm5PUndrLQm1ho9W7RNGMKkiyLZTacLN5AGGzyTponY16Bfy1J7kbxSxyWUlIyBa+BOnQ5yyihsvdaH1A==
   dependencies:
     react-bootstrap-icons "^1.10.3"
 
-"@influenzanet/case-web-ui@1.15.1":
-  version "1.15.1"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-ui/-/case-web-ui-1.15.1.tgz#aaeb0473ac8cd5e9d4dd985858dbf493c73f2292"
-  integrity sha512-pZYrjkvmhasvlFhfibgI3RM/tP19XLHEbUej0Kjv9WKiaWn4pt6Chnkw6kweMmWMlU4KTPPmJJxbksxT+x+wWw==
+"@influenzanet/case-web-ui@1.15.2-staging":
+  version "1.15.2-staging"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-ui/-/case-web-ui-1.15.2-staging.tgz#c9e5f2b9d2f3b2f1a132a8954cd1bd95b3bc8b54"
+  integrity sha512-MoeOin5/sgIILxC9eHBXAPOUEyzn2yUPuhr9i0MoHcEPawa4Mei16b8yowgujwIS1+p9BVLv1tVSw3mMt3aQHQ==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.4"
 
