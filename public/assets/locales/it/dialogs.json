@@ -240,6 +240,7 @@
     "cancelBtn": "Annulla",
     "confirmBtn": "Aggiungi numero di telefono",
     "errors": {
+      "wrongPasswordOrAccountId": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
       "wrongPhoneFormat": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
       "phoneAlreadyTaken": "Questo numero di telefono è già registrato da un altro utente.",
       "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi.",
@@ -270,6 +271,7 @@
     "confirmBtnAdd": "Aggiungi numero di telefono",
     "errors": {
       "wrongPasswordOrAccountId": "Qualcosa è andato storto. Controlla le tue informazioni. (il numero di telefono potrebbe essere errato)",
+      "wrongPhoneFormat": "Il formato del numero di telefono non è valido.",
       "phoneAlreadyTaken": "Questo numero di telefono è già registrato da un altro utente.",
       "unknown": "Qualcosa è andato storto. Controlla le tue informazioni o riprova più tardi.",
       "recipientNotAllowed": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito.",

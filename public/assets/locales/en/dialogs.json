@@ -254,6 +254,7 @@
     "cancelBtn": "Cancel",
     "confirmBtn": "Add phone number",
     "errors": {
+      "wrongPasswordOrAccountId": "Something went wrong. Check your information. (the phone number might be incorrect)",
       "wrongPhoneFormat": "Something went wrong. Check your information. (the phone number might be incorrect)",
       "phoneAlreadyTaken": "This phone number is already registered by another user.",
       "unknown": "Something went wrong. Check your information or try again later.",
@@ -284,6 +285,7 @@
     "confirmBtnAdd": "Add phone number",
     "errors": {
       "wrongPasswordOrAccountId": "Something went wrong. Check your information. (the phone number might be incorrect)",
+      "wrongPhoneFormat": "The phone number format is not valid.",
       "phoneAlreadyTaken": "This phone number is already registered by another user.",
       "unknown": "Something went wrong. Check your information or try again later.",
       "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
