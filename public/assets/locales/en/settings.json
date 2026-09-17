@@ -22,7 +22,10 @@
       "rateLimitError": "You have requested too many verification codes. Please try again later.",
       "cooldownError": "A code was just sent. Please wait a moment before asking for another one.",
       "noPendingVerificationError": "There is no verification waiting for this number. Add the number again to start over.",
-      "resendCountdown": "New code in {{seconds}}s"
+      "resendCountdown": "New code in {{seconds}}s",
+      "sendFailedError": "We could not send the code. Please ask for a new one.",
+      "whatsAppUnavailableError": "WhatsApp messages cannot be sent at the moment. Please try again later.",
+      "alreadyVerifiedError": "This number is already verified."
     },
     "password": {
       "title": "Password",

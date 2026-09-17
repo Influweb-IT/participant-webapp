@@ -22,7 +22,10 @@
       "rateLimitError": "Hai richiesto troppi codici di verifica. Riprova più tardi.",
       "cooldownError": "Ti abbiamo appena inviato un codice. Attendi qualche istante prima di richiederne un altro.",
       "noPendingVerificationError": "Non c'è nessuna verifica in attesa per questo numero. Aggiungilo di nuovo per ricominciare.",
-      "resendCountdown": "Nuovo codice tra {{seconds}} s"
+      "resendCountdown": "Nuovo codice tra {{seconds}} s",
+      "sendFailedError": "Non siamo riusciti a inviare il codice. Richiedine uno nuovo.",
+      "whatsAppUnavailableError": "Al momento non è possibile inviare messaggi WhatsApp. Riprova più tardi.",
+      "alreadyVerifiedError": "Questo numero è già verificato."
     },
     "password": {
       "title": "Password",

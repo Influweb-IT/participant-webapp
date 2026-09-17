@@ -283,7 +283,8 @@
       "recipientNotAllowed": "Questo numero non è abilitato a ricevere messaggi WhatsApp. Controlla il numero inserito.",
       "rateLimit": "Hai richiesto troppi codici di verifica. Dovrai aspettare un po' prima di riprovare.",
       "noPendingVerification": "Non c'è nessuna verifica in corso per questo numero. Richiedi un nuovo codice.",
-      "sendFailed": "Il nuovo numero è stato salvato ma non siamo riusciti a inviare il codice WhatsApp. Richiedi un nuovo codice."
+      "sendFailed": "Il nuovo numero è stato salvato ma non siamo riusciti a inviare il codice WhatsApp. Richiedi un nuovo codice.",
+      "noPhone": "Non c'è nessun numero di telefono da modificare sul tuo account. Aggiungine uno prima."
     },
     "warningDialog": {
       "title": "Conferma nuovo numero di telefono",
@@ -316,7 +317,9 @@
       "codeExpired": "Il codice di verifica è scaduto. Richiedine uno nuovo.",
       "tooManyAttempts": "Troppi tentativi non riusciti: il numero è stato rimosso. Aggiungilo di nuovo per ricominciare.",
       "cooldown": "Ti abbiamo appena inviato un codice. Attendi qualche istante prima di richiederne un altro.",
-      "noPendingVerification": "Non c'è nessuna verifica in corso per questo numero. Richiedi un nuovo codice."
+      "noPendingVerification": "Non c'è nessuna verifica in corso per questo numero. Richiedi un nuovo codice.",
+      "sendFailed": "Non siamo riusciti a inviare il codice. Richiedine uno nuovo.",
+      "whatsAppUnavailable": "Al momento non è possibile inviare messaggi WhatsApp. Riprova più tardi."
     },
     "successDialog": {
       "title": "Numero di telefono verificato",
@@ -339,6 +342,9 @@
       "title": "Numero di telefono eliminato",
       "content": "Fatto! Il tuo numero di telefono è stato eliminato.",
       "btn": "Ok"
+    },
+    "errors": {
+      "unknown": "Qualcosa è andato storto. Riprova più tardi."
     }
   }
 }

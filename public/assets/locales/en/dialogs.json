@@ -242,7 +242,9 @@
       "codeExpired": "The verification code has expired. Please request a new one.",
       "tooManyAttempts": "Too many failed attempts: the number has been removed. Add it again to start over.",
       "cooldown": "A code was just sent to you. Please wait a moment before asking for another one.",
-      "noPendingVerification": "There is no verification in progress for this number. Please request a new code."
+      "noPendingVerification": "There is no verification in progress for this number. Please request a new code.",
+      "sendFailed": "We could not send the code. Please ask for a new one.",
+      "whatsAppUnavailable": "WhatsApp messages cannot be sent at the moment. Please try again later."
     },
     "successDialog": {
       "title": "Phone number verified",
@@ -305,7 +307,8 @@
       "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
       "rateLimit": "You have requested too many verification codes. You will need to wait a while before trying again.",
       "noPendingVerification": "There is no verification in progress for this number. Please request a new code.",
-      "sendFailed": "Your new number was saved but we could not send the WhatsApp code. Please request a new code."
+      "sendFailed": "Your new number was saved but we could not send the WhatsApp code. Please request a new code.",
+      "noPhone": "There is no phone number on your account to change. Add one first."
     },
     "warningDialog": {
       "title": "Confirm new phone number",
@@ -328,6 +331,9 @@
       "title": "Phone number deleted",
       "content": "Done! Your phone number has been deleted.",
       "btn": "Ok"
+    },
+    "errors": {
+      "unknown": "Something went wrong. Please try again later."
     }
   },
   "deleteAccount": {
