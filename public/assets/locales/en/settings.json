@@ -19,7 +19,10 @@
       "resendSuccess": "Code sent successfully!",
       "resendError": "Error sending code. Please try again.",
       "recipientNotAllowedError": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
-      "rateLimitError": "You have requested too many verification codes. Please try again later."
+      "rateLimitError": "You have requested too many verification codes. Please try again later.",
+      "cooldownError": "A code was just sent. Please wait a moment before asking for another one.",
+      "noPendingVerificationError": "There is no verification waiting for this number. Add the number again to start over.",
+      "resendCountdown": "New code in {{seconds}}s"
     },
     "password": {
       "title": "Password",

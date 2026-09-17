@@ -218,6 +218,9 @@
       "title": "Settings are changed",
       "content": "Done! Your email setting are changed.",
       "btn": "Ok"
+    },
+    "errors": {
+      "unknown": "Something went wrong: your settings were not saved. Please try again later."
     }
   },
   "verifyWhatsApp": {
@@ -237,13 +240,21 @@
       "unknown": "Something has gone wrong. Check your information or try again later.",
       "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
       "codeExpired": "The verification code has expired. Please request a new one.",
-      "tooManyAttempts": "Too many failed attempts: the number has been removed. Add it again to start over."
+      "tooManyAttempts": "Too many failed attempts: the number has been removed. Add it again to start over.",
+      "cooldown": "A code was just sent to you. Please wait a moment before asking for another one.",
+      "noPendingVerification": "There is no verification in progress for this number. Please request a new code."
     },
     "successDialog": {
       "title": "Phone number verified",
       "content": "Success! Your phone number has been verified via WhatsApp.",
       "btn": "Ok"
-    }
+    },
+    "tooManyAttemptsDialog": {
+      "title": "Phone number removed",
+      "btn": "Ok"
+    },
+    "resendSuccess": "We have sent you a new code on WhatsApp.",
+    "resendCountdown": "New code in {{seconds}}s"
   },
   "addPhone": {
     "title": "Add phone number",
@@ -259,7 +270,10 @@
       "phoneAlreadyTaken": "This phone number is already registered by another user.",
       "unknown": "Something went wrong. Check your information or try again later.",
       "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
-      "rateLimit": "You have requested too many verification codes. You will need to wait a while before trying again."
+      "rateLimit": "You have requested too many verification codes. You will need to wait a while before trying again.",
+      "sendFailed": "Your number was saved but we could not send the WhatsApp code. Please request a new code.",
+      "alreadyHasPhone": "You already have a phone number waiting to be verified. Verify it or change it from your settings.",
+      "noPendingVerification": "There is no verification in progress for this number. Please request a new code."
     },
     "warningDialog": {
       "title": "Confirm phone number",
@@ -289,7 +303,9 @@
       "phoneAlreadyTaken": "This phone number is already registered by another user.",
       "unknown": "Something went wrong. Check your information or try again later.",
       "recipientNotAllowed": "This number is not enabled to receive WhatsApp messages. Please check the number you entered.",
-      "rateLimit": "You have requested too many verification codes. You will need to wait a while before trying again."
+      "rateLimit": "You have requested too many verification codes. You will need to wait a while before trying again.",
+      "noPendingVerification": "There is no verification in progress for this number. Please request a new code.",
+      "sendFailed": "Your new number was saved but we could not send the WhatsApp code. Please request a new code."
     },
     "warningDialog": {
       "title": "Confirm new phone number",
