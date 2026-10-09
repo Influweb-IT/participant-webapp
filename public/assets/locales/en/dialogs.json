@@ -263,6 +263,11 @@
     "phoneInputLabel": "Phone number",
     "phoneInputPlaceholder": "Phone number",
     "completeNumber": "Complete number",
+    "phoneValidation": {
+      "tooShort": "The number is too short",
+      "tooLong": "The number is too long",
+      "invalid": "This is not a valid number for the selected country"
+    },
     "info": "Enter your phone number. You will receive a verification code via WhatsApp.",
     "cancelBtn": "Cancel",
     "confirmBtn": "Add phone number",

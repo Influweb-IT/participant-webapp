@@ -239,6 +239,11 @@
     "phoneInputLabel": "Numero di telefono",
     "phoneInputPlaceholder": "Numero di telefono",
     "completeNumber": "Numero completo",
+    "phoneValidation": {
+      "tooShort": "Il numero è troppo corto",
+      "tooLong": "Il numero è troppo lungo",
+      "invalid": "Il numero non è valido per il prefisso selezionato"
+    },
     "info": "Inserisci il tuo numero di telefono. Riceverai un codice di verifica tramite WhatsApp.",
     "cancelBtn": "Annulla",
     "confirmBtn": "Aggiungi numero di telefono",
