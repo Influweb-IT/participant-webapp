@@ -2397,11 +2397,12 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influenzanet/case-web-app-core@2.9.12-staging":
-  version "2.9.12-staging"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.12-staging.tgz#a76ce9db705bdc5f405e0f5265b021cbe5231f88"
-  integrity sha512-iLhjHTzcf810e9Ys1F8fnwKaY6P0DqeXQvnzemfs3It/MpFoRySIPZrtjVMKNwURdRg/a6x5l3O6UE6PkumpeQ==
+"@influenzanet/case-web-app-core@2.9.13-staging":
+  version "2.9.13-staging"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.13-staging.tgz#9b11d22f9f23ad49d4b681cfc9fdc79d52a5649c"
+  integrity sha512-wiT+zxZQrvBc/EXQfqsHmREvwkaQvaFOq31Sq7TNQol1RmEQKmd7kHDPbx+UzrL5FlVQDs5ZPX4NCkr4MPS7Kg==
   dependencies:
+    libphonenumber-js "^1.13.15"
     react-bootstrap-icons "^1.10.3"
 
 "@influenzanet/case-web-ui@1.15.2-staging":
@@ -7459,6 +7460,11 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+libphonenumber-js@^1.13.15:
+  version "1.13.15"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.13.15.tgz#da973cc4b7cf178acff24bece8b9c2eefdf98818"
+  integrity sha512-AHdhEQeDFEJ4GKDAQ9AwxChy+v2kUILUB3TGQRpkXMkWePjXTU/WQEzWVQoIx/Gz8fE73Wr5SEuZCy2vk8jrMQ==
 
 lilconfig@^2.0.3, lilconfig@^2.0.5, lilconfig@^2.0.6:
   version "2.0.6"
