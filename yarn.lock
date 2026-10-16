@@ -2397,10 +2397,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@influenzanet/case-web-app-core@2.9.13-staging":
-  version "2.9.13-staging"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.13-staging.tgz#9b11d22f9f23ad49d4b681cfc9fdc79d52a5649c"
-  integrity sha512-wiT+zxZQrvBc/EXQfqsHmREvwkaQvaFOq31Sq7TNQol1RmEQKmd7kHDPbx+UzrL5FlVQDs5ZPX4NCkr4MPS7Kg==
+"@influenzanet/case-web-app-core@2.9.14-staging":
+  version "2.9.14-staging"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.14-staging.tgz#fdb3098f553bbe3cb26ee8861329f1b708c62d3b"
+  integrity sha512-h00Z8bHlzWh+Jmk4aluPPlhaatkXFGjr+F4NZHUqPNii9krCl42iUIt9lfSrLIceOdzPf3t58RGvWlM81oQzCw==
   dependencies:
     libphonenumber-js "^1.13.15"
     react-bootstrap-icons "^1.10.3"
