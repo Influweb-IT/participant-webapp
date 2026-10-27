@@ -4,7 +4,8 @@ FROM node:20-alpine AS build
 ARG ENV_FILE=".env"
 WORKDIR /app
 COPY .npmrc /app
-ARG NPM_TOKEN
+# .npmrc needs the variable set; no @influweb-it package is installed, so empty works
+ARG NPM_TOKEN=""
 COPY package.json /app
 COPY yarn.lock /app
 RUN yarn install
