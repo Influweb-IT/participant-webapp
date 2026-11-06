@@ -1,0 +1,23 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v0.1.0
+_src_path: gh:influenzanet/participant-webapp-template
+app_title: Influweb
+date_locales:
+-   code: it
+    dateFns: it
+    format: dd/MM/yyyy
+description: Un sistema di partecipazione a base volontaria per il monitoraggio del
+    COVID e dell'influenza in Italia
+dev_path_proxies: {}
+dev_proxy_target: https://influweb.staging.influenzanet.info
+dev_ws_proxy_paths:
+- /dashboard
+- /_stcore
+docker_image: influweb/participant-webapp
+extra_dependencies:
+    '@reduxjs/toolkit': 1.8.1
+favicon: /assets/static/images/favicon/favicon.png
+head_extra: <meta name="facebook-domain-verification" content="7rcddwxvcq310aaq8c696iq0ztm5t5"
+    />
+html_lang: it
+package_name: influweb

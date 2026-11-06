@@ -59,7 +59,8 @@ const Iubenda: React.FC = () => {
 
     const scriptTag = document.createElement("script");
 
-    scriptTag.src = "//cdn.iubenda.com/cs/iubenda_cs.js";
+    // explicit https: protocol-relative becomes http:// on a plain-http page, which the CSP blocks
+    scriptTag.src = "https://cdn.iubenda.com/cs/iubenda_cs.js";
     if(instance !== null && instance.current !== null) {
       instance.current.appendChild(scriptTag);
     }

@@ -195,8 +195,9 @@
                   "config": {
                     "type": "extension",
                     "config": {
-                      "type": "results-dashboard",
-                      "baseUrl": "/dashboard"
+                      "type": "iframeEmbed",
+                      "url": "/dashboard/?lang={lang}",
+                      "title": "Influweb Dashboard"
                     }
                   }
                 }

@@ -1,42 +1,33 @@
-import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { store, initI18n } from "@influenzanet/case-web-app-core";
-
-import { LoadingPlaceholder } from "@influenzanet/case-web-ui";
+// App entry point (owned by this repo, never touched by copier update).
+// Shared boot logic: @influenzanet/participant-webapp-kit renderParticipantApp().
+import { renderParticipantApp } from "@influenzanet/participant-webapp-kit";
+import { it } from "date-fns/locale";
 
 import "./index.scss";
 
-import "@fontsource/open-sans";
-// import '@fontsource/open-sans/300.css'; // for light font
-import "@fontsource/open-sans/400-italic.css";
-import "@fontsource/open-sans/700.css";
-import "@fortawesome/fontawesome-free/js/solid";
-import "@fortawesome/fontawesome-free/js/brands";
-import "@fortawesome/fontawesome-free/js/fontawesome";
+import * as appConfig from "./configs/appConfig.json";
+import * as footerConfig from "./configs/footer.json";
+import * as headerConfig from "./configs/header.json";
+import * as navbarConfig from "./configs/navbar.json";
+import * as pagesConfig from "./configs/pages.json";
 
-import "bootstrap/dist/js/bootstrap.bundle";
-
-import App from "./App";
+import Iubenda from "./Iubenda";
+import Facebook from "./Facebook";
 import { configureState } from "./utils/ConfigureState";
 
-const localeURL = process.env.REACT_APP_CONTENT_URL + "/locales";
-const defaultLanguage = process.env.REACT_APP_DEFAULT_LANGUAGE ?? "en";
-const fallbackLanguage = process.env.REACT_APP_FALLBACK_LANGUAGE ?? "en";
-initI18n(defaultLanguage, fallbackLanguage, localeURL);
-
-configureState();
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Suspense
-        fallback={<LoadingPlaceholder color="secondary" minHeight="100vh" />}
-      >
-        <App />
-      </Suspense>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-
+renderParticipantApp({
+  appConfig,
+  footerConfig,
+  headerConfig,
+  navbarConfig,
+  pagesConfig,
+  dateLocales: [{ code: "it", locale: it, format: "dd/MM/yyyy" }],
+  // cookie consent + signup reducers used by Iubenda / Facebook
+  beforeRender: configureState,
+  children: (
+    <>
+      <Iubenda />
+      <Facebook />
+    </>
+  ),
+});
