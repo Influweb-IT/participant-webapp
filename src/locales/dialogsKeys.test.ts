@@ -1,5 +1,9 @@
 import fs from 'fs';
+import { createRequire } from 'module';
 import path from 'path';
+import { describe, expect, it } from 'vitest';
+
+const require = createRequire(import.meta.url);
 
 /**
  * Guards the dialogs translation files against the class of defect reported as

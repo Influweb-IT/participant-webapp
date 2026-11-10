@@ -71,5 +71,12 @@
   "teaserImage": {
     "title": "Welcome to Influweb",
     "content": "Get started by signing up to participate in the study"
+  },
+  "blogPosts": {
+    "title": "From our blog",
+    "readMore": "Read the article",
+    "viewAll": "Visit our blog",
+    "error": "Couldn't load blog posts right now. Please try again later.",
+    "empty": "No posts yet."
   }
 }

@@ -130,25 +130,6 @@
                   }
                 }
               ]
-            },
-            {
-              "key": "infoCard",
-              "className": "col-12 col-lg-4 mt-3 min-h-478",
-              "items": [
-                {
-                  "itemKey": "infoCard",
-                  "className": "h-100",
-                  "config": {
-                    "type": "imageCard",
-                    "showActionBtn": true,
-                    "action": {
-                      "type": "navigate",
-                      "value": "/info"
-                    },
-                    "imageSrc": "/images/info.jpg"
-                  }
-                }
-              ]
             }
           ]
         },
@@ -165,8 +146,7 @@
                   "className": "",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "markdowns/sponsors.md",
-                    "flavor": "chart-renderer"
+                    "markdownUrl": "markdowns/sponsors.md"
                   }
                 }
               ]
@@ -191,8 +171,7 @@
                   "itemKey": "results",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "markdowns/results.md",
-                    "flavor": "chart-renderer"
+                    "markdownUrl": "markdowns/results.md"
                   }
                 }
               ]
@@ -440,7 +419,7 @@
                       "type": "navigate",
                       "value": "/home"
                     },
-                    "imageSrc": "/images/survey.jpg",
+                    "imageSrc": "/images/questionnaire.jpg",
                     "showActionBtn": true
                   }
                 }
@@ -490,7 +469,7 @@
                   "itemKey": "aboutPolicy",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "/markdowns/about.md"
+                    "markdownUrl": "markdowns/about.md"
                   }
                 }
               ]
@@ -523,7 +502,7 @@
                       "type": "navigate",
                       "value": "/home"
                     },
-                    "imageSrc": "/images/survey.jpg",
+                    "imageSrc": "/images/questionnaire.jpg",
                     "showActionBtn": true
                   }
                 }
@@ -550,7 +529,7 @@
                   "className": "",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "/markdowns/contact.md"
+                    "markdownUrl": "markdowns/contact.md"
                   }
                 }
               ]
@@ -576,7 +555,7 @@
                   "className": "",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "/markdowns/privacy.md"
+                    "markdownUrl": "markdowns/privacy.md"
                   }
                 }
               ]
@@ -602,7 +581,7 @@
                   "className": "",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "/markdowns/accessibility.md"
+                    "markdownUrl": "markdowns/accessibility.md"
                   }
                 }
               ]
@@ -628,7 +607,7 @@
                   "className": "",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "/markdowns/disclaimer.md"
+                    "markdownUrl": "markdowns/disclaimer.md"
                   }
                 }
               ]
@@ -654,33 +633,7 @@
                   "className": "",
                   "config": {
                     "type": "markdown",
-                    "markdownUrl": "/markdowns/news.md"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "/info",
-      "pageKey": "info",
-      "rows": [
-        {
-          "key": "content",
-          "containerClassName": "my-3 min-vh-60",
-          "columns": [
-            {
-              "key": "pCol",
-              "className": "col-12 col-sm-10 col-md-8",
-              "items": [
-                {
-                  "itemKey": "info",
-                  "className": "",
-                  "config": {
-                    "type": "markdown",
-                    "markdownUrl": "/markdowns/info.md"
+                    "markdownUrl": "markdowns/news.md"
                   }
                 }
               ]

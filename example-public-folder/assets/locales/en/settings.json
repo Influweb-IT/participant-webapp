@@ -29,8 +29,7 @@
       "title": "Language",
       "info": "You can change the language here.",
       "languages": {
-        "en": "English",
-        "it": "Italiano"
+        "en": "English"
       }
     }
   },

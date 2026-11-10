@@ -71,5 +71,12 @@
   "teaserImage": {
     "title": "Benvenuto in Influweb",
     "content": "Aiutaci a monitorare il COVID-19 e l’influenza in Italia iscrivendoti al nostro studio"
+  },
+  "blogPosts": {
+    "title": "Dal nostro blog",
+    "readMore": "Leggi l'articolo",
+    "viewAll": "Vai al blog",
+    "error": "Non è stato possibile caricare gli articoli del blog. Riprova più tardi.",
+    "empty": "Nessun articolo pubblicato al momento."
   }
 }

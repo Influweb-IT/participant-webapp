@@ -33,12 +33,6 @@
     "body": "Find more about us.",
     "actionLabel": "Learn more"
   },
-  "infoCard": {
-    "imageAlt": "Info image",
-    "title": "Info",
-    "body": "Additional information",
-    "actionLabel": "Learn more"
-  },
   "newsCard": {
     "imageAlt": "News image",
     "title": "News",
@@ -75,7 +69,7 @@
     }
   },
   "teaserImage": {
-    "title": "Welcome",
+    "title": "Welcome to Gripenet",
     "content": "Get started by signing up to participate in the study"
   }
 }

@@ -2,11 +2,20 @@
   "name": "influweb",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
   "dependencies": {
-    "@fontsource/open-sans": "^4.2.1",
     "@influenzanet/case-web-app-core": "2.9.14-staging",
     "@influenzanet/case-web-ui": "1.15.2-staging",
-    "@popperjs/core": "^2.11.5",
+    "@influenzanet/participant-webapp-kit": "^0.1.0",
+    "@popperjs/core": "^2.11.8",
+    "@reduxjs/toolkit": "1.8.1",
     "bootstrap": "^5.1.3",
     "date-fns": "2.28.0",
     "encoding": "^0.1.13",
@@ -15,40 +24,25 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.16.8",
     "react-redux": "^7.2.8",
-    "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "survey-engine": "^1.2.1"
+    "survey-engine": "1.2.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@reduxjs/toolkit": "1.8.1",
-    "@types/jest": "^27.5.2",
+    "@types/node": "^22.0.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
+    "@vitejs/plugin-react": "^5.0.0",
     "check-peer-dependencies": "^4.1.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "http-proxy-middleware": "2.0.1",
-    "sass": "^1.49.8",
-    "typescript": "^4.2.4",
-    "web-vitals": "^1.1.2"
+    "sass": "^1.99.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.4.2",
+    "vitest": "^3.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "resolutions": {
+    "@babel/runtime": "^7.26.10",
+    "@types/react": "^17.0.2",
+    "lodash": "^4.18.0"
   }
 }
