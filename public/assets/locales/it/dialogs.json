@@ -210,7 +210,8 @@
       "email": "Email",
       "whatsapp": "WhatsApp",
       "whatsappDisabled": "Per abilitare WhatsApp, aggiungi e verifica un numero di telefono.",
-      "note": "Alcune comunicazioni potrebbero essere disponibili solo via email."
+      "note": "Alcune comunicazioni potrebbero essere disponibili solo via email.",
+      "noChannelWarning": "Senza alcun canale selezionato non riceverai alcuna notifica: né il promemoria settimanale, né la newsletter, né i messaggi dello studio. Le e-mail che riguardano il tuo account, come quella per reimpostare la password, continueranno ad arrivare."
     },
     "cancelBtn": "Annulla",
     "submitBtn": "Invia",
@@ -222,6 +223,9 @@
     "errors": {
       "unknown": "Qualcosa è andato storto: le impostazioni non sono state salvate. Riprova più tardi."
     }
+  },
+  "whatsAppOptIn": {
+    "statement": "[DRAFT] Verificando il numero accetti di ricevere le notifiche di Influweb (Fondazione ISI) su WhatsApp, inviate tramite Meta. Puoi disattivarle in qualsiasi momento dalle impostazioni, eliminando il numero o rispondendo STOP. Maggiori dettagli nell'[informativa sulla privacy](/privacy)."
   },
   "deleteAccount": {
     "title": "Ritiro dallo studio",

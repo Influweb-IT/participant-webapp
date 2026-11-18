@@ -450,10 +450,10 @@
     "@iframe-resizer/core" "5.5.9"
     auto-console-group "1.3.0"
 
-"@influenzanet/case-web-app-core@2.9.14-staging":
-  version "2.9.14-staging"
-  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.14-staging.tgz#fdb3098f553bbe3cb26ee8861329f1b708c62d3b"
-  integrity sha512-h00Z8bHlzWh+Jmk4aluPPlhaatkXFGjr+F4NZHUqPNii9krCl42iUIt9lfSrLIceOdzPf3t58RGvWlM81oQzCw==
+"@influenzanet/case-web-app-core@2.9.15-staging.1":
+  version "2.9.15-staging.1"
+  resolved "https://registry.yarnpkg.com/@influenzanet/case-web-app-core/-/case-web-app-core-2.9.15-staging.1.tgz#0e5401437c0068d88cc3fdbe98cd4a799c422c29"
+  integrity sha512-s5WABQAwTc0x+IN5uFFGV9fxdCBXuz3XP6IibFCZr+fPxt0UJ7EhsdNQYX82wdbhJLhktpMJikpwc57dAVu66A==
   dependencies:
     libphonenumber-js "^1.13.15"
     react-bootstrap-icons "^1.10.3"

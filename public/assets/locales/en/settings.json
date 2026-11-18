@@ -25,7 +25,8 @@
       "resendCountdown": "New code in {{seconds}}s",
       "sendFailedError": "We could not send the code. Please ask for a new one.",
       "whatsAppUnavailableError": "WhatsApp messages cannot be sent at the moment. Please try again later.",
-      "alreadyVerifiedError": "This number is already verified."
+      "alreadyVerifiedError": "This number is already verified.",
+      "infoWhatsAppOff": "WhatsApp notifications are not available at the moment. You can still delete your number."
     },
     "password": {
       "title": "Password",

@@ -120,6 +120,18 @@
     {
       "title": "Non ho avuto alcun sintomo recentemente. Devo comunque compilare il questionario?",
       "content": "Si, poiché per avere una fotografia accurata della situazione in Italia è importante sapere anche quante persone sono sane e non hanno sintomi per poter stimare correttamente la velocità di diffusione del virus. Se non hai sintomi, sono sufficienti pochi secondi per completare il questionario."
+    },
+    {
+      "title": "[DRAFT] Come attivo o disattivo le notifiche su WhatsApp?",
+      "content": "[DRAFT] Nelle impostazioni del tuo account aggiungi il tuo numero di telefono e verificalo con il codice che ricevi su WhatsApp: da quel momento riceverai le notifiche anche su WhatsApp. Per disattivarle, togli la spunta a WhatsApp nelle impostazioni delle notifiche, oppure elimina il numero."
+    },
+    {
+      "title": "[DRAFT] Come smetto di ricevere messaggi su WhatsApp?",
+      "content": "[DRAFT] Rispondi STOP a uno dei nostri messaggi, oppure togli la spunta a WhatsApp nelle impostazioni delle notifiche. Se togli la spunta sia all'e-mail sia a WhatsApp non riceverai alcuna notifica; le e-mail che riguardano il tuo account, come quella per reimpostare la password, continueranno ad arrivare."
+    },
+    {
+      "title": "[DRAFT] Posso rispondere ai messaggi WhatsApp?",
+      "content": "[DRAFT] No: il numero da cui ricevi i messaggi non è monitorato e le risposte non vengono lette, tranne STOP. Per qualsiasi domanda usa la pagina dei contatti."
     }
   ]
 }

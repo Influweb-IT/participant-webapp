@@ -25,7 +25,8 @@
       "resendCountdown": "Nuovo codice tra {{seconds}} s",
       "sendFailedError": "Non siamo riusciti a inviare il codice. Richiedine uno nuovo.",
       "whatsAppUnavailableError": "Al momento non è possibile inviare messaggi WhatsApp. Riprova più tardi.",
-      "alreadyVerifiedError": "Questo numero è già verificato."
+      "alreadyVerifiedError": "Questo numero è già verificato.",
+      "infoWhatsAppOff": "Le notifiche WhatsApp non sono disponibili al momento. Puoi comunque eliminare il tuo numero."
     },
     "password": {
       "title": "Password",

@@ -210,7 +210,8 @@
       "email": "Email",
       "whatsapp": "WhatsApp",
       "whatsappDisabled": "To enable WhatsApp, add and verify a phone number.",
-      "note": "Some communications may only be available via email."
+      "note": "Some communications may only be available via email.",
+      "noChannelWarning": "With no channel selected you will receive no notifications: no weekly reminder, no newsletter and no study messages. E-mails about your account, such as the one to reset your password, will still arrive."
     },
     "cancelBtn": "Cancel",
     "submitBtn": "Submit",
@@ -340,6 +341,9 @@
     "errors": {
       "unknown": "Something went wrong. Please try again later."
     }
+  },
+  "whatsAppOptIn": {
+    "statement": "[DRAFT] By verifying your number you agree to receive Influweb (ISI Foundation) notifications on WhatsApp, sent through Meta. You can turn them off at any time in your settings, by deleting your number or by replying STOP. More details in the [privacy notice](/privacy)."
   },
   "deleteAccount": {
     "title": "Withdraw from study",

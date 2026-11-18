@@ -56,6 +56,18 @@ The study results will only be used to answer the scientific questions in this s
 
 After the study, your responses to the questionnaires will be kept for at least 25 years to ensure the validity of the study. This will also be the case if you withdraw from the study before its completion.
 
+#### 9. [DRAFT] Phone number and WhatsApp notifications
+
+[DRAFT: placeholder text, to be replaced with the text approved by the DPO.]
+
+- **What data:** your phone number, if you enter it. It is optional.
+- **What for:** only to send you the verification code and the study notifications (weekly reminder, newsletter, study messages) on WhatsApp, if you choose this channel. By verifying the number you agree to receive them.
+- **Who processes it:** messages are sent through Meta's WhatsApp Business platform, which acts as data processor. Data may be transferred to the United States [DRAFT: legal basis for the transfer and agreement with Meta].
+- **How long:** the record of the messages sent is kept for [DRAFT: 180 days] and is deleted together with your account.
+- **Login links:** some messages contain a link that signs you in without a password; it stays valid for [DRAFT: 7 days]. Do not forward it.
+- **Replies:** the number the messages come from is not monitored and replies are not read, except STOP, which turns WhatsApp notifications off.
+- **How to stop:** untick WhatsApp in your settings, delete your number in your settings, or reply STOP to any of the messages.
+
 ---
 
 #### Modification of the privacy policy

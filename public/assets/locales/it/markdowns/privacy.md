@@ -62,6 +62,18 @@ I risultati dello studio saranno utilizzati solo per rispondere alle domande sci
 
 Dopo lo studio, le tue risposte ai questionari verranno conservate per almeno 25 anni per garantire la validità dello studio. Questo sarà il caso anche se ti ritiri dallo studio prima del suo completamento.
 
+#### 9. [DRAFT] Numero di telefono e notifiche WhatsApp
+
+[DRAFT: testo provvisorio, da sostituire con quello approvato dal DPO.]
+
+- **Quali dati:** se lo inserisci, il tuo numero di telefono. È facoltativo.
+- **Per cosa:** solo per inviarti il codice di verifica e le notifiche dello studio (promemoria settimanale, newsletter, messaggi dello studio) su WhatsApp, se scegli questo canale. Verificando il numero accetti di riceverle.
+- **Chi lo tratta:** i messaggi sono inviati tramite la piattaforma WhatsApp Business di Meta, che agisce come responsabile del trattamento. I dati possono essere trasferiti negli Stati Uniti [DRAFT: base giuridica del trasferimento e accordo con Meta].
+- **Per quanto tempo:** il registro dei messaggi inviati è conservato per [DRAFT: 180 giorni] ed è cancellato insieme all'account.
+- **Link di accesso:** alcuni messaggi contengono un link che ti fa accedere senza password; resta valido per [DRAFT: 7 giorni]. Non inoltrarlo ad altri.
+- **Risposte:** il numero da cui ricevi i messaggi non è monitorato e le risposte non vengono lette, tranne STOP, che disattiva le notifiche WhatsApp.
+- **Come smettere:** togli la spunta a WhatsApp nelle impostazioni, elimina il numero dalle impostazioni, oppure rispondi STOP a uno dei messaggi.
+
 ---
 
 #### Modifica della policy di privacy

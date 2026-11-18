@@ -120,6 +120,18 @@
     {
       "title": "I have had no symptoms this week: should I still complete the weekly questionnaire?",
       "content": "Yes, to gain a reliable picture of the situation in Italy, it is important to have data about both people who are ill and those who are not ill. If only people with symptoms participate, we cannot estimate properly how the new coronavirus is developing. This is why it is just as important for people who are not ill to take part as for those who have symptoms. If you are not ill, the questionnaire will only take you a few seconds to complete."
+    },
+    {
+      "title": "[DRAFT] How do I turn WhatsApp notifications on or off?",
+      "content": "[DRAFT] In your account settings, add your phone number and verify it with the code you receive on WhatsApp: from then on you will also receive notifications on WhatsApp. To turn them off, untick WhatsApp in your notification settings, or delete your number."
+    },
+    {
+      "title": "[DRAFT] How do I stop receiving WhatsApp messages?",
+      "content": "[DRAFT] Reply STOP to any of our messages, or untick WhatsApp in your notification settings. If you untick both e-mail and WhatsApp you will receive no notifications; e-mails about your account, such as the one to reset your password, will still arrive."
+    },
+    {
+      "title": "[DRAFT] Can I reply to the WhatsApp messages?",
+      "content": "[DRAFT] No: the number the messages come from is not monitored and replies are not read, except STOP. For any question, please use the contact page."
     }
   ]
 }
