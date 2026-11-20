@@ -465,10 +465,10 @@
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.4"
 
-"@influenzanet/participant-webapp-kit@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@influenzanet/participant-webapp-kit/-/participant-webapp-kit-0.1.1.tgz#7f8c2244b97855ba0bdf692e35a7c5b8a09a4187"
-  integrity sha512-Rh6VAc7xkFzvJ2CzKEcTVmIljAOLQ3yXho/jl5EZbR33QPOvH+sf5UGitiZoTH2DvEcrbjMU+6MFRk2aEw/kHA==
+"@influenzanet/participant-webapp-kit@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@influenzanet/participant-webapp-kit/-/participant-webapp-kit-0.1.2.tgz#87adfc9d962876e32bb65e1a6f1d6606ed576743"
+  integrity sha512-sctIC02EV8EGBvmCw69hawV/1aB2h50YdGUjHKJ+zEMQz278+5LHVPjE3f7m9X6IIv3HpZK7dOdN72yggR+jwA==
   dependencies:
     "@fontsource/open-sans" "^4.5.14"
     "@fortawesome/fontawesome-free" "^5.15.4"
