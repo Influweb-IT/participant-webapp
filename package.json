@@ -11,9 +11,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@influenzanet/case-web-app-core": "2.9.15-staging.1",
+    "@influenzanet/case-web-app-core": "2.9.15-staging.4",
     "@influenzanet/case-web-ui": "1.15.2-staging",
-    "@influenzanet/participant-webapp-kit": "^0.1.0",
+    "@influenzanet/participant-webapp-kit": "0.1.1",
     "@popperjs/core": "^2.11.8",
     "@reduxjs/toolkit": "1.8.1",
     "bootstrap": "^5.1.3",
