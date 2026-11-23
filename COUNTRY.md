@@ -23,8 +23,8 @@ Owned by this repo: `copier update` never touches this file. The shared setup is
   Iubenda / Facebook (registered with `beforeRender` in `src/index.tsx`).
 - `src/theme/`: `it-theme.scss`, `iubenda_banner.scss`, colour schemes (`selected_color_scheme.scss`).
 - `@reduxjs/toolkit` is an `extra_dependencies` answer.
-- `PhoneVerificationBanner` (from the Orbyta `case-web-app-core` `-staging` build) is registered as a
-  country extension in `src/index.tsx` (`extensions`), ahead of the kit defaults.
+- The phone verification banner is the kit's `phoneVerificationBanner` extension (a `pages.json` row
+  on the logged-in landing page); it shows nothing unless the platform has WhatsApp on.
 - `src/locales/dialogsKeys.test.ts` (`yarn test`, Vitest): `it`/`en` `dialogs.json` have the same keys
   and contain every phone/WhatsApp dialog key the installed core references. `vitest`, `@types/node`
   and the `test` script are not template answers: re-check them after `copier update`.

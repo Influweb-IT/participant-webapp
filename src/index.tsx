@@ -1,7 +1,6 @@
 // App entry point (owned by this repo, never touched by copier update).
 // Shared boot logic: @influenzanet/participant-webapp-kit renderParticipantApp().
 import { renderParticipantApp } from "@influenzanet/participant-webapp-kit";
-import { PhoneVerificationBanner } from "@influenzanet/case-web-app-core";
 import { it } from "date-fns/locale";
 
 import "./index.scss";
@@ -23,8 +22,6 @@ renderParticipantApp({
   navbarConfig,
   pagesConfig,
   dateLocales: [{ code: "it", locale: it, format: "dd/MM/yyyy" }],
-  // country extensions, registered before the kit defaults (iframeEmbed, blogPosts)
-  extensions: [{ name: "PhoneVerificationBanner", component: PhoneVerificationBanner }],
   // cookie consent + signup reducers used by Iubenda / Facebook
   beforeRender: configureState,
   children: (

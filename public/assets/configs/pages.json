@@ -249,7 +249,9 @@
                   "itemKey": "phoneVerificationBanner",
                   "config": {
                     "type": "extension",
-                    "componentName": "PhoneVerificationBanner"
+                    "config": {
+                      "type": "phoneVerificationBanner"
+                    }
                   }
                 }
               ]
